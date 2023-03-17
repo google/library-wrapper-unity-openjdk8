@@ -1,4 +1,4 @@
-# Library Wrapper Unity JDK8 Library
+# Library Wrapper Unity OpenJDK8 Library
 
 [Library Wrapper](https://developer.android.com/games/develop/custom/wrapper) is
 a code generator that parses Java API and produces wrapper APIs in Unity C#. It

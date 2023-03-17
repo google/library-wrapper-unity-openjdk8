@@ -4,7 +4,8 @@ namespace Java.Util
 {
     public static class Extensions
     {
-        public static List<T> ToJavaList<T>(this System.Collections.Generic.List<T> csList)
+        public static List<T> ToJavaList<T>(
+                this System.Collections.Generic.IEnumerable<T> csList)
                 where T : JavaObject
         {
             ArrayList<T> result = new ArrayList<T>();
@@ -15,13 +16,16 @@ namespace Java.Util
             return result;
         }
 
-        public static System.Collections.Generic.List<T> ToCsList<T>(this List<T> javaList)
-                where T : JavaObject
+        public static System.Collections.Generic.List<T> ToCsList<T>(
+                this Java.Lang.Iterable<T> javaList) where T : JavaObject
         {
-            System.Collections.Generic.List<T> result = new System.Collections.Generic.List<T>();
-            for (int i = 0; i < javaList.Size(); i++)
+            System.Collections.Generic.List<T> result =
+                    new System.Collections.Generic.List<T>();
+
+            Iterator<T> iterator = javaList.Iterator();
+            while (iterator.HasNext())
             {
-                result.Add(javaList.Get(i));
+                result.Add(iterator.Next());
             }
             return result;
         }

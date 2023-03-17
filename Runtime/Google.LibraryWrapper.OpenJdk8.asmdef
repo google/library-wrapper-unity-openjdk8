@@ -1,0 +1,16 @@
+{
+    "name": "Google.LibraryWrapper.OpenJdk8",
+    "rootNamespace": "",
+    "references": [
+        "Google.LibraryWrapper.Java"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

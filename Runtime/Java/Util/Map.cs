@@ -6,9 +6,9 @@ namespace Java.Util
 {
     public static class Map
     {
-        public interface Entry<K, V> : global::Google.LibraryWrapper.Java.JavaInterface where K : class where V : class
+        public interface Entry<K2, V2> : global::Google.LibraryWrapper.Java.JavaInterface where K2 : class where V2 : class
         {
-            public new class AnonymousImplementation : global::Google.LibraryWrapper.Java.JavaObject, global::Java.Util.Map.Entry<K, V>
+            public new class AnonymousImplementation : global::Google.LibraryWrapper.Java.JavaObject, global::Java.Util.Map.Entry<K2, V2>
             {
                 private static readonly IntPtr _classObject;
                 private static readonly IntPtr _cachedMethodId0;
@@ -60,20 +60,20 @@ namespace Java.Util
                     }
                 }
 
-                public K GetKey()
+                public K2 GetKey()
                 {
                     try
                     {
                         AndroidJNI.PushLocalFrame(0);
                         jvalue[] args_ = new jvalue[] {};
-                        if (typeof(K) == typeof(global::System.String))
+                        if (typeof(K2) == typeof(global::System.String))
                         {
-                            return (K) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId0, args_);
+                            return (K2) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId0, args_);
                         }
                         else
                         {
                             IntPtr result_ = AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId0, args_);
-                            return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<K>(result_);
+                            return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<K2>(result_);
                         }
                     }
                     finally
@@ -82,20 +82,20 @@ namespace Java.Util
                     }
                 }
 
-                public V GetValue()
+                public V2 GetValue()
                 {
                     try
                     {
                         AndroidJNI.PushLocalFrame(0);
                         jvalue[] args_ = new jvalue[] {};
-                        if (typeof(V) == typeof(global::System.String))
+                        if (typeof(V2) == typeof(global::System.String))
                         {
-                            return (V) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId1, args_);
+                            return (V2) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId1, args_);
                         }
                         else
                         {
                             IntPtr result_ = AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId1, args_);
-                            return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(result_);
+                            return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V2>(result_);
                         }
                     }
                     finally
@@ -104,20 +104,20 @@ namespace Java.Util
                     }
                 }
 
-                public V SetValue(V value)
+                public V2 SetValue(V2 value)
                 {
                     try
                     {
                         AndroidJNI.PushLocalFrame(0);
                         jvalue[] args_ = new jvalue[] {ToJvalue(value)};
-                        if (typeof(V) == typeof(global::System.String))
+                        if (typeof(V2) == typeof(global::System.String))
                         {
-                            return (V) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId2, args_);
+                            return (V2) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId2, args_);
                         }
                         else
                         {
                             IntPtr result_ = AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId2, args_);
-                            return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(result_);
+                            return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V2>(result_);
                         }
                     }
                     finally
@@ -154,13 +154,13 @@ namespace Java.Util
                     }
                 }
 
-                public static global::Java.Util.Comparator<global::Java.Util.Map.Entry<K, V>> ComparingByKey<K, V>() where K : class, global::Java.ExternalType.Java.Lang.Comparable<K> where V : class
+                public static global::Java.Util.Comparator<global::Java.Util.Map.Entry<K3, V3>> ComparingByKey<K3, V3>() where K3 : class, global::Java.ExternalType.Java.Lang.Comparable<K3> where V3 : class
                 {
                     try
                     {
                         AndroidJNI.PushLocalFrame(0);
                         jvalue[] args_ = new jvalue[] {};
-                        return new global::Java.Util.Comparator<global::Java.Util.Map.Entry<K, V>>.AnonymousImplementation(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId5, args_));
+                        return new global::Java.Util.Comparator<global::Java.Util.Map.Entry<K3, V3>>.AnonymousImplementation(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId5, args_));
                     }
                     finally
                     {
@@ -168,13 +168,13 @@ namespace Java.Util
                     }
                 }
 
-                public static global::Java.Util.Comparator<global::Java.Util.Map.Entry<K, V>> ComparingByValue<K, V>() where K : class where V : class, global::Java.ExternalType.Java.Lang.Comparable<V>
+                public static global::Java.Util.Comparator<global::Java.Util.Map.Entry<K3, V3>> ComparingByValue<K3, V3>() where K3 : class where V3 : class, global::Java.ExternalType.Java.Lang.Comparable<V3>
                 {
                     try
                     {
                         AndroidJNI.PushLocalFrame(0);
                         jvalue[] args_ = new jvalue[] {};
-                        return new global::Java.Util.Comparator<global::Java.Util.Map.Entry<K, V>>.AnonymousImplementation(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId6, args_));
+                        return new global::Java.Util.Comparator<global::Java.Util.Map.Entry<K3, V3>>.AnonymousImplementation(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId6, args_));
                     }
                     finally
                     {
@@ -182,13 +182,13 @@ namespace Java.Util
                     }
                 }
 
-                public static global::Java.Util.Comparator<global::Java.Util.Map.Entry<K, V>> ComparingByKey<K, V>(global::Java.Util.Comparator<K> cmp) where K : class where V : class
+                public static global::Java.Util.Comparator<global::Java.Util.Map.Entry<K3, V3>> ComparingByKey<K3, V3>(global::Java.Util.Comparator<K3> cmp) where K3 : class where V3 : class
                 {
                     try
                     {
                         AndroidJNI.PushLocalFrame(0);
                         jvalue[] args_ = new jvalue[] {new jvalue { l = cmp.GetRawObject() }};
-                        return new global::Java.Util.Comparator<global::Java.Util.Map.Entry<K, V>>.AnonymousImplementation(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId7, args_));
+                        return new global::Java.Util.Comparator<global::Java.Util.Map.Entry<K3, V3>>.AnonymousImplementation(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId7, args_));
                     }
                     finally
                     {
@@ -196,13 +196,13 @@ namespace Java.Util
                     }
                 }
 
-                public static global::Java.Util.Comparator<global::Java.Util.Map.Entry<K, V>> ComparingByValue<K, V>(global::Java.Util.Comparator<V> cmp) where K : class where V : class
+                public static global::Java.Util.Comparator<global::Java.Util.Map.Entry<K3, V3>> ComparingByValue<K3, V3>(global::Java.Util.Comparator<V3> cmp) where K3 : class where V3 : class
                 {
                     try
                     {
                         AndroidJNI.PushLocalFrame(0);
                         jvalue[] args_ = new jvalue[] {new jvalue { l = cmp.GetRawObject() }};
-                        return new global::Java.Util.Comparator<global::Java.Util.Map.Entry<K, V>>.AnonymousImplementation(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId8, args_));
+                        return new global::Java.Util.Comparator<global::Java.Util.Map.Entry<K3, V3>>.AnonymousImplementation(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId8, args_));
                     }
                     finally
                     {
@@ -226,15 +226,15 @@ namespace Java.Util
                 }
             } // end class AnonymousImplementation
 
-            public new abstract class CallbackHelper : global::Google.LibraryWrapper.Java.JavaProxy, global::Java.Util.Map.Entry<K, V>
+            public new abstract class CallbackHelper : global::Google.LibraryWrapper.Java.JavaProxy, global::Java.Util.Map.Entry<K2, V2>
             {
                 public CallbackHelper() : base("java.util.Map$Entry") {}
 
-                public abstract K GetKey();
+                public abstract K2 GetKey();
 
-                public abstract V GetValue();
+                public abstract V2 GetValue();
 
-                public abstract V SetValue(V value);
+                public abstract V2 SetValue(V2 value);
 
                 public abstract bool Equals(global::Google.LibraryWrapper.Java.JavaObject o);
 
@@ -252,7 +252,7 @@ namespace Java.Util
                 }
                 else if (methodName == "setValue" && args.Length == 1)
                 {
-                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(SetValue(args[0] is global::System.String ? (V) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(((AndroidJavaObject) args[0]).GetRawObject())));
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(SetValue(args[0] is global::System.String ? (V2) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V2>(((AndroidJavaObject) args[0]).GetRawObject())));
                 }
                 else if (methodName == "equals" && args.Length == 1)
                 {
@@ -266,11 +266,11 @@ namespace Java.Util
                 }
             } // end class CallbackHelper
 
-            K GetKey();
+            K2 GetKey();
 
-            V GetValue();
+            V2 GetValue();
 
-            V SetValue(V value);
+            V2 SetValue(V2 value);
 
             bool Equals(global::Google.LibraryWrapper.Java.JavaObject o);
 

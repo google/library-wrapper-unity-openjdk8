@@ -76,13 +76,13 @@ namespace Java.Util
             }
         }
 
-        public static global::Java.Util.ServiceLoader<S> Load<S>(global::Java.Lang.Class<S> service, global::Java.Lang.ClassLoader loader) where S : class
+        public static global::Java.Util.ServiceLoader<S2> Load<S2>(global::Java.Lang.Class<S2> service, global::Java.Lang.ClassLoader loader) where S2 : class
         {
             try
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] {new jvalue { l = service.GetRawObject() }, new jvalue { l = loader.GetRawObject() }};
-                return new global::Java.Util.ServiceLoader<S>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId2, args_));
+                return new global::Java.Util.ServiceLoader<S2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId2, args_));
             }
             finally
             {
@@ -90,13 +90,13 @@ namespace Java.Util
             }
         }
 
-        public static global::Java.Util.ServiceLoader<S> Load<S>(global::Java.Lang.Class<S> service) where S : class
+        public static global::Java.Util.ServiceLoader<S2> Load<S2>(global::Java.Lang.Class<S2> service) where S2 : class
         {
             try
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] {new jvalue { l = service.GetRawObject() }};
-                return new global::Java.Util.ServiceLoader<S>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId3, args_));
+                return new global::Java.Util.ServiceLoader<S2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId3, args_));
             }
             finally
             {
@@ -104,13 +104,13 @@ namespace Java.Util
             }
         }
 
-        public static global::Java.Util.ServiceLoader<S> LoadInstalled<S>(global::Java.Lang.Class<S> service) where S : class
+        public static global::Java.Util.ServiceLoader<S2> LoadInstalled<S2>(global::Java.Lang.Class<S2> service) where S2 : class
         {
             try
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] {new jvalue { l = service.GetRawObject() }};
-                return new global::Java.Util.ServiceLoader<S>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId4, args_));
+                return new global::Java.Util.ServiceLoader<S2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId4, args_));
             }
             finally
             {

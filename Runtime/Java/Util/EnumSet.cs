@@ -79,13 +79,13 @@ namespace Java.Util
             }
         }
 
-        public static global::Java.Util.EnumSet<E> NoneOf<E>(global::Java.Lang.Class<E> elementType) where E : global::Java.Lang.Enum<E>
+        public static global::Java.Util.EnumSet<E2> NoneOf<E2>(global::Java.Lang.Class<E2> elementType) where E2 : global::Java.Lang.Enum<E2>
         {
             try
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] {new jvalue { l = elementType.GetRawObject() }};
-                return new global::Java.Util.EnumSet<E>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId0, args_));
+                return new global::Java.Util.EnumSet<E2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId0, args_));
             }
             finally
             {
@@ -93,13 +93,13 @@ namespace Java.Util
             }
         }
 
-        public static global::Java.Util.EnumSet<E> AllOf<E>(global::Java.Lang.Class<E> elementType) where E : global::Java.Lang.Enum<E>
+        public static global::Java.Util.EnumSet<E2> AllOf<E2>(global::Java.Lang.Class<E2> elementType) where E2 : global::Java.Lang.Enum<E2>
         {
             try
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] {new jvalue { l = elementType.GetRawObject() }};
-                return new global::Java.Util.EnumSet<E>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId1, args_));
+                return new global::Java.Util.EnumSet<E2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId1, args_));
             }
             finally
             {
@@ -107,13 +107,13 @@ namespace Java.Util
             }
         }
 
-        public static global::Java.Util.EnumSet<E> CopyOf<E>(global::Java.Util.EnumSet<E> s) where E : global::Java.Lang.Enum<E>
+        public static global::Java.Util.EnumSet<E2> CopyOf<E2>(global::Java.Util.EnumSet<E2> s) where E2 : global::Java.Lang.Enum<E2>
         {
             try
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] {new jvalue { l = s.GetRawObject() }};
-                return new global::Java.Util.EnumSet<E>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId2, args_));
+                return new global::Java.Util.EnumSet<E2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId2, args_));
             }
             finally
             {
@@ -121,13 +121,13 @@ namespace Java.Util
             }
         }
 
-        public static global::Java.Util.EnumSet<E> CopyOf<E>(global::Java.Util.Collection<E> c) where E : global::Java.Lang.Enum<E>
+        public static global::Java.Util.EnumSet<E2> CopyOf<E2>(global::Java.Util.Collection<E2> c) where E2 : global::Java.Lang.Enum<E2>
         {
             try
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] {new jvalue { l = c.GetRawObject() }};
-                return new global::Java.Util.EnumSet<E>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId3, args_));
+                return new global::Java.Util.EnumSet<E2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId3, args_));
             }
             finally
             {
@@ -135,13 +135,13 @@ namespace Java.Util
             }
         }
 
-        public static global::Java.Util.EnumSet<E> ComplementOf<E>(global::Java.Util.EnumSet<E> s) where E : global::Java.Lang.Enum<E>
+        public static global::Java.Util.EnumSet<E2> ComplementOf<E2>(global::Java.Util.EnumSet<E2> s) where E2 : global::Java.Lang.Enum<E2>
         {
             try
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] {new jvalue { l = s.GetRawObject() }};
-                return new global::Java.Util.EnumSet<E>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId4, args_));
+                return new global::Java.Util.EnumSet<E2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId4, args_));
             }
             finally
             {
@@ -149,13 +149,13 @@ namespace Java.Util
             }
         }
 
-        public static global::Java.Util.EnumSet<E> Of<E>(E e) where E : global::Java.Lang.Enum<E>
+        public static global::Java.Util.EnumSet<E2> Of<E2>(E2 e) where E2 : global::Java.Lang.Enum<E2>
         {
             try
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] {ToJvalue(e)};
-                return new global::Java.Util.EnumSet<E>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId5, args_));
+                return new global::Java.Util.EnumSet<E2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId5, args_));
             }
             finally
             {
@@ -163,13 +163,13 @@ namespace Java.Util
             }
         }
 
-        public static global::Java.Util.EnumSet<E> Of<E>(E e1, E e2) where E : global::Java.Lang.Enum<E>
+        public static global::Java.Util.EnumSet<E2> Of<E2>(E2 e1, E2 e2) where E2 : global::Java.Lang.Enum<E2>
         {
             try
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] {ToJvalue(e1), ToJvalue(e2)};
-                return new global::Java.Util.EnumSet<E>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId6, args_));
+                return new global::Java.Util.EnumSet<E2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId6, args_));
             }
             finally
             {
@@ -177,13 +177,13 @@ namespace Java.Util
             }
         }
 
-        public static global::Java.Util.EnumSet<E> Of<E>(E e1, E e2, E e3) where E : global::Java.Lang.Enum<E>
+        public static global::Java.Util.EnumSet<E2> Of<E2>(E2 e1, E2 e2, E2 e3) where E2 : global::Java.Lang.Enum<E2>
         {
             try
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] {ToJvalue(e1), ToJvalue(e2), ToJvalue(e3)};
-                return new global::Java.Util.EnumSet<E>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId7, args_));
+                return new global::Java.Util.EnumSet<E2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId7, args_));
             }
             finally
             {
@@ -191,13 +191,13 @@ namespace Java.Util
             }
         }
 
-        public static global::Java.Util.EnumSet<E> Of<E>(E e1, E e2, E e3, E e4) where E : global::Java.Lang.Enum<E>
+        public static global::Java.Util.EnumSet<E2> Of<E2>(E2 e1, E2 e2, E2 e3, E2 e4) where E2 : global::Java.Lang.Enum<E2>
         {
             try
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] {ToJvalue(e1), ToJvalue(e2), ToJvalue(e3), ToJvalue(e4)};
-                return new global::Java.Util.EnumSet<E>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId8, args_));
+                return new global::Java.Util.EnumSet<E2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId8, args_));
             }
             finally
             {
@@ -205,13 +205,13 @@ namespace Java.Util
             }
         }
 
-        public static global::Java.Util.EnumSet<E> Of<E>(E e1, E e2, E e3, E e4, E e5) where E : global::Java.Lang.Enum<E>
+        public static global::Java.Util.EnumSet<E2> Of<E2>(E2 e1, E2 e2, E2 e3, E2 e4, E2 e5) where E2 : global::Java.Lang.Enum<E2>
         {
             try
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] {ToJvalue(e1), ToJvalue(e2), ToJvalue(e3), ToJvalue(e4), ToJvalue(e5)};
-                return new global::Java.Util.EnumSet<E>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId9, args_));
+                return new global::Java.Util.EnumSet<E2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId9, args_));
             }
             finally
             {
@@ -219,13 +219,13 @@ namespace Java.Util
             }
         }
 
-        public static global::Java.Util.EnumSet<E> Range<E>(E from, E to) where E : global::Java.Lang.Enum<E>
+        public static global::Java.Util.EnumSet<E2> Range<E2>(E2 from, E2 to) where E2 : global::Java.Lang.Enum<E2>
         {
             try
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] {ToJvalue(from), ToJvalue(to)};
-                return new global::Java.Util.EnumSet<E>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId10, args_));
+                return new global::Java.Util.EnumSet<E2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId10, args_));
             }
             finally
             {

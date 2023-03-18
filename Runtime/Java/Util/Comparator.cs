@@ -202,13 +202,13 @@ namespace Java.Util
                 }
             }
 
-            public static global::Java.Util.Comparator<T> ReverseOrder<T>() where T : class, global::Java.ExternalType.Java.Lang.Comparable<T>
+            public static global::Java.Util.Comparator<T2> ReverseOrder<T2>() where T2 : class, global::Java.ExternalType.Java.Lang.Comparable<T2>
             {
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
                     jvalue[] args_ = new jvalue[] {};
-                    return new global::Java.Util.Comparator<T>.AnonymousImplementation(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId9, args_));
+                    return new global::Java.Util.Comparator<T2>.AnonymousImplementation(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId9, args_));
                 }
                 finally
                 {
@@ -216,13 +216,13 @@ namespace Java.Util
                 }
             }
 
-            public static global::Java.Util.Comparator<T> NaturalOrder<T>() where T : class, global::Java.ExternalType.Java.Lang.Comparable<T>
+            public static global::Java.Util.Comparator<T2> NaturalOrder<T2>() where T2 : class, global::Java.ExternalType.Java.Lang.Comparable<T2>
             {
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
                     jvalue[] args_ = new jvalue[] {};
-                    return new global::Java.Util.Comparator<T>.AnonymousImplementation(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId10, args_));
+                    return new global::Java.Util.Comparator<T2>.AnonymousImplementation(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId10, args_));
                 }
                 finally
                 {
@@ -230,13 +230,13 @@ namespace Java.Util
                 }
             }
 
-            public static global::Java.Util.Comparator<T> NullsFirst<T>(global::Java.Util.Comparator<T> comparator) where T : class
+            public static global::Java.Util.Comparator<T2> NullsFirst<T2>(global::Java.Util.Comparator<T2> comparator) where T2 : class
             {
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
                     jvalue[] args_ = new jvalue[] {new jvalue { l = comparator.GetRawObject() }};
-                    return new global::Java.Util.Comparator<T>.AnonymousImplementation(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId11, args_));
+                    return new global::Java.Util.Comparator<T2>.AnonymousImplementation(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId11, args_));
                 }
                 finally
                 {
@@ -244,13 +244,13 @@ namespace Java.Util
                 }
             }
 
-            public static global::Java.Util.Comparator<T> NullsLast<T>(global::Java.Util.Comparator<T> comparator) where T : class
+            public static global::Java.Util.Comparator<T2> NullsLast<T2>(global::Java.Util.Comparator<T2> comparator) where T2 : class
             {
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
                     jvalue[] args_ = new jvalue[] {new jvalue { l = comparator.GetRawObject() }};
-                    return new global::Java.Util.Comparator<T>.AnonymousImplementation(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId12, args_));
+                    return new global::Java.Util.Comparator<T2>.AnonymousImplementation(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId12, args_));
                 }
                 finally
                 {
@@ -258,13 +258,13 @@ namespace Java.Util
                 }
             }
 
-            public static global::Java.Util.Comparator<T> Comparing<T, U>(global::Java.ExternalType.Java.Util.Function.Function<T, U> keyExtractor, global::Java.Util.Comparator<U> keyComparator) where T : class where U : class
+            public static global::Java.Util.Comparator<T2> Comparing<T2, U>(global::Java.ExternalType.Java.Util.Function.Function<T2, U> keyExtractor, global::Java.Util.Comparator<U> keyComparator) where T2 : class where U : class
             {
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
                     jvalue[] args_ = new jvalue[] {new jvalue { l = keyExtractor.GetRawObject() }, new jvalue { l = keyComparator.GetRawObject() }};
-                    return new global::Java.Util.Comparator<T>.AnonymousImplementation(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId13, args_));
+                    return new global::Java.Util.Comparator<T2>.AnonymousImplementation(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId13, args_));
                 }
                 finally
                 {
@@ -272,13 +272,13 @@ namespace Java.Util
                 }
             }
 
-            public static global::Java.Util.Comparator<T> Comparing<T, U>(global::Java.ExternalType.Java.Util.Function.Function<T, U> keyExtractor) where T : class where U : class, global::Java.ExternalType.Java.Lang.Comparable<U>
+            public static global::Java.Util.Comparator<T2> Comparing<T2, U>(global::Java.ExternalType.Java.Util.Function.Function<T2, U> keyExtractor) where T2 : class where U : class, global::Java.ExternalType.Java.Lang.Comparable<U>
             {
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
                     jvalue[] args_ = new jvalue[] {new jvalue { l = keyExtractor.GetRawObject() }};
-                    return new global::Java.Util.Comparator<T>.AnonymousImplementation(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId14, args_));
+                    return new global::Java.Util.Comparator<T2>.AnonymousImplementation(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId14, args_));
                 }
                 finally
                 {
@@ -286,13 +286,13 @@ namespace Java.Util
                 }
             }
 
-            public static global::Java.Util.Comparator<T> ComparingInt<T>(global::Java.ExternalType.Java.Util.Function.ToIntFunction<T> keyExtractor) where T : class
+            public static global::Java.Util.Comparator<T2> ComparingInt<T2>(global::Java.ExternalType.Java.Util.Function.ToIntFunction<T2> keyExtractor) where T2 : class
             {
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
                     jvalue[] args_ = new jvalue[] {new jvalue { l = keyExtractor.GetRawObject() }};
-                    return new global::Java.Util.Comparator<T>.AnonymousImplementation(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId15, args_));
+                    return new global::Java.Util.Comparator<T2>.AnonymousImplementation(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId15, args_));
                 }
                 finally
                 {
@@ -300,13 +300,13 @@ namespace Java.Util
                 }
             }
 
-            public static global::Java.Util.Comparator<T> ComparingLong<T>(global::Java.ExternalType.Java.Util.Function.ToLongFunction<T> keyExtractor) where T : class
+            public static global::Java.Util.Comparator<T2> ComparingLong<T2>(global::Java.ExternalType.Java.Util.Function.ToLongFunction<T2> keyExtractor) where T2 : class
             {
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
                     jvalue[] args_ = new jvalue[] {new jvalue { l = keyExtractor.GetRawObject() }};
-                    return new global::Java.Util.Comparator<T>.AnonymousImplementation(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId16, args_));
+                    return new global::Java.Util.Comparator<T2>.AnonymousImplementation(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId16, args_));
                 }
                 finally
                 {
@@ -314,13 +314,13 @@ namespace Java.Util
                 }
             }
 
-            public static global::Java.Util.Comparator<T> ComparingDouble<T>(global::Java.ExternalType.Java.Util.Function.ToDoubleFunction<T> keyExtractor) where T : class
+            public static global::Java.Util.Comparator<T2> ComparingDouble<T2>(global::Java.ExternalType.Java.Util.Function.ToDoubleFunction<T2> keyExtractor) where T2 : class
             {
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
                     jvalue[] args_ = new jvalue[] {new jvalue { l = keyExtractor.GetRawObject() }};
-                    return new global::Java.Util.Comparator<T>.AnonymousImplementation(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId17, args_));
+                    return new global::Java.Util.Comparator<T2>.AnonymousImplementation(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId17, args_));
                 }
                 finally
                 {

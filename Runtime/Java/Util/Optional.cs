@@ -66,13 +66,13 @@ namespace Java.Util
             }
         }
 
-        public static global::Java.Util.Optional<T> Empty<T>() where T : class
+        public static global::Java.Util.Optional<T2> Empty<T2>() where T2 : class
         {
             try
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] {};
-                return new global::Java.Util.Optional<T>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId0, args_));
+                return new global::Java.Util.Optional<T2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId0, args_));
             }
             finally
             {
@@ -80,13 +80,13 @@ namespace Java.Util
             }
         }
 
-        public static global::Java.Util.Optional<T> Of<T>(T value) where T : class
+        public static global::Java.Util.Optional<T2> Of<T2>(T2 value) where T2 : class
         {
             try
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] {ToJvalue(value)};
-                return new global::Java.Util.Optional<T>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId1, args_));
+                return new global::Java.Util.Optional<T2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId1, args_));
             }
             finally
             {
@@ -94,13 +94,13 @@ namespace Java.Util
             }
         }
 
-        public static global::Java.Util.Optional<T> OfNullable<T>(T value) where T : class
+        public static global::Java.Util.Optional<T2> OfNullable<T2>(T2 value) where T2 : class
         {
             try
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] {ToJvalue(value)};
-                return new global::Java.Util.Optional<T>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId2, args_));
+                return new global::Java.Util.Optional<T2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId2, args_));
             }
             finally
             {

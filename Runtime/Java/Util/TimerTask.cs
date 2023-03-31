@@ -49,7 +49,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId0, args_);
             }
             finally
@@ -63,7 +63,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId1, args_);
             }
             finally
@@ -77,7 +77,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallLongMethod(_rawObject, _cachedMethodId2, args_);
             }
             finally

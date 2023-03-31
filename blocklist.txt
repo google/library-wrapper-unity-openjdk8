@@ -1,0 +1,15 @@
+// All classes except java.lang.Object need base class generic translation
+// support before they can be wrapped.
+java.lang.Comparable *
+java.lang.EnumConstantNotPresentException *
+// In Library Wrapper, C# JavaObject maps directly to java.lang.Object.
+java.lang.Object *
+java.lang.ProcessBuilder *
+java.lang.ProcessHandle *
+java.lang.Runtime *
+java.lang.StringBuilder *
+java.util.Collections *
+java.util.PrimitiveIterator *
+java.util.Scanner *
+java.util.Spliterator *
+java.util.StringTokenizer *

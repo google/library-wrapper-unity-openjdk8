@@ -33,7 +33,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId0, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -70,7 +70,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 if (typeof(E) == typeof(global::System.String))
                 {
                     return (E) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId0, args_);
@@ -92,7 +92,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 if (typeof(E) == typeof(global::System.String))
                 {
                     return (E) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId1, args_);
@@ -114,7 +114,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {ToJvalue(e)};
+                jvalue[] args_ = new jvalue[] { ToJvalue(e) };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId2, args_);
             }
             finally
@@ -128,7 +128,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 if (typeof(E) == typeof(global::System.String))
                 {
                     return (E) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId3, args_);
@@ -150,7 +150,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 if (typeof(E) == typeof(global::System.String))
                 {
                     return (E) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId4, args_);

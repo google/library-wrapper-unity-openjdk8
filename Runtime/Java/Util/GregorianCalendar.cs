@@ -8,13 +8,25 @@ namespace Java.Util
     {
         public static int BC
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId0);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId0, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId0);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId0, value);
+            }
         }
         public static int AD
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId1);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId1, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId1);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId1, value);
+            }
         }
 
         private static readonly IntPtr _classObject;
@@ -60,7 +72,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId0, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -75,7 +87,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = zone.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = zone.GetRawObject() } };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId1, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -90,7 +102,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = aLocale.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = aLocale.GetRawObject() } };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId2, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -105,7 +117,12 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = zone.GetRawObject() }, new jvalue { l = aLocale.GetRawObject() }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { l = zone.GetRawObject() },
+                            new jvalue { l = aLocale.GetRawObject() }
+                        };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId3, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -120,7 +137,13 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = year }, new jvalue { i = month }, new jvalue { i = dayOfMonth }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = year },
+                            new jvalue { i = month },
+                            new jvalue { i = dayOfMonth }
+                        };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId4, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -135,7 +158,15 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = year }, new jvalue { i = month }, new jvalue { i = dayOfMonth }, new jvalue { i = hourOfDay }, new jvalue { i = minute }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = year },
+                            new jvalue { i = month },
+                            new jvalue { i = dayOfMonth },
+                            new jvalue { i = hourOfDay },
+                            new jvalue { i = minute }
+                        };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId5, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -150,7 +181,16 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = year }, new jvalue { i = month }, new jvalue { i = dayOfMonth }, new jvalue { i = hourOfDay }, new jvalue { i = minute }, new jvalue { i = second }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = year },
+                            new jvalue { i = month },
+                            new jvalue { i = dayOfMonth },
+                            new jvalue { i = hourOfDay },
+                            new jvalue { i = minute },
+                            new jvalue { i = second }
+                        };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId6, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -187,7 +227,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = date.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = date.GetRawObject() } };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId0, args_);
             }
             finally
@@ -201,7 +241,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return new global::Java.Util.Date(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId1, args_));
             }
             finally
@@ -215,7 +255,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = year }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = year } };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId2, args_);
             }
             finally
@@ -229,7 +269,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return new global::Java.ExternalType.Java.Time.ZonedDateTime(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId3, args_));
             }
             finally
@@ -243,7 +283,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = zdt.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = zdt.GetRawObject() } };
                 return new global::Java.Util.GregorianCalendar(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId4, args_));
             }
             finally

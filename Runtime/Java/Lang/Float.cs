@@ -8,57 +8,120 @@ namespace Java.Lang
     {
         public static float POSITIVE_INFINITY
         {
-            get => AndroidJNI.GetStaticFloatField(_classObject, _cachedFieldId0);
-            set => AndroidJNI.SetStaticFloatField(_classObject, _cachedFieldId0, value);
+            get
+            {
+                return AndroidJNI.GetStaticFloatField(_classObject, _cachedFieldId0);
+            }
+            set
+            {
+                AndroidJNI.SetStaticFloatField(_classObject, _cachedFieldId0, value);
+            }
         }
         public static float NEGATIVE_INFINITY
         {
-            get => AndroidJNI.GetStaticFloatField(_classObject, _cachedFieldId1);
-            set => AndroidJNI.SetStaticFloatField(_classObject, _cachedFieldId1, value);
+            get
+            {
+                return AndroidJNI.GetStaticFloatField(_classObject, _cachedFieldId1);
+            }
+            set
+            {
+                AndroidJNI.SetStaticFloatField(_classObject, _cachedFieldId1, value);
+            }
         }
         public static float NaN
         {
-            get => AndroidJNI.GetStaticFloatField(_classObject, _cachedFieldId2);
-            set => AndroidJNI.SetStaticFloatField(_classObject, _cachedFieldId2, value);
+            get
+            {
+                return AndroidJNI.GetStaticFloatField(_classObject, _cachedFieldId2);
+            }
+            set
+            {
+                AndroidJNI.SetStaticFloatField(_classObject, _cachedFieldId2, value);
+            }
         }
         public static float MAX_VALUE
         {
-            get => AndroidJNI.GetStaticFloatField(_classObject, _cachedFieldId3);
-            set => AndroidJNI.SetStaticFloatField(_classObject, _cachedFieldId3, value);
+            get
+            {
+                return AndroidJNI.GetStaticFloatField(_classObject, _cachedFieldId3);
+            }
+            set
+            {
+                AndroidJNI.SetStaticFloatField(_classObject, _cachedFieldId3, value);
+            }
         }
         public static float MIN_NORMAL
         {
-            get => AndroidJNI.GetStaticFloatField(_classObject, _cachedFieldId4);
-            set => AndroidJNI.SetStaticFloatField(_classObject, _cachedFieldId4, value);
+            get
+            {
+                return AndroidJNI.GetStaticFloatField(_classObject, _cachedFieldId4);
+            }
+            set
+            {
+                AndroidJNI.SetStaticFloatField(_classObject, _cachedFieldId4, value);
+            }
         }
         public static float MIN_VALUE
         {
-            get => AndroidJNI.GetStaticFloatField(_classObject, _cachedFieldId5);
-            set => AndroidJNI.SetStaticFloatField(_classObject, _cachedFieldId5, value);
+            get
+            {
+                return AndroidJNI.GetStaticFloatField(_classObject, _cachedFieldId5);
+            }
+            set
+            {
+                AndroidJNI.SetStaticFloatField(_classObject, _cachedFieldId5, value);
+            }
         }
         public static int MAX_EXPONENT
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId6);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId6, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId6);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId6, value);
+            }
         }
         public static int MIN_EXPONENT
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId7);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId7, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId7);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId7, value);
+            }
         }
         public static int SIZE
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId8);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId8, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId8);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId8, value);
+            }
         }
         public static int BYTES
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId9);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId9, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId9);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId9, value);
+            }
         }
         public static global::Java.Lang.Class<global::Java.Lang.Float> TYPE
         {
-            get => new global::Java.Lang.Class<global::Java.Lang.Float>(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId10));
+            get
+            {
+                return new global::Java.Lang.Class<global::Java.Lang.Float>(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId10));
+            }
             set
             {
                 IntPtr valueRef = value.GetRawObject();
@@ -152,7 +215,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { f = value }};
+                jvalue[] args_ = new jvalue[] { new jvalue { f = value } };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId0, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -167,7 +230,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = value }};
+                jvalue[] args_ = new jvalue[] { new jvalue { d = value } };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId1, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -182,7 +245,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = AndroidJNI.NewString(s) }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = global::Google.LibraryWrapper.Java.Utils.NewString(s) } };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId2, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -219,7 +282,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { f = f }};
+                jvalue[] args_ = new jvalue[] { new jvalue { f = f } };
                 return AndroidJNI.CallStaticStringMethod(_classObject, _cachedMethodId0, args_);
             }
             finally
@@ -233,7 +296,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { f = f }};
+                jvalue[] args_ = new jvalue[] { new jvalue { f = f } };
                 return AndroidJNI.CallStaticStringMethod(_classObject, _cachedMethodId1, args_);
             }
             finally
@@ -247,7 +310,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = AndroidJNI.NewString(s) }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = global::Google.LibraryWrapper.Java.Utils.NewString(s) } };
                 return new global::Java.Lang.Float(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId2, args_));
             }
             finally
@@ -261,7 +324,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { f = f }};
+                jvalue[] args_ = new jvalue[] { new jvalue { f = f } };
                 return new global::Java.Lang.Float(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId3, args_));
             }
             finally
@@ -275,7 +338,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = AndroidJNI.NewString(s) }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = global::Google.LibraryWrapper.Java.Utils.NewString(s) } };
                 return AndroidJNI.CallStaticFloatMethod(_classObject, _cachedMethodId4, args_);
             }
             finally
@@ -289,7 +352,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { f = v }};
+                jvalue[] args_ = new jvalue[] { new jvalue { f = v } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId5, args_);
             }
             finally
@@ -303,7 +366,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { f = v }};
+                jvalue[] args_ = new jvalue[] { new jvalue { f = v } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId6, args_);
             }
             finally
@@ -317,7 +380,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { f = f }};
+                jvalue[] args_ = new jvalue[] { new jvalue { f = f } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId7, args_);
             }
             finally
@@ -331,7 +394,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId8, args_);
             }
             finally
@@ -345,7 +408,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId9, args_);
             }
             finally
@@ -359,7 +422,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId10, args_);
             }
             finally
@@ -373,7 +436,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { f = value }};
+                jvalue[] args_ = new jvalue[] { new jvalue { f = value } };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId11, args_);
             }
             finally
@@ -387,7 +450,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = obj.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = obj.GetRawObject() } };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId12, args_);
             }
             finally
@@ -401,7 +464,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { f = value }};
+                jvalue[] args_ = new jvalue[] { new jvalue { f = value } };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId13, args_);
             }
             finally
@@ -415,7 +478,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { f = value }};
+                jvalue[] args_ = new jvalue[] { new jvalue { f = value } };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId14, args_);
             }
             finally
@@ -429,7 +492,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = bits }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = bits } };
                 return AndroidJNI.CallStaticFloatMethod(_classObject, _cachedMethodId15, args_);
             }
             finally
@@ -443,7 +506,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = anotherFloat.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = anotherFloat.GetRawObject() } };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId16, args_);
             }
             finally
@@ -457,7 +520,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { f = f1 }, new jvalue { f = f2 }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { f = f1 },
+                            new jvalue { f = f2 }
+                        };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId17, args_);
             }
             finally
@@ -471,7 +539,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { f = a }, new jvalue { f = b }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { f = a },
+                            new jvalue { f = b }
+                        };
                 return AndroidJNI.CallStaticFloatMethod(_classObject, _cachedMethodId18, args_);
             }
             finally
@@ -485,7 +558,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { f = a }, new jvalue { f = b }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { f = a },
+                            new jvalue { f = b }
+                        };
                 return AndroidJNI.CallStaticFloatMethod(_classObject, _cachedMethodId19, args_);
             }
             finally
@@ -499,7 +577,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { f = a }, new jvalue { f = b }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { f = a },
+                            new jvalue { f = b }
+                        };
                 return AndroidJNI.CallStaticFloatMethod(_classObject, _cachedMethodId20, args_);
             }
             finally

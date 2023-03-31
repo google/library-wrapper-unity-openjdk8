@@ -8,7 +8,10 @@ namespace Java.Lang
     {
         public static global::Java.Lang.Class<global::Java.Lang.Void> TYPE
         {
-            get => new global::Java.Lang.Class<global::Java.Lang.Void>(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId0));
+            get
+            {
+                return new global::Java.Lang.Class<global::Java.Lang.Void>(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId0));
+            }
             set
             {
                 IntPtr valueRef = value.GetRawObject();
@@ -36,7 +39,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId0, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }

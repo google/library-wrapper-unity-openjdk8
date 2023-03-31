@@ -105,7 +105,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId0, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -142,7 +142,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId0, args_);
             }
             finally
@@ -156,7 +156,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = AndroidJNI.NewString(className) }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = global::Google.LibraryWrapper.Java.Utils.NewString(className) } };
                 return new global::Java.Lang.Class<global::Google.LibraryWrapper.Java.JavaObject>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId1, args_));
             }
             finally
@@ -170,7 +170,13 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = AndroidJNI.NewString(name) }, new jvalue { z = initialize }, new jvalue { l = loader.GetRawObject() }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { l = global::Google.LibraryWrapper.Java.Utils.NewString(name) },
+                            new jvalue { z = initialize },
+                            new jvalue { l = loader.GetRawObject() }
+                        };
                 return new global::Java.Lang.Class<global::Google.LibraryWrapper.Java.JavaObject>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId2, args_));
             }
             finally
@@ -184,7 +190,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 if (typeof(T) == typeof(global::System.String))
                 {
                     return (T) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId3, args_);
@@ -206,7 +212,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = obj.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = obj.GetRawObject() } };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId4, args_);
             }
             finally
@@ -220,7 +226,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = cls.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = cls.GetRawObject() } };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId5, args_);
             }
             finally
@@ -234,7 +240,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId6, args_);
             }
             finally
@@ -248,7 +254,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId7, args_);
             }
             finally
@@ -262,7 +268,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId8, args_);
             }
             finally
@@ -276,7 +282,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId9, args_);
             }
             finally
@@ -290,7 +296,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId10, args_);
             }
             finally
@@ -304,7 +310,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId11, args_);
             }
             finally
@@ -318,7 +324,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return new global::Java.Lang.ClassLoader(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId12, args_));
             }
             finally
@@ -332,7 +338,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return new global::Java.Lang.Class<T>(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId13, args_));
             }
             finally
@@ -346,8 +352,8 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
-                return new global::Java.ExternalType.Java.Lang.Reflect.Type.AnonymousImplementation(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId14, args_));
+                jvalue[] args_ = new jvalue[] {  };
+                return new global::Java.ExternalType.Java.Lang.Reflect.TypeAnonymousImplementation(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId14, args_));
             }
             finally
             {
@@ -360,7 +366,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return new global::Java.Lang.Package(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId15, args_));
             }
             finally
@@ -374,7 +380,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return new global::Java.Lang.Class<global::Google.LibraryWrapper.Java.JavaObject>(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId16, args_));
             }
             finally
@@ -388,7 +394,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId17, args_);
             }
             finally
@@ -402,7 +408,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return new global::Java.ExternalType.Java.Lang.Reflect.Method(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId18, args_));
             }
             finally
@@ -416,7 +422,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return new global::Java.ExternalType.Java.Lang.Reflect.Constructor<global::Google.LibraryWrapper.Java.JavaObject>(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId19, args_));
             }
             finally
@@ -430,7 +436,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return new global::Java.Lang.Class<global::Google.LibraryWrapper.Java.JavaObject>(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId20, args_));
             }
             finally
@@ -444,7 +450,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return new global::Java.Lang.Class<global::Google.LibraryWrapper.Java.JavaObject>(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId21, args_));
             }
             finally
@@ -458,7 +464,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId22, args_);
             }
             finally
@@ -472,7 +478,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId23, args_);
             }
             finally
@@ -486,7 +492,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId24, args_);
             }
             finally
@@ -500,7 +506,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId25, args_);
             }
             finally
@@ -514,7 +520,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId26, args_);
             }
             finally
@@ -528,7 +534,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId27, args_);
             }
             finally
@@ -542,7 +548,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = AndroidJNI.NewString(name) }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = global::Google.LibraryWrapper.Java.Utils.NewString(name) } };
                 return new global::Java.ExternalType.Java.Lang.Reflect.Field(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId28, args_));
             }
             finally
@@ -556,7 +562,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = AndroidJNI.NewString(name) }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = global::Google.LibraryWrapper.Java.Utils.NewString(name) } };
                 return new global::Java.ExternalType.Java.Lang.Reflect.Field(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId29, args_));
             }
             finally
@@ -570,7 +576,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = AndroidJNI.NewString(name) }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = global::Google.LibraryWrapper.Java.Utils.NewString(name) } };
                 return new global::Java.ExternalType.Java.Io.InputStream(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId30, args_));
             }
             finally
@@ -584,7 +590,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = AndroidJNI.NewString(name) }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = global::Google.LibraryWrapper.Java.Utils.NewString(name) } };
                 return new global::Java.ExternalType.Java.Net.URL(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId31, args_));
             }
             finally
@@ -598,7 +604,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return new global::Java.ExternalType.Java.Security.ProtectionDomain(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId32, args_));
             }
             finally
@@ -612,7 +618,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId33, args_);
             }
             finally
@@ -626,7 +632,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId34, args_);
             }
             finally
@@ -640,7 +646,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = obj.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = obj.GetRawObject() } };
                 if (typeof(T) == typeof(global::System.String))
                 {
                     return (T) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId35, args_);
@@ -662,7 +668,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = clazz.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = clazz.GetRawObject() } };
                 return new global::Java.Lang.Class<U>(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId36, args_));
             }
             finally
@@ -676,7 +682,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = annotationClass.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = annotationClass.GetRawObject() } };
                 if (typeof(A) == typeof(global::System.String))
                 {
                     return (A) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId37, args_);
@@ -698,7 +704,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = annotationClass.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = annotationClass.GetRawObject() } };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId38, args_);
             }
             finally
@@ -712,7 +718,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = annotationClass.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = annotationClass.GetRawObject() } };
                 if (typeof(A) == typeof(global::System.String))
                 {
                     return (A) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId39, args_);
@@ -734,7 +740,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return new global::Java.ExternalType.Java.Lang.Reflect.AnnotatedType(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId40, args_));
             }
             finally

@@ -8,18 +8,36 @@ namespace Java.Util
     {
         public static int WALL_TIME
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId0);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId0, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId0);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId0, value);
+            }
         }
         public static int STANDARD_TIME
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId1);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId1, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId1);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId1, value);
+            }
         }
         public static int UTC_TIME
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId2);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId2, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId2);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId2, value);
+            }
         }
 
         private static readonly IntPtr _classObject;
@@ -71,7 +89,12 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = rawOffset }, new jvalue { l = AndroidJNI.NewString(ID) }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = rawOffset },
+                            new jvalue { l = global::Google.LibraryWrapper.Java.Utils.NewString(ID) }
+                        };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId0, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -86,7 +109,20 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = rawOffset }, new jvalue { l = AndroidJNI.NewString(ID) }, new jvalue { i = startMonth }, new jvalue { i = startDay }, new jvalue { i = startDayOfWeek }, new jvalue { i = startTime }, new jvalue { i = endMonth }, new jvalue { i = endDay }, new jvalue { i = endDayOfWeek }, new jvalue { i = endTime }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = rawOffset },
+                            new jvalue { l = global::Google.LibraryWrapper.Java.Utils.NewString(ID) },
+                            new jvalue { i = startMonth },
+                            new jvalue { i = startDay },
+                            new jvalue { i = startDayOfWeek },
+                            new jvalue { i = startTime },
+                            new jvalue { i = endMonth },
+                            new jvalue { i = endDay },
+                            new jvalue { i = endDayOfWeek },
+                            new jvalue { i = endTime }
+                        };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId1, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -101,7 +137,21 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = rawOffset }, new jvalue { l = AndroidJNI.NewString(ID) }, new jvalue { i = startMonth }, new jvalue { i = startDay }, new jvalue { i = startDayOfWeek }, new jvalue { i = startTime }, new jvalue { i = endMonth }, new jvalue { i = endDay }, new jvalue { i = endDayOfWeek }, new jvalue { i = endTime }, new jvalue { i = dstSavings }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = rawOffset },
+                            new jvalue { l = global::Google.LibraryWrapper.Java.Utils.NewString(ID) },
+                            new jvalue { i = startMonth },
+                            new jvalue { i = startDay },
+                            new jvalue { i = startDayOfWeek },
+                            new jvalue { i = startTime },
+                            new jvalue { i = endMonth },
+                            new jvalue { i = endDay },
+                            new jvalue { i = endDayOfWeek },
+                            new jvalue { i = endTime },
+                            new jvalue { i = dstSavings }
+                        };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId2, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -116,7 +166,23 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = rawOffset }, new jvalue { l = AndroidJNI.NewString(ID) }, new jvalue { i = startMonth }, new jvalue { i = startDay }, new jvalue { i = startDayOfWeek }, new jvalue { i = startTime }, new jvalue { i = startTimeMode }, new jvalue { i = endMonth }, new jvalue { i = endDay }, new jvalue { i = endDayOfWeek }, new jvalue { i = endTime }, new jvalue { i = endTimeMode }, new jvalue { i = dstSavings }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = rawOffset },
+                            new jvalue { l = global::Google.LibraryWrapper.Java.Utils.NewString(ID) },
+                            new jvalue { i = startMonth },
+                            new jvalue { i = startDay },
+                            new jvalue { i = startDayOfWeek },
+                            new jvalue { i = startTime },
+                            new jvalue { i = startTimeMode },
+                            new jvalue { i = endMonth },
+                            new jvalue { i = endDay },
+                            new jvalue { i = endDayOfWeek },
+                            new jvalue { i = endTime },
+                            new jvalue { i = endTimeMode },
+                            new jvalue { i = dstSavings }
+                        };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId3, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -153,7 +219,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = year }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = year } };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId0, args_);
             }
             finally
@@ -167,7 +233,14 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = startMonth }, new jvalue { i = startDay }, new jvalue { i = startDayOfWeek }, new jvalue { i = startTime }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = startMonth },
+                            new jvalue { i = startDay },
+                            new jvalue { i = startDayOfWeek },
+                            new jvalue { i = startTime }
+                        };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId1, args_);
             }
             finally
@@ -181,7 +254,13 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = startMonth }, new jvalue { i = startDay }, new jvalue { i = startTime }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = startMonth },
+                            new jvalue { i = startDay },
+                            new jvalue { i = startTime }
+                        };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId2, args_);
             }
             finally
@@ -195,7 +274,15 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = startMonth }, new jvalue { i = startDay }, new jvalue { i = startDayOfWeek }, new jvalue { i = startTime }, new jvalue { z = after }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = startMonth },
+                            new jvalue { i = startDay },
+                            new jvalue { i = startDayOfWeek },
+                            new jvalue { i = startTime },
+                            new jvalue { z = after }
+                        };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId3, args_);
             }
             finally
@@ -209,7 +296,14 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = endMonth }, new jvalue { i = endDay }, new jvalue { i = endDayOfWeek }, new jvalue { i = endTime }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = endMonth },
+                            new jvalue { i = endDay },
+                            new jvalue { i = endDayOfWeek },
+                            new jvalue { i = endTime }
+                        };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId4, args_);
             }
             finally
@@ -223,7 +317,13 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = endMonth }, new jvalue { i = endDay }, new jvalue { i = endTime }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = endMonth },
+                            new jvalue { i = endDay },
+                            new jvalue { i = endTime }
+                        };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId5, args_);
             }
             finally
@@ -237,7 +337,15 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = endMonth }, new jvalue { i = endDay }, new jvalue { i = endDayOfWeek }, new jvalue { i = endTime }, new jvalue { z = after }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = endMonth },
+                            new jvalue { i = endDay },
+                            new jvalue { i = endDayOfWeek },
+                            new jvalue { i = endTime },
+                            new jvalue { z = after }
+                        };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId6, args_);
             }
             finally
@@ -251,7 +359,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = millisSavedDuringDST }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = millisSavedDuringDST } };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId7, args_);
             }
             finally
@@ -265,7 +373,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId8, args_);
             }
             finally
@@ -279,7 +387,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = obj.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = obj.GetRawObject() } };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId9, args_);
             }
             finally

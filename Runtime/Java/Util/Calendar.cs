@@ -51,7 +51,7 @@ namespace Java.Util
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {};
+                    jvalue[] args_ = new jvalue[] {  };
                     IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId0, args_);
                     _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
                 }
@@ -88,7 +88,7 @@ namespace Java.Util
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {new jvalue { j = instant }};
+                    jvalue[] args_ = new jvalue[] { new jvalue { j = instant } };
                     return new global::Java.Util.Calendar.Builder(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId0, args_));
                 }
                 finally
@@ -102,7 +102,7 @@ namespace Java.Util
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {new jvalue { l = instant.GetRawObject() }};
+                    jvalue[] args_ = new jvalue[] { new jvalue { l = instant.GetRawObject() } };
                     return new global::Java.Util.Calendar.Builder(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId1, args_));
                 }
                 finally
@@ -116,7 +116,12 @@ namespace Java.Util
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {new jvalue { i = field }, new jvalue { i = value }};
+                    jvalue[] args_ =
+                            new jvalue[]
+                            {
+                                new jvalue { i = field },
+                                new jvalue { i = value }
+                            };
                     return new global::Java.Util.Calendar.Builder(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId2, args_));
                 }
                 finally
@@ -130,7 +135,13 @@ namespace Java.Util
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {new jvalue { i = year }, new jvalue { i = month }, new jvalue { i = dayOfMonth }};
+                    jvalue[] args_ =
+                            new jvalue[]
+                            {
+                                new jvalue { i = year },
+                                new jvalue { i = month },
+                                new jvalue { i = dayOfMonth }
+                            };
                     return new global::Java.Util.Calendar.Builder(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId3, args_));
                 }
                 finally
@@ -144,7 +155,13 @@ namespace Java.Util
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {new jvalue { i = hourOfDay }, new jvalue { i = minute }, new jvalue { i = second }};
+                    jvalue[] args_ =
+                            new jvalue[]
+                            {
+                                new jvalue { i = hourOfDay },
+                                new jvalue { i = minute },
+                                new jvalue { i = second }
+                            };
                     return new global::Java.Util.Calendar.Builder(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId4, args_));
                 }
                 finally
@@ -158,7 +175,14 @@ namespace Java.Util
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {new jvalue { i = hourOfDay }, new jvalue { i = minute }, new jvalue { i = second }, new jvalue { i = millis }};
+                    jvalue[] args_ =
+                            new jvalue[]
+                            {
+                                new jvalue { i = hourOfDay },
+                                new jvalue { i = minute },
+                                new jvalue { i = second },
+                                new jvalue { i = millis }
+                            };
                     return new global::Java.Util.Calendar.Builder(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId5, args_));
                 }
                 finally
@@ -172,7 +196,13 @@ namespace Java.Util
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {new jvalue { i = weekYear }, new jvalue { i = weekOfYear }, new jvalue { i = dayOfWeek }};
+                    jvalue[] args_ =
+                            new jvalue[]
+                            {
+                                new jvalue { i = weekYear },
+                                new jvalue { i = weekOfYear },
+                                new jvalue { i = dayOfWeek }
+                            };
                     return new global::Java.Util.Calendar.Builder(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId6, args_));
                 }
                 finally
@@ -186,7 +216,7 @@ namespace Java.Util
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {new jvalue { l = zone.GetRawObject() }};
+                    jvalue[] args_ = new jvalue[] { new jvalue { l = zone.GetRawObject() } };
                     return new global::Java.Util.Calendar.Builder(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId7, args_));
                 }
                 finally
@@ -200,7 +230,7 @@ namespace Java.Util
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {new jvalue { z = lenient }};
+                    jvalue[] args_ = new jvalue[] { new jvalue { z = lenient } };
                     return new global::Java.Util.Calendar.Builder(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId8, args_));
                 }
                 finally
@@ -214,7 +244,7 @@ namespace Java.Util
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {new jvalue { l = AndroidJNI.NewString(type) }};
+                    jvalue[] args_ = new jvalue[] { new jvalue { l = global::Google.LibraryWrapper.Java.Utils.NewString(type) } };
                     return new global::Java.Util.Calendar.Builder(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId9, args_));
                 }
                 finally
@@ -228,7 +258,7 @@ namespace Java.Util
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {new jvalue { l = locale.GetRawObject() }};
+                    jvalue[] args_ = new jvalue[] { new jvalue { l = locale.GetRawObject() } };
                     return new global::Java.Util.Calendar.Builder(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId10, args_));
                 }
                 finally
@@ -242,7 +272,12 @@ namespace Java.Util
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {new jvalue { i = firstDayOfWeek }, new jvalue { i = minimalDaysInFirstWeek }};
+                    jvalue[] args_ =
+                            new jvalue[]
+                            {
+                                new jvalue { i = firstDayOfWeek },
+                                new jvalue { i = minimalDaysInFirstWeek }
+                            };
                     return new global::Java.Util.Calendar.Builder(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId11, args_));
                 }
                 finally
@@ -256,7 +291,7 @@ namespace Java.Util
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {};
+                    jvalue[] args_ = new jvalue[] {  };
                     return new global::Java.Util.Calendar(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId12, args_));
                 }
                 finally
@@ -283,253 +318,553 @@ namespace Java.Util
 
         public static int ERA
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId0);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId0, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId0);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId0, value);
+            }
         }
         public static int YEAR
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId1);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId1, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId1);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId1, value);
+            }
         }
         public static int MONTH
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId2);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId2, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId2);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId2, value);
+            }
         }
         public static int WEEK_OF_YEAR
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId3);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId3, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId3);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId3, value);
+            }
         }
         public static int WEEK_OF_MONTH
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId4);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId4, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId4);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId4, value);
+            }
         }
         public static int DATE
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId5);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId5, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId5);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId5, value);
+            }
         }
         public static int DAY_OF_MONTH
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId6);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId6, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId6);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId6, value);
+            }
         }
         public static int DAY_OF_YEAR
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId7);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId7, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId7);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId7, value);
+            }
         }
         public static int DAY_OF_WEEK
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId8);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId8, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId8);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId8, value);
+            }
         }
         public static int DAY_OF_WEEK_IN_MONTH
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId9);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId9, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId9);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId9, value);
+            }
         }
         public static int AM_PM
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId10);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId10, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId10);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId10, value);
+            }
         }
         public static int HOUR
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId11);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId11, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId11);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId11, value);
+            }
         }
         public static int HOUR_OF_DAY
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId12);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId12, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId12);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId12, value);
+            }
         }
         public static int MINUTE
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId13);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId13, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId13);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId13, value);
+            }
         }
         public static int SECOND
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId14);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId14, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId14);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId14, value);
+            }
         }
         public static int MILLISECOND
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId15);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId15, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId15);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId15, value);
+            }
         }
         public static int ZONE_OFFSET
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId16);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId16, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId16);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId16, value);
+            }
         }
         public static int DST_OFFSET
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId17);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId17, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId17);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId17, value);
+            }
         }
         public static int FIELD_COUNT
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId18);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId18, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId18);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId18, value);
+            }
         }
         public static int SUNDAY
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId19);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId19, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId19);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId19, value);
+            }
         }
         public static int MONDAY
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId20);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId20, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId20);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId20, value);
+            }
         }
         public static int TUESDAY
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId21);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId21, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId21);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId21, value);
+            }
         }
         public static int WEDNESDAY
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId22);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId22, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId22);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId22, value);
+            }
         }
         public static int THURSDAY
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId23);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId23, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId23);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId23, value);
+            }
         }
         public static int FRIDAY
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId24);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId24, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId24);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId24, value);
+            }
         }
         public static int SATURDAY
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId25);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId25, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId25);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId25, value);
+            }
         }
         public static int JANUARY
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId26);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId26, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId26);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId26, value);
+            }
         }
         public static int FEBRUARY
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId27);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId27, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId27);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId27, value);
+            }
         }
         public static int MARCH
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId28);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId28, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId28);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId28, value);
+            }
         }
         public static int APRIL
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId29);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId29, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId29);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId29, value);
+            }
         }
         public static int MAY
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId30);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId30, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId30);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId30, value);
+            }
         }
         public static int JUNE
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId31);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId31, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId31);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId31, value);
+            }
         }
         public static int JULY
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId32);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId32, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId32);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId32, value);
+            }
         }
         public static int AUGUST
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId33);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId33, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId33);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId33, value);
+            }
         }
         public static int SEPTEMBER
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId34);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId34, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId34);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId34, value);
+            }
         }
         public static int OCTOBER
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId35);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId35, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId35);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId35, value);
+            }
         }
         public static int NOVEMBER
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId36);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId36, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId36);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId36, value);
+            }
         }
         public static int DECEMBER
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId37);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId37, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId37);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId37, value);
+            }
         }
         public static int UNDECIMBER
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId38);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId38, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId38);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId38, value);
+            }
         }
         public static int AM
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId39);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId39, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId39);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId39, value);
+            }
         }
         public static int PM
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId40);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId40, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId40);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId40, value);
+            }
         }
         public static int ALL_STYLES
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId41);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId41, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId41);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId41, value);
+            }
         }
         public static int SHORT
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId42);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId42, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId42);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId42, value);
+            }
         }
         public static int LONG
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId43);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId43, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId43);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId43, value);
+            }
         }
         public static int NARROW_FORMAT
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId44);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId44, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId44);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId44, value);
+            }
         }
         public static int NARROW_STANDALONE
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId45);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId45, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId45);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId45, value);
+            }
         }
         public static int SHORT_FORMAT
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId46);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId46, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId46);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId46, value);
+            }
         }
         public static int LONG_FORMAT
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId47);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId47, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId47);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId47, value);
+            }
         }
         public static int SHORT_STANDALONE
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId48);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId48, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId48);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId48, value);
+            }
         }
         public static int LONG_STANDALONE
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId49);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId49, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId49);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId49, value);
+            }
         }
 
         private static readonly IntPtr _classObject;
@@ -745,7 +1080,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId0, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -782,7 +1117,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return new global::Java.Util.Calendar(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId0, args_));
             }
             finally
@@ -796,7 +1131,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = zone.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = zone.GetRawObject() } };
                 return new global::Java.Util.Calendar(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId1, args_));
             }
             finally
@@ -810,7 +1145,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = aLocale.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = aLocale.GetRawObject() } };
                 return new global::Java.Util.Calendar(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId2, args_));
             }
             finally
@@ -824,7 +1159,12 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = zone.GetRawObject() }, new jvalue { l = aLocale.GetRawObject() }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { l = zone.GetRawObject() },
+                            new jvalue { l = aLocale.GetRawObject() }
+                        };
                 return new global::Java.Util.Calendar(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId3, args_));
             }
             finally
@@ -838,7 +1178,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return new global::Java.Util.Date(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId4, args_));
             }
             finally
@@ -852,7 +1192,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = date.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = date.GetRawObject() } };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId5, args_);
             }
             finally
@@ -866,7 +1206,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallLongMethod(_rawObject, _cachedMethodId6, args_);
             }
             finally
@@ -880,7 +1220,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { j = millis }};
+                jvalue[] args_ = new jvalue[] { new jvalue { j = millis } };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId7, args_);
             }
             finally
@@ -894,7 +1234,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = field }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = field } };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId8, args_);
             }
             finally
@@ -908,7 +1248,12 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = field }, new jvalue { i = value }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = field },
+                            new jvalue { i = value }
+                        };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId9, args_);
             }
             finally
@@ -922,7 +1267,13 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = year }, new jvalue { i = month }, new jvalue { i = date }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = year },
+                            new jvalue { i = month },
+                            new jvalue { i = date }
+                        };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId10, args_);
             }
             finally
@@ -936,7 +1287,15 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = year }, new jvalue { i = month }, new jvalue { i = date }, new jvalue { i = hourOfDay }, new jvalue { i = minute }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = year },
+                            new jvalue { i = month },
+                            new jvalue { i = date },
+                            new jvalue { i = hourOfDay },
+                            new jvalue { i = minute }
+                        };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId11, args_);
             }
             finally
@@ -950,7 +1309,16 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = year }, new jvalue { i = month }, new jvalue { i = date }, new jvalue { i = hourOfDay }, new jvalue { i = minute }, new jvalue { i = second }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = year },
+                            new jvalue { i = month },
+                            new jvalue { i = date },
+                            new jvalue { i = hourOfDay },
+                            new jvalue { i = minute },
+                            new jvalue { i = second }
+                        };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId12, args_);
             }
             finally
@@ -964,7 +1332,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId13, args_);
             }
             finally
@@ -978,7 +1346,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = field }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = field } };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId14, args_);
             }
             finally
@@ -992,7 +1360,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = field }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = field } };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId15, args_);
             }
             finally
@@ -1006,7 +1374,13 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = field }, new jvalue { i = style }, new jvalue { l = locale.GetRawObject() }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = field },
+                            new jvalue { i = style },
+                            new jvalue { l = locale.GetRawObject() }
+                        };
                 return AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId16, args_);
             }
             finally
@@ -1020,8 +1394,14 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = field }, new jvalue { i = style }, new jvalue { l = locale.GetRawObject() }};
-                return new global::Java.Util.Map<global::System.String, global::Java.Lang.Integer>.AnonymousImplementation(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId17, args_));
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = field },
+                            new jvalue { i = style },
+                            new jvalue { l = locale.GetRawObject() }
+                        };
+                return new global::Java.Util.MapAnonymousImplementation<global::System.String, global::Java.Lang.Integer>(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId17, args_));
             }
             finally
             {
@@ -1034,8 +1414,8 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
-                return new global::Java.Util.Set<global::System.String>.AnonymousImplementation(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId18, args_));
+                jvalue[] args_ = new jvalue[] {  };
+                return new global::Java.Util.SetAnonymousImplementation<global::System.String>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId18, args_));
             }
             finally
             {
@@ -1048,7 +1428,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId19, args_);
             }
             finally
@@ -1062,7 +1442,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = obj.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = obj.GetRawObject() } };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId20, args_);
             }
             finally
@@ -1076,7 +1456,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId21, args_);
             }
             finally
@@ -1090,7 +1470,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = when.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = when.GetRawObject() } };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId22, args_);
             }
             finally
@@ -1104,7 +1484,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = when.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = when.GetRawObject() } };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId23, args_);
             }
             finally
@@ -1118,7 +1498,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = anotherCalendar.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = anotherCalendar.GetRawObject() } };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId24, args_);
             }
             finally
@@ -1132,7 +1512,12 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = field }, new jvalue { i = amount }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = field },
+                            new jvalue { i = amount }
+                        };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId25, args_);
             }
             finally
@@ -1146,7 +1531,12 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = field }, new jvalue { z = up }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = field },
+                            new jvalue { z = up }
+                        };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId26, args_);
             }
             finally
@@ -1160,7 +1550,12 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = field }, new jvalue { i = amount }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = field },
+                            new jvalue { i = amount }
+                        };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId27, args_);
             }
             finally
@@ -1174,7 +1569,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = value.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = value.GetRawObject() } };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId28, args_);
             }
             finally
@@ -1188,7 +1583,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return new global::Java.Util.TimeZone(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId29, args_));
             }
             finally
@@ -1202,7 +1597,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { z = lenient }};
+                jvalue[] args_ = new jvalue[] { new jvalue { z = lenient } };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId30, args_);
             }
             finally
@@ -1216,7 +1611,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId31, args_);
             }
             finally
@@ -1230,7 +1625,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = value }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = value } };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId32, args_);
             }
             finally
@@ -1244,7 +1639,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId33, args_);
             }
             finally
@@ -1258,7 +1653,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = value }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = value } };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId34, args_);
             }
             finally
@@ -1272,7 +1667,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId35, args_);
             }
             finally
@@ -1286,7 +1681,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId36, args_);
             }
             finally
@@ -1300,7 +1695,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId37, args_);
             }
             finally
@@ -1314,7 +1709,13 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = weekYear }, new jvalue { i = weekOfYear }, new jvalue { i = dayOfWeek }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = weekYear },
+                            new jvalue { i = weekOfYear },
+                            new jvalue { i = dayOfWeek }
+                        };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId38, args_);
             }
             finally
@@ -1328,7 +1729,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId39, args_);
             }
             finally
@@ -1342,7 +1743,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = field }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = field } };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId40, args_);
             }
             finally
@@ -1356,7 +1757,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = field }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = field } };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId41, args_);
             }
             finally
@@ -1370,7 +1771,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = field }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = field } };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId42, args_);
             }
             finally
@@ -1384,7 +1785,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = field }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = field } };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId43, args_);
             }
             finally
@@ -1398,7 +1799,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = field }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = field } };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId44, args_);
             }
             finally
@@ -1412,7 +1813,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = field }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = field } };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId45, args_);
             }
             finally
@@ -1426,7 +1827,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return new global::Google.LibraryWrapper.Java.JavaObject(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId46, args_));
             }
             finally
@@ -1440,7 +1841,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return new global::Java.ExternalType.Java.Time.Instant(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId47, args_));
             }
             finally

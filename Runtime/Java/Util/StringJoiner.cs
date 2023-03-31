@@ -33,7 +33,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = delimiter.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = delimiter.GetRawObject() } };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId0, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -48,7 +48,13 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = delimiter.GetRawObject() }, new jvalue { l = prefix.GetRawObject() }, new jvalue { l = suffix.GetRawObject() }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { l = delimiter.GetRawObject() },
+                            new jvalue { l = prefix.GetRawObject() },
+                            new jvalue { l = suffix.GetRawObject() }
+                        };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId1, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -85,7 +91,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = emptyValue.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = emptyValue.GetRawObject() } };
                 return new global::Java.Util.StringJoiner(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId0, args_));
             }
             finally
@@ -99,7 +105,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = newElement.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = newElement.GetRawObject() } };
                 return new global::Java.Util.StringJoiner(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId1, args_));
             }
             finally
@@ -113,7 +119,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = other.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = other.GetRawObject() } };
                 return new global::Java.Util.StringJoiner(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId2, args_));
             }
             finally
@@ -127,7 +133,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId3, args_);
             }
             finally

@@ -8,18 +8,36 @@ namespace Java.Util
     {
         public static int LEFT_JUSTIFY
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId0);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId0, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId0);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId0, value);
+            }
         }
         public static int UPPERCASE
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId1);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId1, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId1);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId1, value);
+            }
         }
         public static int ALTERNATE
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId2);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId2, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId2);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId2, value);
+            }
         }
 
         private static readonly IntPtr _classObject;

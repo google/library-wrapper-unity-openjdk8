@@ -29,7 +29,7 @@ namespace Java.Lang
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {};
+                    jvalue[] args_ = new jvalue[] {  };
                     IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId0, args_);
                     _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
                 }
@@ -66,7 +66,7 @@ namespace Java.Lang
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {new jvalue { l = obj.GetRawObject() }};
+                    jvalue[] args_ = new jvalue[] { new jvalue { l = obj.GetRawObject() } };
                     return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId0, args_);
                 }
                 finally
@@ -80,7 +80,7 @@ namespace Java.Lang
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {};
+                    jvalue[] args_ = new jvalue[] {  };
                     return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId1, args_);
                 }
                 finally
@@ -109,7 +109,10 @@ namespace Java.Lang
         {
             public static global::Java.Lang.Character.UnicodeBlock BASIC_LATIN
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId0));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId0));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -119,7 +122,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock LATIN_1_SUPPLEMENT
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId1));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId1));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -129,7 +135,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock LATIN_EXTENDED_A
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId2));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId2));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -139,7 +148,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock LATIN_EXTENDED_B
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId3));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId3));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -149,7 +161,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock IPA_EXTENSIONS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId4));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId4));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -159,7 +174,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock SPACING_MODIFIER_LETTERS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId5));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId5));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -169,7 +187,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock COMBINING_DIACRITICAL_MARKS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId6));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId6));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -179,7 +200,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock GREEK
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId7));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId7));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -189,7 +213,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock CYRILLIC
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId8));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId8));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -199,7 +226,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock ARMENIAN
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId9));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId9));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -209,7 +239,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock HEBREW
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId10));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId10));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -219,7 +252,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock ARABIC
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId11));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId11));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -229,7 +265,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock DEVANAGARI
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId12));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId12));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -239,7 +278,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock BENGALI
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId13));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId13));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -249,7 +291,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock GURMUKHI
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId14));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId14));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -259,7 +304,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock GUJARATI
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId15));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId15));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -269,7 +317,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock ORIYA
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId16));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId16));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -279,7 +330,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock TAMIL
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId17));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId17));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -289,7 +343,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock TELUGU
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId18));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId18));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -299,7 +356,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock KANNADA
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId19));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId19));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -309,7 +369,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock MALAYALAM
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId20));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId20));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -319,7 +382,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock THAI
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId21));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId21));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -329,7 +395,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock LAO
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId22));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId22));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -339,7 +408,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock TIBETAN
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId23));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId23));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -349,7 +421,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock GEORGIAN
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId24));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId24));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -359,7 +434,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock HANGUL_JAMO
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId25));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId25));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -369,7 +447,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock LATIN_EXTENDED_ADDITIONAL
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId26));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId26));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -379,7 +460,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock GREEK_EXTENDED
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId27));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId27));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -389,7 +473,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock GENERAL_PUNCTUATION
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId28));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId28));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -399,7 +486,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock SUPERSCRIPTS_AND_SUBSCRIPTS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId29));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId29));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -409,7 +499,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock CURRENCY_SYMBOLS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId30));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId30));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -419,7 +512,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock COMBINING_MARKS_FOR_SYMBOLS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId31));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId31));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -429,7 +525,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock LETTERLIKE_SYMBOLS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId32));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId32));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -439,7 +538,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock NUMBER_FORMS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId33));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId33));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -449,7 +551,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock ARROWS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId34));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId34));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -459,7 +564,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock MATHEMATICAL_OPERATORS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId35));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId35));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -469,7 +577,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock MISCELLANEOUS_TECHNICAL
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId36));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId36));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -479,7 +590,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock CONTROL_PICTURES
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId37));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId37));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -489,7 +603,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock OPTICAL_CHARACTER_RECOGNITION
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId38));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId38));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -499,7 +616,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock ENCLOSED_ALPHANUMERICS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId39));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId39));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -509,7 +629,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock BOX_DRAWING
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId40));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId40));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -519,7 +642,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock BLOCK_ELEMENTS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId41));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId41));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -529,7 +655,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock GEOMETRIC_SHAPES
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId42));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId42));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -539,7 +668,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock MISCELLANEOUS_SYMBOLS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId43));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId43));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -549,7 +681,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock DINGBATS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId44));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId44));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -559,7 +694,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock CJK_SYMBOLS_AND_PUNCTUATION
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId45));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId45));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -569,7 +707,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock HIRAGANA
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId46));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId46));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -579,7 +720,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock KATAKANA
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId47));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId47));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -589,7 +733,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock BOPOMOFO
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId48));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId48));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -599,7 +746,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock HANGUL_COMPATIBILITY_JAMO
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId49));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId49));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -609,7 +759,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock KANBUN
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId50));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId50));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -619,7 +772,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock ENCLOSED_CJK_LETTERS_AND_MONTHS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId51));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId51));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -629,7 +785,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock CJK_COMPATIBILITY
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId52));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId52));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -639,7 +798,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock CJK_UNIFIED_IDEOGRAPHS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId53));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId53));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -649,7 +811,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock HANGUL_SYLLABLES
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId54));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId54));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -659,7 +824,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock PRIVATE_USE_AREA
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId55));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId55));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -669,7 +837,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock CJK_COMPATIBILITY_IDEOGRAPHS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId56));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId56));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -679,7 +850,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock ALPHABETIC_PRESENTATION_FORMS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId57));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId57));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -689,7 +863,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock ARABIC_PRESENTATION_FORMS_A
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId58));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId58));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -699,7 +876,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock COMBINING_HALF_MARKS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId59));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId59));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -709,7 +889,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock CJK_COMPATIBILITY_FORMS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId60));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId60));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -719,7 +902,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock SMALL_FORM_VARIANTS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId61));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId61));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -729,7 +915,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock ARABIC_PRESENTATION_FORMS_B
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId62));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId62));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -739,7 +928,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock HALFWIDTH_AND_FULLWIDTH_FORMS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId63));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId63));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -749,7 +941,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock SPECIALS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId64));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId64));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -759,7 +954,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock SURROGATES_AREA
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId65));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId65));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -769,7 +967,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock SYRIAC
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId66));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId66));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -779,7 +980,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock THAANA
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId67));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId67));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -789,7 +993,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock SINHALA
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId68));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId68));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -799,7 +1006,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock MYANMAR
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId69));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId69));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -809,7 +1019,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock ETHIOPIC
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId70));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId70));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -819,7 +1032,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock CHEROKEE
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId71));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId71));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -829,7 +1045,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId72));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId72));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -839,7 +1058,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock OGHAM
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId73));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId73));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -849,7 +1071,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock RUNIC
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId74));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId74));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -859,7 +1084,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock KHMER
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId75));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId75));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -869,7 +1097,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock MONGOLIAN
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId76));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId76));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -879,7 +1110,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock BRAILLE_PATTERNS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId77));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId77));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -889,7 +1123,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock CJK_RADICALS_SUPPLEMENT
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId78));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId78));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -899,7 +1136,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock KANGXI_RADICALS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId79));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId79));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -909,7 +1149,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock IDEOGRAPHIC_DESCRIPTION_CHARACTERS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId80));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId80));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -919,7 +1162,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock BOPOMOFO_EXTENDED
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId81));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId81));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -929,7 +1175,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId82));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId82));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -939,7 +1188,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock YI_SYLLABLES
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId83));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId83));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -949,7 +1201,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock YI_RADICALS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId84));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId84));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -959,7 +1214,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock CYRILLIC_SUPPLEMENTARY
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId85));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId85));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -969,7 +1227,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock TAGALOG
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId86));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId86));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -979,7 +1240,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock HANUNOO
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId87));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId87));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -989,7 +1253,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock BUHID
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId88));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId88));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -999,7 +1266,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock TAGBANWA
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId89));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId89));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1009,7 +1279,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock LIMBU
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId90));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId90));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1019,7 +1292,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock TAI_LE
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId91));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId91));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1029,7 +1305,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock KHMER_SYMBOLS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId92));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId92));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1039,7 +1318,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock PHONETIC_EXTENSIONS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId93));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId93));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1049,7 +1331,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock MISCELLANEOUS_MATHEMATICAL_SYMBOLS_A
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId94));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId94));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1059,7 +1344,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock SUPPLEMENTAL_ARROWS_A
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId95));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId95));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1069,7 +1357,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock SUPPLEMENTAL_ARROWS_B
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId96));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId96));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1079,7 +1370,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock MISCELLANEOUS_MATHEMATICAL_SYMBOLS_B
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId97));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId97));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1089,7 +1383,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock SUPPLEMENTAL_MATHEMATICAL_OPERATORS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId98));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId98));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1099,7 +1396,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock MISCELLANEOUS_SYMBOLS_AND_ARROWS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId99));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId99));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1109,7 +1409,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock KATAKANA_PHONETIC_EXTENSIONS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId100));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId100));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1119,7 +1422,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock YIJING_HEXAGRAM_SYMBOLS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId101));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId101));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1129,7 +1435,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock VARIATION_SELECTORS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId102));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId102));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1139,7 +1448,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock LINEAR_B_SYLLABARY
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId103));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId103));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1149,7 +1461,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock LINEAR_B_IDEOGRAMS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId104));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId104));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1159,7 +1474,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock AEGEAN_NUMBERS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId105));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId105));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1169,7 +1487,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock OLD_ITALIC
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId106));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId106));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1179,7 +1500,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock GOTHIC
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId107));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId107));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1189,7 +1513,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock UGARITIC
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId108));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId108));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1199,7 +1526,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock DESERET
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId109));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId109));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1209,7 +1539,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock SHAVIAN
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId110));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId110));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1219,7 +1552,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock OSMANYA
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId111));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId111));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1229,7 +1565,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock CYPRIOT_SYLLABARY
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId112));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId112));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1239,7 +1578,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock BYZANTINE_MUSICAL_SYMBOLS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId113));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId113));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1249,7 +1591,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock MUSICAL_SYMBOLS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId114));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId114));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1259,7 +1604,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock TAI_XUAN_JING_SYMBOLS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId115));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId115));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1269,7 +1617,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock MATHEMATICAL_ALPHANUMERIC_SYMBOLS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId116));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId116));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1279,7 +1630,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId117));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId117));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1289,7 +1643,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock CJK_COMPATIBILITY_IDEOGRAPHS_SUPPLEMENT
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId118));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId118));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1299,7 +1656,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock TAGS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId119));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId119));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1309,7 +1669,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock VARIATION_SELECTORS_SUPPLEMENT
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId120));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId120));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1319,7 +1682,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock SUPPLEMENTARY_PRIVATE_USE_AREA_A
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId121));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId121));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1329,7 +1695,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock SUPPLEMENTARY_PRIVATE_USE_AREA_B
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId122));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId122));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1339,7 +1708,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock HIGH_SURROGATES
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId123));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId123));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1349,7 +1721,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock HIGH_PRIVATE_USE_SURROGATES
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId124));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId124));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1359,7 +1734,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock LOW_SURROGATES
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId125));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId125));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1369,7 +1747,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock ARABIC_SUPPLEMENT
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId126));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId126));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1379,7 +1760,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock NKO
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId127));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId127));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1389,7 +1773,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock SAMARITAN
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId128));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId128));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1399,7 +1786,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock MANDAIC
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId129));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId129));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1409,7 +1799,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock ETHIOPIC_SUPPLEMENT
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId130));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId130));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1419,7 +1812,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS_EXTENDED
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId131));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId131));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1429,7 +1825,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock NEW_TAI_LUE
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId132));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId132));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1439,7 +1838,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock BUGINESE
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId133));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId133));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1449,7 +1851,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock TAI_THAM
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId134));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId134));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1459,7 +1864,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock BALINESE
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId135));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId135));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1469,7 +1877,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock SUNDANESE
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId136));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId136));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1479,7 +1890,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock BATAK
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId137));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId137));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1489,7 +1903,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock LEPCHA
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId138));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId138));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1499,7 +1916,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock OL_CHIKI
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId139));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId139));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1509,7 +1929,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock VEDIC_EXTENSIONS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId140));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId140));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1519,7 +1942,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock PHONETIC_EXTENSIONS_SUPPLEMENT
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId141));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId141));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1529,7 +1955,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock COMBINING_DIACRITICAL_MARKS_SUPPLEMENT
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId142));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId142));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1539,7 +1968,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock GLAGOLITIC
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId143));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId143));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1549,7 +1981,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock LATIN_EXTENDED_C
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId144));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId144));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1559,7 +1994,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock COPTIC
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId145));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId145));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1569,7 +2007,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock GEORGIAN_SUPPLEMENT
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId146));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId146));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1579,7 +2020,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock TIFINAGH
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId147));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId147));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1589,7 +2033,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock ETHIOPIC_EXTENDED
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId148));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId148));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1599,7 +2046,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock CYRILLIC_EXTENDED_A
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId149));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId149));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1609,7 +2059,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock SUPPLEMENTAL_PUNCTUATION
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId150));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId150));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1619,7 +2072,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock CJK_STROKES
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId151));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId151));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1629,7 +2085,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock LISU
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId152));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId152));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1639,7 +2098,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock VAI
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId153));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId153));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1649,7 +2111,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock CYRILLIC_EXTENDED_B
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId154));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId154));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1659,7 +2124,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock BAMUM
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId155));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId155));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1669,7 +2137,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock MODIFIER_TONE_LETTERS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId156));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId156));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1679,7 +2150,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock LATIN_EXTENDED_D
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId157));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId157));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1689,7 +2163,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock SYLOTI_NAGRI
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId158));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId158));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1699,7 +2176,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock COMMON_INDIC_NUMBER_FORMS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId159));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId159));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1709,7 +2189,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock PHAGS_PA
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId160));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId160));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1719,7 +2202,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock SAURASHTRA
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId161));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId161));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1729,7 +2215,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock DEVANAGARI_EXTENDED
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId162));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId162));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1739,7 +2228,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock KAYAH_LI
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId163));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId163));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1749,7 +2241,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock REJANG
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId164));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId164));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1759,7 +2254,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock HANGUL_JAMO_EXTENDED_A
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId165));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId165));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1769,7 +2267,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock JAVANESE
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId166));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId166));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1779,7 +2280,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock CHAM
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId167));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId167));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1789,7 +2293,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock MYANMAR_EXTENDED_A
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId168));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId168));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1799,7 +2306,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock TAI_VIET
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId169));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId169));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1809,7 +2319,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock ETHIOPIC_EXTENDED_A
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId170));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId170));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1819,7 +2332,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock MEETEI_MAYEK
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId171));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId171));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1829,7 +2345,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock HANGUL_JAMO_EXTENDED_B
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId172));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId172));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1839,7 +2358,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock VERTICAL_FORMS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId173));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId173));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1849,7 +2371,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock ANCIENT_GREEK_NUMBERS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId174));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId174));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1859,7 +2384,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock ANCIENT_SYMBOLS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId175));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId175));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1869,7 +2397,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock PHAISTOS_DISC
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId176));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId176));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1879,7 +2410,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock LYCIAN
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId177));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId177));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1889,7 +2423,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock CARIAN
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId178));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId178));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1899,7 +2436,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock OLD_PERSIAN
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId179));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId179));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1909,7 +2449,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock IMPERIAL_ARAMAIC
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId180));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId180));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1919,7 +2462,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock PHOENICIAN
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId181));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId181));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1929,7 +2475,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock LYDIAN
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId182));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId182));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1939,7 +2488,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock KHAROSHTHI
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId183));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId183));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1949,7 +2501,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock OLD_SOUTH_ARABIAN
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId184));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId184));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1959,7 +2514,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock AVESTAN
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId185));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId185));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1969,7 +2527,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock INSCRIPTIONAL_PARTHIAN
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId186));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId186));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1979,7 +2540,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock INSCRIPTIONAL_PAHLAVI
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId187));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId187));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1989,7 +2553,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock OLD_TURKIC
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId188));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId188));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -1999,7 +2566,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock RUMI_NUMERAL_SYMBOLS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId189));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId189));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2009,7 +2579,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock BRAHMI
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId190));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId190));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2019,7 +2592,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock KAITHI
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId191));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId191));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2029,7 +2605,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock CUNEIFORM
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId192));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId192));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2039,7 +2618,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock CUNEIFORM_NUMBERS_AND_PUNCTUATION
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId193));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId193));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2049,7 +2631,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock EGYPTIAN_HIEROGLYPHS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId194));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId194));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2059,7 +2644,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock BAMUM_SUPPLEMENT
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId195));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId195));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2069,7 +2657,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock KANA_SUPPLEMENT
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId196));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId196));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2079,7 +2670,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock ANCIENT_GREEK_MUSICAL_NOTATION
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId197));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId197));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2089,7 +2683,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock COUNTING_ROD_NUMERALS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId198));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId198));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2099,7 +2696,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock MAHJONG_TILES
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId199));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId199));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2109,7 +2709,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock DOMINO_TILES
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId200));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId200));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2119,7 +2722,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock PLAYING_CARDS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId201));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId201));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2129,7 +2735,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock ENCLOSED_ALPHANUMERIC_SUPPLEMENT
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId202));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId202));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2139,7 +2748,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock ENCLOSED_IDEOGRAPHIC_SUPPLEMENT
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId203));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId203));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2149,7 +2761,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock MISCELLANEOUS_SYMBOLS_AND_PICTOGRAPHS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId204));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId204));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2159,7 +2774,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock EMOTICONS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId205));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId205));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2169,7 +2787,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock TRANSPORT_AND_MAP_SYMBOLS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId206));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId206));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2179,7 +2800,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock ALCHEMICAL_SYMBOLS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId207));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId207));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2189,7 +2813,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock CJK_UNIFIED_IDEOGRAPHS_EXTENSION_C
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId208));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId208));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2199,7 +2826,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock CJK_UNIFIED_IDEOGRAPHS_EXTENSION_D
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId209));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId209));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2209,7 +2839,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock ARABIC_EXTENDED_A
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId210));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId210));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2219,7 +2852,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock SUNDANESE_SUPPLEMENT
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId211));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId211));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2229,7 +2865,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock MEETEI_MAYEK_EXTENSIONS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId212));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId212));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2239,7 +2878,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock MEROITIC_HIEROGLYPHS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId213));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId213));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2249,7 +2891,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock MEROITIC_CURSIVE
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId214));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId214));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2259,7 +2904,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock SORA_SOMPENG
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId215));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId215));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2269,7 +2917,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock CHAKMA
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId216));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId216));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2279,7 +2930,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock SHARADA
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId217));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId217));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2289,7 +2943,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock TAKRI
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId218));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId218));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2299,7 +2956,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock MIAO
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId219));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId219));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2309,7 +2969,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeBlock ARABIC_MATHEMATICAL_ALPHABETIC_SYMBOLS
             {
-                get => new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId220));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId220));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2783,7 +3446,7 @@ namespace Java.Lang
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {};
+                    jvalue[] args_ = new jvalue[] {  };
                     IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId0, args_);
                     _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
                 }
@@ -2820,7 +3483,7 @@ namespace Java.Lang
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {new jvalue { c = c }};
+                    jvalue[] args_ = new jvalue[] { new jvalue { c = c } };
                     return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId0, args_));
                 }
                 finally
@@ -2834,7 +3497,7 @@ namespace Java.Lang
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                    jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                     return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId1, args_));
                 }
                 finally
@@ -2848,7 +3511,7 @@ namespace Java.Lang
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {new jvalue { l = AndroidJNI.NewString(blockName) }};
+                    jvalue[] args_ = new jvalue[] { new jvalue { l = global::Google.LibraryWrapper.Java.Utils.NewString(blockName) } };
                     return new global::Java.Lang.Character.UnicodeBlock(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId2, args_));
                 }
                 finally
@@ -2877,7 +3540,10 @@ namespace Java.Lang
         {
             public static global::Java.Lang.Character.UnicodeScript COMMON
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId0));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId0));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2887,7 +3553,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript LATIN
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId1));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId1));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2897,7 +3566,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript GREEK
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId2));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId2));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2907,7 +3579,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript CYRILLIC
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId3));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId3));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2917,7 +3592,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript ARMENIAN
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId4));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId4));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2927,7 +3605,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript HEBREW
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId5));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId5));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2937,7 +3618,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript ARABIC
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId6));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId6));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2947,7 +3631,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript SYRIAC
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId7));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId7));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2957,7 +3644,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript THAANA
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId8));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId8));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2967,7 +3657,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript DEVANAGARI
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId9));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId9));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2977,7 +3670,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript BENGALI
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId10));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId10));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2987,7 +3683,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript GURMUKHI
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId11));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId11));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -2997,7 +3696,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript GUJARATI
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId12));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId12));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3007,7 +3709,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript ORIYA
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId13));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId13));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3017,7 +3722,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript TAMIL
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId14));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId14));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3027,7 +3735,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript TELUGU
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId15));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId15));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3037,7 +3748,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript KANNADA
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId16));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId16));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3047,7 +3761,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript MALAYALAM
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId17));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId17));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3057,7 +3774,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript SINHALA
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId18));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId18));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3067,7 +3787,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript THAI
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId19));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId19));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3077,7 +3800,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript LAO
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId20));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId20));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3087,7 +3813,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript TIBETAN
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId21));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId21));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3097,7 +3826,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript MYANMAR
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId22));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId22));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3107,7 +3839,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript GEORGIAN
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId23));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId23));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3117,7 +3852,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript HANGUL
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId24));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId24));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3127,7 +3865,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript ETHIOPIC
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId25));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId25));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3137,7 +3878,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript CHEROKEE
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId26));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId26));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3147,7 +3891,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript CANADIAN_ABORIGINAL
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId27));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId27));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3157,7 +3904,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript OGHAM
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId28));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId28));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3167,7 +3917,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript RUNIC
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId29));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId29));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3177,7 +3930,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript KHMER
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId30));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId30));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3187,7 +3943,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript MONGOLIAN
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId31));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId31));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3197,7 +3956,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript HIRAGANA
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId32));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId32));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3207,7 +3969,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript KATAKANA
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId33));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId33));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3217,7 +3982,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript BOPOMOFO
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId34));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId34));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3227,7 +3995,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript HAN
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId35));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId35));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3237,7 +4008,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript YI
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId36));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId36));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3247,7 +4021,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript OLD_ITALIC
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId37));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId37));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3257,7 +4034,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript GOTHIC
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId38));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId38));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3267,7 +4047,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript DESERET
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId39));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId39));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3277,7 +4060,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript INHERITED
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId40));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId40));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3287,7 +4073,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript TAGALOG
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId41));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId41));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3297,7 +4086,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript HANUNOO
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId42));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId42));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3307,7 +4099,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript BUHID
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId43));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId43));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3317,7 +4112,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript TAGBANWA
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId44));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId44));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3327,7 +4125,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript LIMBU
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId45));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId45));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3337,7 +4138,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript TAI_LE
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId46));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId46));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3347,7 +4151,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript LINEAR_B
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId47));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId47));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3357,7 +4164,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript UGARITIC
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId48));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId48));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3367,7 +4177,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript SHAVIAN
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId49));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId49));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3377,7 +4190,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript OSMANYA
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId50));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId50));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3387,7 +4203,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript CYPRIOT
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId51));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId51));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3397,7 +4216,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript BRAILLE
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId52));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId52));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3407,7 +4229,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript BUGINESE
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId53));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId53));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3417,7 +4242,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript COPTIC
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId54));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId54));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3427,7 +4255,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript NEW_TAI_LUE
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId55));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId55));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3437,7 +4268,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript GLAGOLITIC
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId56));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId56));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3447,7 +4281,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript TIFINAGH
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId57));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId57));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3457,7 +4294,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript SYLOTI_NAGRI
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId58));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId58));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3467,7 +4307,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript OLD_PERSIAN
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId59));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId59));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3477,7 +4320,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript KHAROSHTHI
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId60));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId60));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3487,7 +4333,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript BALINESE
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId61));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId61));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3497,7 +4346,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript CUNEIFORM
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId62));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId62));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3507,7 +4359,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript PHOENICIAN
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId63));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId63));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3517,7 +4372,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript PHAGS_PA
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId64));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId64));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3527,7 +4385,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript NKO
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId65));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId65));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3537,7 +4398,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript SUNDANESE
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId66));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId66));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3547,7 +4411,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript BATAK
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId67));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId67));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3557,7 +4424,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript LEPCHA
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId68));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId68));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3567,7 +4437,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript OL_CHIKI
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId69));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId69));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3577,7 +4450,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript VAI
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId70));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId70));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3587,7 +4463,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript SAURASHTRA
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId71));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId71));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3597,7 +4476,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript KAYAH_LI
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId72));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId72));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3607,7 +4489,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript REJANG
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId73));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId73));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3617,7 +4502,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript LYCIAN
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId74));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId74));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3627,7 +4515,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript CARIAN
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId75));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId75));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3637,7 +4528,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript LYDIAN
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId76));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId76));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3647,7 +4541,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript CHAM
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId77));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId77));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3657,7 +4554,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript TAI_THAM
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId78));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId78));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3667,7 +4567,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript TAI_VIET
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId79));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId79));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3677,7 +4580,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript AVESTAN
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId80));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId80));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3687,7 +4593,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript EGYPTIAN_HIEROGLYPHS
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId81));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId81));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3697,7 +4606,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript SAMARITAN
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId82));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId82));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3707,7 +4619,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript MANDAIC
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId83));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId83));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3717,7 +4632,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript LISU
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId84));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId84));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3727,7 +4645,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript BAMUM
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId85));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId85));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3737,7 +4658,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript JAVANESE
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId86));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId86));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3747,7 +4671,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript MEETEI_MAYEK
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId87));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId87));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3757,7 +4684,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript IMPERIAL_ARAMAIC
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId88));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId88));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3767,7 +4697,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript OLD_SOUTH_ARABIAN
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId89));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId89));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3777,7 +4710,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript INSCRIPTIONAL_PARTHIAN
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId90));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId90));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3787,7 +4723,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript INSCRIPTIONAL_PAHLAVI
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId91));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId91));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3797,7 +4736,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript OLD_TURKIC
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId92));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId92));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3807,7 +4749,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript BRAHMI
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId93));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId93));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3817,7 +4762,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript KAITHI
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId94));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId94));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3827,7 +4775,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript MEROITIC_HIEROGLYPHS
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId95));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId95));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3837,7 +4788,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript MEROITIC_CURSIVE
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId96));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId96));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3847,7 +4801,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript SORA_SOMPENG
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId97));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId97));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3857,7 +4814,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript CHAKMA
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId98));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId98));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3867,7 +4827,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript SHARADA
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId99));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId99));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3877,7 +4840,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript TAKRI
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId100));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId100));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3887,7 +4853,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript MIAO
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId101));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId101));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -3897,7 +4866,10 @@ namespace Java.Lang
             }
             public static global::Java.Lang.Character.UnicodeScript UNKNOWN
             {
-                get => new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId102));
+                get
+                {
+                    return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId102));
+                }
                 set
                 {
                     IntPtr valueRef = value.GetRawObject();
@@ -4155,7 +5127,7 @@ namespace Java.Lang
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {new jvalue { l = AndroidJNI.NewString(name) }};
+                    jvalue[] args_ = new jvalue[] { new jvalue { l = global::Google.LibraryWrapper.Java.Utils.NewString(name) } };
                     return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId0, args_));
                 }
                 finally
@@ -4169,7 +5141,7 @@ namespace Java.Lang
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                    jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                     return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId1, args_));
                 }
                 finally
@@ -4183,7 +5155,7 @@ namespace Java.Lang
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {new jvalue { l = AndroidJNI.NewString(scriptName) }};
+                    jvalue[] args_ = new jvalue[] { new jvalue { l = global::Google.LibraryWrapper.Java.Utils.NewString(scriptName) } };
                     return new global::Java.Lang.Character.UnicodeScript(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId2, args_));
                 }
                 finally
@@ -4210,27 +5182,54 @@ namespace Java.Lang
 
         public static int MIN_RADIX
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId0);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId0, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId0);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId0, value);
+            }
         }
         public static int MAX_RADIX
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId1);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId1, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId1);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId1, value);
+            }
         }
         public static char MIN_VALUE
         {
-            get => AndroidJNI.GetStaticCharField(_classObject, _cachedFieldId2);
-            set => AndroidJNI.SetStaticCharField(_classObject, _cachedFieldId2, value);
+            get
+            {
+                return AndroidJNI.GetStaticCharField(_classObject, _cachedFieldId2);
+            }
+            set
+            {
+                AndroidJNI.SetStaticCharField(_classObject, _cachedFieldId2, value);
+            }
         }
         public static char MAX_VALUE
         {
-            get => AndroidJNI.GetStaticCharField(_classObject, _cachedFieldId3);
-            set => AndroidJNI.SetStaticCharField(_classObject, _cachedFieldId3, value);
+            get
+            {
+                return AndroidJNI.GetStaticCharField(_classObject, _cachedFieldId3);
+            }
+            set
+            {
+                AndroidJNI.SetStaticCharField(_classObject, _cachedFieldId3, value);
+            }
         }
         public static global::Java.Lang.Class<global::Java.Lang.Character> TYPE
         {
-            get => new global::Java.Lang.Class<global::Java.Lang.Character>(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId4));
+            get
+            {
+                return new global::Java.Lang.Class<global::Java.Lang.Character>(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId4));
+            }
             set
             {
                 IntPtr valueRef = value.GetRawObject();
@@ -4240,308 +5239,674 @@ namespace Java.Lang
         }
         public static sbyte UNASSIGNED
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId5);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId5, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId5);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId5, value);
+            }
         }
         public static sbyte UPPERCASE_LETTER
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId6);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId6, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId6);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId6, value);
+            }
         }
         public static sbyte LOWERCASE_LETTER
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId7);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId7, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId7);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId7, value);
+            }
         }
         public static sbyte TITLECASE_LETTER
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId8);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId8, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId8);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId8, value);
+            }
         }
         public static sbyte MODIFIER_LETTER
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId9);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId9, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId9);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId9, value);
+            }
         }
         public static sbyte OTHER_LETTER
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId10);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId10, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId10);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId10, value);
+            }
         }
         public static sbyte NON_SPACING_MARK
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId11);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId11, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId11);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId11, value);
+            }
         }
         public static sbyte ENCLOSING_MARK
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId12);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId12, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId12);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId12, value);
+            }
         }
         public static sbyte COMBINING_SPACING_MARK
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId13);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId13, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId13);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId13, value);
+            }
         }
         public static sbyte DECIMAL_DIGIT_NUMBER
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId14);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId14, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId14);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId14, value);
+            }
         }
         public static sbyte LETTER_NUMBER
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId15);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId15, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId15);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId15, value);
+            }
         }
         public static sbyte OTHER_NUMBER
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId16);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId16, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId16);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId16, value);
+            }
         }
         public static sbyte SPACE_SEPARATOR
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId17);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId17, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId17);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId17, value);
+            }
         }
         public static sbyte LINE_SEPARATOR
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId18);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId18, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId18);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId18, value);
+            }
         }
         public static sbyte PARAGRAPH_SEPARATOR
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId19);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId19, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId19);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId19, value);
+            }
         }
         public static sbyte CONTROL
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId20);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId20, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId20);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId20, value);
+            }
         }
         public static sbyte FORMAT
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId21);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId21, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId21);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId21, value);
+            }
         }
         public static sbyte PRIVATE_USE
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId22);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId22, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId22);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId22, value);
+            }
         }
         public static sbyte SURROGATE
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId23);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId23, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId23);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId23, value);
+            }
         }
         public static sbyte DASH_PUNCTUATION
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId24);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId24, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId24);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId24, value);
+            }
         }
         public static sbyte START_PUNCTUATION
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId25);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId25, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId25);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId25, value);
+            }
         }
         public static sbyte END_PUNCTUATION
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId26);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId26, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId26);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId26, value);
+            }
         }
         public static sbyte CONNECTOR_PUNCTUATION
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId27);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId27, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId27);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId27, value);
+            }
         }
         public static sbyte OTHER_PUNCTUATION
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId28);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId28, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId28);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId28, value);
+            }
         }
         public static sbyte MATH_SYMBOL
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId29);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId29, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId29);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId29, value);
+            }
         }
         public static sbyte CURRENCY_SYMBOL
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId30);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId30, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId30);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId30, value);
+            }
         }
         public static sbyte MODIFIER_SYMBOL
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId31);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId31, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId31);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId31, value);
+            }
         }
         public static sbyte OTHER_SYMBOL
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId32);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId32, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId32);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId32, value);
+            }
         }
         public static sbyte INITIAL_QUOTE_PUNCTUATION
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId33);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId33, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId33);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId33, value);
+            }
         }
         public static sbyte FINAL_QUOTE_PUNCTUATION
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId34);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId34, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId34);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId34, value);
+            }
         }
         public static sbyte DIRECTIONALITY_UNDEFINED
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId35);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId35, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId35);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId35, value);
+            }
         }
         public static sbyte DIRECTIONALITY_LEFT_TO_RIGHT
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId36);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId36, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId36);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId36, value);
+            }
         }
         public static sbyte DIRECTIONALITY_RIGHT_TO_LEFT
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId37);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId37, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId37);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId37, value);
+            }
         }
         public static sbyte DIRECTIONALITY_RIGHT_TO_LEFT_ARABIC
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId38);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId38, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId38);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId38, value);
+            }
         }
         public static sbyte DIRECTIONALITY_EUROPEAN_NUMBER
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId39);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId39, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId39);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId39, value);
+            }
         }
         public static sbyte DIRECTIONALITY_EUROPEAN_NUMBER_SEPARATOR
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId40);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId40, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId40);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId40, value);
+            }
         }
         public static sbyte DIRECTIONALITY_EUROPEAN_NUMBER_TERMINATOR
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId41);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId41, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId41);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId41, value);
+            }
         }
         public static sbyte DIRECTIONALITY_ARABIC_NUMBER
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId42);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId42, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId42);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId42, value);
+            }
         }
         public static sbyte DIRECTIONALITY_COMMON_NUMBER_SEPARATOR
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId43);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId43, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId43);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId43, value);
+            }
         }
         public static sbyte DIRECTIONALITY_NONSPACING_MARK
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId44);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId44, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId44);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId44, value);
+            }
         }
         public static sbyte DIRECTIONALITY_BOUNDARY_NEUTRAL
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId45);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId45, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId45);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId45, value);
+            }
         }
         public static sbyte DIRECTIONALITY_PARAGRAPH_SEPARATOR
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId46);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId46, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId46);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId46, value);
+            }
         }
         public static sbyte DIRECTIONALITY_SEGMENT_SEPARATOR
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId47);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId47, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId47);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId47, value);
+            }
         }
         public static sbyte DIRECTIONALITY_WHITESPACE
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId48);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId48, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId48);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId48, value);
+            }
         }
         public static sbyte DIRECTIONALITY_OTHER_NEUTRALS
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId49);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId49, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId49);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId49, value);
+            }
         }
         public static sbyte DIRECTIONALITY_LEFT_TO_RIGHT_EMBEDDING
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId50);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId50, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId50);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId50, value);
+            }
         }
         public static sbyte DIRECTIONALITY_LEFT_TO_RIGHT_OVERRIDE
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId51);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId51, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId51);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId51, value);
+            }
         }
         public static sbyte DIRECTIONALITY_RIGHT_TO_LEFT_EMBEDDING
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId52);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId52, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId52);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId52, value);
+            }
         }
         public static sbyte DIRECTIONALITY_RIGHT_TO_LEFT_OVERRIDE
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId53);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId53, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId53);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId53, value);
+            }
         }
         public static sbyte DIRECTIONALITY_POP_DIRECTIONAL_FORMAT
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId54);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId54, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId54);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId54, value);
+            }
         }
         public static char MIN_HIGH_SURROGATE
         {
-            get => AndroidJNI.GetStaticCharField(_classObject, _cachedFieldId55);
-            set => AndroidJNI.SetStaticCharField(_classObject, _cachedFieldId55, value);
+            get
+            {
+                return AndroidJNI.GetStaticCharField(_classObject, _cachedFieldId55);
+            }
+            set
+            {
+                AndroidJNI.SetStaticCharField(_classObject, _cachedFieldId55, value);
+            }
         }
         public static char MAX_HIGH_SURROGATE
         {
-            get => AndroidJNI.GetStaticCharField(_classObject, _cachedFieldId56);
-            set => AndroidJNI.SetStaticCharField(_classObject, _cachedFieldId56, value);
+            get
+            {
+                return AndroidJNI.GetStaticCharField(_classObject, _cachedFieldId56);
+            }
+            set
+            {
+                AndroidJNI.SetStaticCharField(_classObject, _cachedFieldId56, value);
+            }
         }
         public static char MIN_LOW_SURROGATE
         {
-            get => AndroidJNI.GetStaticCharField(_classObject, _cachedFieldId57);
-            set => AndroidJNI.SetStaticCharField(_classObject, _cachedFieldId57, value);
+            get
+            {
+                return AndroidJNI.GetStaticCharField(_classObject, _cachedFieldId57);
+            }
+            set
+            {
+                AndroidJNI.SetStaticCharField(_classObject, _cachedFieldId57, value);
+            }
         }
         public static char MAX_LOW_SURROGATE
         {
-            get => AndroidJNI.GetStaticCharField(_classObject, _cachedFieldId58);
-            set => AndroidJNI.SetStaticCharField(_classObject, _cachedFieldId58, value);
+            get
+            {
+                return AndroidJNI.GetStaticCharField(_classObject, _cachedFieldId58);
+            }
+            set
+            {
+                AndroidJNI.SetStaticCharField(_classObject, _cachedFieldId58, value);
+            }
         }
         public static char MIN_SURROGATE
         {
-            get => AndroidJNI.GetStaticCharField(_classObject, _cachedFieldId59);
-            set => AndroidJNI.SetStaticCharField(_classObject, _cachedFieldId59, value);
+            get
+            {
+                return AndroidJNI.GetStaticCharField(_classObject, _cachedFieldId59);
+            }
+            set
+            {
+                AndroidJNI.SetStaticCharField(_classObject, _cachedFieldId59, value);
+            }
         }
         public static char MAX_SURROGATE
         {
-            get => AndroidJNI.GetStaticCharField(_classObject, _cachedFieldId60);
-            set => AndroidJNI.SetStaticCharField(_classObject, _cachedFieldId60, value);
+            get
+            {
+                return AndroidJNI.GetStaticCharField(_classObject, _cachedFieldId60);
+            }
+            set
+            {
+                AndroidJNI.SetStaticCharField(_classObject, _cachedFieldId60, value);
+            }
         }
         public static int MIN_SUPPLEMENTARY_CODE_POINT
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId61);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId61, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId61);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId61, value);
+            }
         }
         public static int MIN_CODE_POINT
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId62);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId62, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId62);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId62, value);
+            }
         }
         public static int MAX_CODE_POINT
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId63);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId63, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId63);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId63, value);
+            }
         }
         public static int SIZE
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId64);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId64, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId64);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId64, value);
+            }
         }
         public static int BYTES
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId65);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId65, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId65);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId65, value);
+            }
         }
 
         private static readonly IntPtr _classObject;
@@ -4847,7 +6212,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = value }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = value } };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId0, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -4884,7 +6249,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = c }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = c } };
                 return new global::Java.Lang.Character(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId0, args_));
             }
             finally
@@ -4898,7 +6263,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallCharMethod(_rawObject, _cachedMethodId1, args_);
             }
             finally
@@ -4912,7 +6277,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId2, args_);
             }
             finally
@@ -4926,7 +6291,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = value }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = value } };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId3, args_);
             }
             finally
@@ -4940,7 +6305,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = obj.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = obj.GetRawObject() } };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId4, args_);
             }
             finally
@@ -4954,7 +6319,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = c }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = c } };
                 return AndroidJNI.CallStaticStringMethod(_classObject, _cachedMethodId5, args_);
             }
             finally
@@ -4968,7 +6333,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId6, args_);
             }
             finally
@@ -4982,7 +6347,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId7, args_);
             }
             finally
@@ -4996,7 +6361,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId8, args_);
             }
             finally
@@ -5010,7 +6375,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = ch } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId9, args_);
             }
             finally
@@ -5024,7 +6389,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = ch } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId10, args_);
             }
             finally
@@ -5038,7 +6403,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = ch } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId11, args_);
             }
             finally
@@ -5052,7 +6417,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = high }, new jvalue { c = low }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { c = high },
+                            new jvalue { c = low }
+                        };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId12, args_);
             }
             finally
@@ -5066,7 +6436,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId13, args_);
             }
             finally
@@ -5080,7 +6450,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = high }, new jvalue { c = low }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { c = high },
+                            new jvalue { c = low }
+                        };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId14, args_);
             }
             finally
@@ -5094,7 +6469,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = seq.GetRawObject() }, new jvalue { i = index }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { l = seq.GetRawObject() },
+                            new jvalue { i = index }
+                        };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId15, args_);
             }
             finally
@@ -5108,7 +6488,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = seq.GetRawObject() }, new jvalue { i = index }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { l = seq.GetRawObject() },
+                            new jvalue { i = index }
+                        };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId16, args_);
             }
             finally
@@ -5122,7 +6507,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticCharMethod(_classObject, _cachedMethodId17, args_);
             }
             finally
@@ -5136,7 +6521,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticCharMethod(_classObject, _cachedMethodId18, args_);
             }
             finally
@@ -5150,7 +6535,13 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = seq.GetRawObject() }, new jvalue { i = beginIndex }, new jvalue { i = endIndex }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { l = seq.GetRawObject() },
+                            new jvalue { i = beginIndex },
+                            new jvalue { i = endIndex }
+                        };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId19, args_);
             }
             finally
@@ -5164,7 +6555,13 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = seq.GetRawObject() }, new jvalue { i = index }, new jvalue { i = codePointOffset }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { l = seq.GetRawObject() },
+                            new jvalue { i = index },
+                            new jvalue { i = codePointOffset }
+                        };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId20, args_);
             }
             finally
@@ -5178,7 +6575,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = ch } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId21, args_);
             }
             finally
@@ -5192,7 +6589,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId22, args_);
             }
             finally
@@ -5206,7 +6603,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = ch } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId23, args_);
             }
             finally
@@ -5220,7 +6617,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId24, args_);
             }
             finally
@@ -5234,7 +6631,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = ch } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId25, args_);
             }
             finally
@@ -5248,7 +6645,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId26, args_);
             }
             finally
@@ -5262,7 +6659,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = ch } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId27, args_);
             }
             finally
@@ -5276,7 +6673,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId28, args_);
             }
             finally
@@ -5290,7 +6687,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = ch } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId29, args_);
             }
             finally
@@ -5304,7 +6701,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId30, args_);
             }
             finally
@@ -5318,7 +6715,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = ch } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId31, args_);
             }
             finally
@@ -5332,7 +6729,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId32, args_);
             }
             finally
@@ -5346,7 +6743,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = ch } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId33, args_);
             }
             finally
@@ -5360,7 +6757,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId34, args_);
             }
             finally
@@ -5374,7 +6771,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = ch } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId35, args_);
             }
             finally
@@ -5388,7 +6785,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = ch } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId36, args_);
             }
             finally
@@ -5402,7 +6799,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId37, args_);
             }
             finally
@@ -5416,7 +6813,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId38, args_);
             }
             finally
@@ -5430,7 +6827,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = ch } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId39, args_);
             }
             finally
@@ -5444,7 +6841,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId40, args_);
             }
             finally
@@ -5458,7 +6855,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = ch } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId41, args_);
             }
             finally
@@ -5472,7 +6869,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId42, args_);
             }
             finally
@@ -5486,7 +6883,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = ch } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId43, args_);
             }
             finally
@@ -5500,7 +6897,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId44, args_);
             }
             finally
@@ -5514,7 +6911,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = ch } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId45, args_);
             }
             finally
@@ -5528,7 +6925,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId46, args_);
             }
             finally
@@ -5542,7 +6939,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = ch } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId47, args_);
             }
             finally
@@ -5556,7 +6953,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId48, args_);
             }
             finally
@@ -5570,7 +6967,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = ch } };
                 return AndroidJNI.CallStaticCharMethod(_classObject, _cachedMethodId49, args_);
             }
             finally
@@ -5584,7 +6981,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId50, args_);
             }
             finally
@@ -5598,7 +6995,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = ch } };
                 return AndroidJNI.CallStaticCharMethod(_classObject, _cachedMethodId51, args_);
             }
             finally
@@ -5612,7 +7009,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId52, args_);
             }
             finally
@@ -5626,7 +7023,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = ch } };
                 return AndroidJNI.CallStaticCharMethod(_classObject, _cachedMethodId53, args_);
             }
             finally
@@ -5640,7 +7037,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId54, args_);
             }
             finally
@@ -5654,7 +7051,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }, new jvalue { i = radix }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { c = ch },
+                            new jvalue { i = radix }
+                        };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId55, args_);
             }
             finally
@@ -5668,7 +7070,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }, new jvalue { i = radix }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = codePoint },
+                            new jvalue { i = radix }
+                        };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId56, args_);
             }
             finally
@@ -5682,7 +7089,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = ch } };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId57, args_);
             }
             finally
@@ -5696,7 +7103,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId58, args_);
             }
             finally
@@ -5710,7 +7117,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = ch } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId59, args_);
             }
             finally
@@ -5724,7 +7131,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = ch } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId60, args_);
             }
             finally
@@ -5738,7 +7145,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId61, args_);
             }
             finally
@@ -5752,7 +7159,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = ch } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId62, args_);
             }
             finally
@@ -5766,7 +7173,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId63, args_);
             }
             finally
@@ -5780,7 +7187,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = ch } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId64, args_);
             }
             finally
@@ -5794,7 +7201,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId65, args_);
             }
             finally
@@ -5808,7 +7215,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = ch } };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId66, args_);
             }
             finally
@@ -5822,7 +7229,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId67, args_);
             }
             finally
@@ -5836,7 +7243,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = digit }, new jvalue { i = radix }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = digit },
+                            new jvalue { i = radix }
+                        };
                 return AndroidJNI.CallStaticCharMethod(_classObject, _cachedMethodId68, args_);
             }
             finally
@@ -5850,8 +7262,8 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }};
-                return AndroidJNI.CallStaticSByteMethod(_classObject, _cachedMethodId69, args_);
+                jvalue[] args_ = new jvalue[] { new jvalue { c = ch } };
+                return global::Google.LibraryWrapper.Java.Utils.CallStaticSByteMethod(_classObject, _cachedMethodId69, args_);
             }
             finally
             {
@@ -5864,8 +7276,8 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
-                return AndroidJNI.CallStaticSByteMethod(_classObject, _cachedMethodId70, args_);
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
+                return global::Google.LibraryWrapper.Java.Utils.CallStaticSByteMethod(_classObject, _cachedMethodId70, args_);
             }
             finally
             {
@@ -5878,7 +7290,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = ch } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId71, args_);
             }
             finally
@@ -5892,7 +7304,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId72, args_);
             }
             finally
@@ -5906,7 +7318,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = anotherCharacter.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = anotherCharacter.GetRawObject() } };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId73, args_);
             }
             finally
@@ -5920,7 +7332,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = x }, new jvalue { c = y }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { c = x },
+                            new jvalue { c = y }
+                        };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId74, args_);
             }
             finally
@@ -5934,7 +7351,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { c = ch }};
+                jvalue[] args_ = new jvalue[] { new jvalue { c = ch } };
                 return AndroidJNI.CallStaticCharMethod(_classObject, _cachedMethodId75, args_);
             }
             finally
@@ -5948,7 +7365,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = codePoint }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = codePoint } };
                 return AndroidJNI.CallStaticStringMethod(_classObject, _cachedMethodId76, args_);
             }
             finally

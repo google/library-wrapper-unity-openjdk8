@@ -47,7 +47,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId0, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -84,7 +84,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = elementType.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = elementType.GetRawObject() } };
                 return new global::Java.Util.EnumSet<E2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId0, args_));
             }
             finally
@@ -98,7 +98,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = elementType.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = elementType.GetRawObject() } };
                 return new global::Java.Util.EnumSet<E2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId1, args_));
             }
             finally
@@ -112,7 +112,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = s.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = s.GetRawObject() } };
                 return new global::Java.Util.EnumSet<E2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId2, args_));
             }
             finally
@@ -126,7 +126,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = c.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = c.GetRawObject() } };
                 return new global::Java.Util.EnumSet<E2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId3, args_));
             }
             finally
@@ -140,7 +140,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = s.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = s.GetRawObject() } };
                 return new global::Java.Util.EnumSet<E2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId4, args_));
             }
             finally
@@ -154,7 +154,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {ToJvalue(e)};
+                jvalue[] args_ = new jvalue[] { ToJvalue(e) };
                 return new global::Java.Util.EnumSet<E2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId5, args_));
             }
             finally
@@ -168,7 +168,12 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {ToJvalue(e1), ToJvalue(e2)};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            ToJvalue(e1),
+                            ToJvalue(e2)
+                        };
                 return new global::Java.Util.EnumSet<E2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId6, args_));
             }
             finally
@@ -182,7 +187,13 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {ToJvalue(e1), ToJvalue(e2), ToJvalue(e3)};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            ToJvalue(e1),
+                            ToJvalue(e2),
+                            ToJvalue(e3)
+                        };
                 return new global::Java.Util.EnumSet<E2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId7, args_));
             }
             finally
@@ -196,7 +207,14 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {ToJvalue(e1), ToJvalue(e2), ToJvalue(e3), ToJvalue(e4)};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            ToJvalue(e1),
+                            ToJvalue(e2),
+                            ToJvalue(e3),
+                            ToJvalue(e4)
+                        };
                 return new global::Java.Util.EnumSet<E2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId8, args_));
             }
             finally
@@ -210,7 +228,15 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {ToJvalue(e1), ToJvalue(e2), ToJvalue(e3), ToJvalue(e4), ToJvalue(e5)};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            ToJvalue(e1),
+                            ToJvalue(e2),
+                            ToJvalue(e3),
+                            ToJvalue(e4),
+                            ToJvalue(e5)
+                        };
                 return new global::Java.Util.EnumSet<E2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId9, args_));
             }
             finally
@@ -224,7 +250,12 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {ToJvalue(from), ToJvalue(to)};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            ToJvalue(from),
+                            ToJvalue(to)
+                        };
                 return new global::Java.Util.EnumSet<E2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId10, args_));
             }
             finally
@@ -238,7 +269,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return new global::Java.Util.EnumSet<E>(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId11, args_));
             }
             finally

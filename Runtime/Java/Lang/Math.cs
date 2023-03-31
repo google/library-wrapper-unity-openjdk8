@@ -8,13 +8,25 @@ namespace Java.Lang
     {
         public static double E
         {
-            get => AndroidJNI.GetStaticDoubleField(_classObject, _cachedFieldId0);
-            set => AndroidJNI.SetStaticDoubleField(_classObject, _cachedFieldId0, value);
+            get
+            {
+                return AndroidJNI.GetStaticDoubleField(_classObject, _cachedFieldId0);
+            }
+            set
+            {
+                AndroidJNI.SetStaticDoubleField(_classObject, _cachedFieldId0, value);
+            }
         }
         public static double PI
         {
-            get => AndroidJNI.GetStaticDoubleField(_classObject, _cachedFieldId1);
-            set => AndroidJNI.SetStaticDoubleField(_classObject, _cachedFieldId1, value);
+            get
+            {
+                return AndroidJNI.GetStaticDoubleField(_classObject, _cachedFieldId1);
+            }
+            set
+            {
+                AndroidJNI.SetStaticDoubleField(_classObject, _cachedFieldId1, value);
+            }
         }
 
         private static readonly IntPtr _classObject;
@@ -204,7 +216,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = a }};
+                jvalue[] args_ = new jvalue[] { new jvalue { d = a } };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId0, args_);
             }
             finally
@@ -218,7 +230,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = a }};
+                jvalue[] args_ = new jvalue[] { new jvalue { d = a } };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId1, args_);
             }
             finally
@@ -232,7 +244,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = a }};
+                jvalue[] args_ = new jvalue[] { new jvalue { d = a } };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId2, args_);
             }
             finally
@@ -246,7 +258,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = a }};
+                jvalue[] args_ = new jvalue[] { new jvalue { d = a } };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId3, args_);
             }
             finally
@@ -260,7 +272,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = a }};
+                jvalue[] args_ = new jvalue[] { new jvalue { d = a } };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId4, args_);
             }
             finally
@@ -274,7 +286,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = a }};
+                jvalue[] args_ = new jvalue[] { new jvalue { d = a } };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId5, args_);
             }
             finally
@@ -288,7 +300,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = angdeg }};
+                jvalue[] args_ = new jvalue[] { new jvalue { d = angdeg } };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId6, args_);
             }
             finally
@@ -302,7 +314,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = angrad }};
+                jvalue[] args_ = new jvalue[] { new jvalue { d = angrad } };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId7, args_);
             }
             finally
@@ -316,7 +328,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = a }};
+                jvalue[] args_ = new jvalue[] { new jvalue { d = a } };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId8, args_);
             }
             finally
@@ -330,7 +342,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = a }};
+                jvalue[] args_ = new jvalue[] { new jvalue { d = a } };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId9, args_);
             }
             finally
@@ -344,7 +356,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = a }};
+                jvalue[] args_ = new jvalue[] { new jvalue { d = a } };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId10, args_);
             }
             finally
@@ -358,7 +370,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = a }};
+                jvalue[] args_ = new jvalue[] { new jvalue { d = a } };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId11, args_);
             }
             finally
@@ -372,7 +384,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = a }};
+                jvalue[] args_ = new jvalue[] { new jvalue { d = a } };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId12, args_);
             }
             finally
@@ -386,7 +398,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = f1 }, new jvalue { d = f2 }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { d = f1 },
+                            new jvalue { d = f2 }
+                        };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId13, args_);
             }
             finally
@@ -400,7 +417,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = a }};
+                jvalue[] args_ = new jvalue[] { new jvalue { d = a } };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId14, args_);
             }
             finally
@@ -414,7 +431,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = a }};
+                jvalue[] args_ = new jvalue[] { new jvalue { d = a } };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId15, args_);
             }
             finally
@@ -428,7 +445,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = a }};
+                jvalue[] args_ = new jvalue[] { new jvalue { d = a } };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId16, args_);
             }
             finally
@@ -442,7 +459,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = y }, new jvalue { d = x }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { d = y },
+                            new jvalue { d = x }
+                        };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId17, args_);
             }
             finally
@@ -456,7 +478,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = a }, new jvalue { d = b }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { d = a },
+                            new jvalue { d = b }
+                        };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId18, args_);
             }
             finally
@@ -470,7 +497,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { f = a }};
+                jvalue[] args_ = new jvalue[] { new jvalue { f = a } };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId19, args_);
             }
             finally
@@ -484,7 +511,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = a }};
+                jvalue[] args_ = new jvalue[] { new jvalue { d = a } };
                 return AndroidJNI.CallStaticLongMethod(_classObject, _cachedMethodId20, args_);
             }
             finally
@@ -498,7 +525,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId21, args_);
             }
             finally
@@ -512,7 +539,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = x }, new jvalue { i = y }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = x },
+                            new jvalue { i = y }
+                        };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId22, args_);
             }
             finally
@@ -526,7 +558,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { j = x }, new jvalue { j = y }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { j = x },
+                            new jvalue { j = y }
+                        };
                 return AndroidJNI.CallStaticLongMethod(_classObject, _cachedMethodId23, args_);
             }
             finally
@@ -540,7 +577,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = x }, new jvalue { i = y }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = x },
+                            new jvalue { i = y }
+                        };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId24, args_);
             }
             finally
@@ -554,7 +596,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { j = x }, new jvalue { j = y }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { j = x },
+                            new jvalue { j = y }
+                        };
                 return AndroidJNI.CallStaticLongMethod(_classObject, _cachedMethodId25, args_);
             }
             finally
@@ -568,7 +615,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = x }, new jvalue { i = y }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = x },
+                            new jvalue { i = y }
+                        };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId26, args_);
             }
             finally
@@ -582,7 +634,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { j = x }, new jvalue { j = y }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { j = x },
+                            new jvalue { j = y }
+                        };
                 return AndroidJNI.CallStaticLongMethod(_classObject, _cachedMethodId27, args_);
             }
             finally
@@ -596,7 +653,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = a }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = a } };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId28, args_);
             }
             finally
@@ -610,7 +667,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { j = a }};
+                jvalue[] args_ = new jvalue[] { new jvalue { j = a } };
                 return AndroidJNI.CallStaticLongMethod(_classObject, _cachedMethodId29, args_);
             }
             finally
@@ -624,7 +681,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = a }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = a } };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId30, args_);
             }
             finally
@@ -638,7 +695,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { j = a }};
+                jvalue[] args_ = new jvalue[] { new jvalue { j = a } };
                 return AndroidJNI.CallStaticLongMethod(_classObject, _cachedMethodId31, args_);
             }
             finally
@@ -652,7 +709,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = a }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = a } };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId32, args_);
             }
             finally
@@ -666,7 +723,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { j = a }};
+                jvalue[] args_ = new jvalue[] { new jvalue { j = a } };
                 return AndroidJNI.CallStaticLongMethod(_classObject, _cachedMethodId33, args_);
             }
             finally
@@ -680,7 +737,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { j = value }};
+                jvalue[] args_ = new jvalue[] { new jvalue { j = value } };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId34, args_);
             }
             finally
@@ -694,7 +751,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = x }, new jvalue { i = y }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = x },
+                            new jvalue { i = y }
+                        };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId35, args_);
             }
             finally
@@ -708,7 +770,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { j = x }, new jvalue { j = y }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { j = x },
+                            new jvalue { j = y }
+                        };
                 return AndroidJNI.CallStaticLongMethod(_classObject, _cachedMethodId36, args_);
             }
             finally
@@ -722,7 +789,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = x }, new jvalue { i = y }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = x },
+                            new jvalue { i = y }
+                        };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId37, args_);
             }
             finally
@@ -736,7 +808,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { j = x }, new jvalue { j = y }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { j = x },
+                            new jvalue { j = y }
+                        };
                 return AndroidJNI.CallStaticLongMethod(_classObject, _cachedMethodId38, args_);
             }
             finally
@@ -750,7 +827,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = a }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = a } };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId39, args_);
             }
             finally
@@ -764,7 +841,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { j = a }};
+                jvalue[] args_ = new jvalue[] { new jvalue { j = a } };
                 return AndroidJNI.CallStaticLongMethod(_classObject, _cachedMethodId40, args_);
             }
             finally
@@ -778,7 +855,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { f = a }};
+                jvalue[] args_ = new jvalue[] { new jvalue { f = a } };
                 return AndroidJNI.CallStaticFloatMethod(_classObject, _cachedMethodId41, args_);
             }
             finally
@@ -792,7 +869,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = a }};
+                jvalue[] args_ = new jvalue[] { new jvalue { d = a } };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId42, args_);
             }
             finally
@@ -806,7 +883,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = a }, new jvalue { i = b }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = a },
+                            new jvalue { i = b }
+                        };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId43, args_);
             }
             finally
@@ -820,7 +902,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { j = a }, new jvalue { j = b }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { j = a },
+                            new jvalue { j = b }
+                        };
                 return AndroidJNI.CallStaticLongMethod(_classObject, _cachedMethodId44, args_);
             }
             finally
@@ -834,7 +921,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { f = a }, new jvalue { f = b }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { f = a },
+                            new jvalue { f = b }
+                        };
                 return AndroidJNI.CallStaticFloatMethod(_classObject, _cachedMethodId45, args_);
             }
             finally
@@ -848,7 +940,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = a }, new jvalue { d = b }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { d = a },
+                            new jvalue { d = b }
+                        };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId46, args_);
             }
             finally
@@ -862,7 +959,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = a }, new jvalue { i = b }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = a },
+                            new jvalue { i = b }
+                        };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId47, args_);
             }
             finally
@@ -876,7 +978,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { j = a }, new jvalue { j = b }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { j = a },
+                            new jvalue { j = b }
+                        };
                 return AndroidJNI.CallStaticLongMethod(_classObject, _cachedMethodId48, args_);
             }
             finally
@@ -890,7 +997,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { f = a }, new jvalue { f = b }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { f = a },
+                            new jvalue { f = b }
+                        };
                 return AndroidJNI.CallStaticFloatMethod(_classObject, _cachedMethodId49, args_);
             }
             finally
@@ -904,7 +1016,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = a }, new jvalue { d = b }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { d = a },
+                            new jvalue { d = b }
+                        };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId50, args_);
             }
             finally
@@ -918,7 +1035,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = d }};
+                jvalue[] args_ = new jvalue[] { new jvalue { d = d } };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId51, args_);
             }
             finally
@@ -932,7 +1049,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { f = f }};
+                jvalue[] args_ = new jvalue[] { new jvalue { f = f } };
                 return AndroidJNI.CallStaticFloatMethod(_classObject, _cachedMethodId52, args_);
             }
             finally
@@ -946,7 +1063,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = d }};
+                jvalue[] args_ = new jvalue[] { new jvalue { d = d } };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId53, args_);
             }
             finally
@@ -960,7 +1077,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { f = f }};
+                jvalue[] args_ = new jvalue[] { new jvalue { f = f } };
                 return AndroidJNI.CallStaticFloatMethod(_classObject, _cachedMethodId54, args_);
             }
             finally
@@ -974,7 +1091,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = x }};
+                jvalue[] args_ = new jvalue[] { new jvalue { d = x } };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId55, args_);
             }
             finally
@@ -988,7 +1105,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = x }};
+                jvalue[] args_ = new jvalue[] { new jvalue { d = x } };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId56, args_);
             }
             finally
@@ -1002,7 +1119,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = x }};
+                jvalue[] args_ = new jvalue[] { new jvalue { d = x } };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId57, args_);
             }
             finally
@@ -1016,7 +1133,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = x }, new jvalue { d = y }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { d = x },
+                            new jvalue { d = y }
+                        };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId58, args_);
             }
             finally
@@ -1030,7 +1152,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = x }};
+                jvalue[] args_ = new jvalue[] { new jvalue { d = x } };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId59, args_);
             }
             finally
@@ -1044,7 +1166,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = x }};
+                jvalue[] args_ = new jvalue[] { new jvalue { d = x } };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId60, args_);
             }
             finally
@@ -1058,7 +1180,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = magnitude }, new jvalue { d = sign }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { d = magnitude },
+                            new jvalue { d = sign }
+                        };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId61, args_);
             }
             finally
@@ -1072,7 +1199,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { f = magnitude }, new jvalue { f = sign }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { f = magnitude },
+                            new jvalue { f = sign }
+                        };
                 return AndroidJNI.CallStaticFloatMethod(_classObject, _cachedMethodId62, args_);
             }
             finally
@@ -1086,7 +1218,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { f = f }};
+                jvalue[] args_ = new jvalue[] { new jvalue { f = f } };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId63, args_);
             }
             finally
@@ -1100,7 +1232,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = d }};
+                jvalue[] args_ = new jvalue[] { new jvalue { d = d } };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId64, args_);
             }
             finally
@@ -1114,7 +1246,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = start }, new jvalue { d = direction }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { d = start },
+                            new jvalue { d = direction }
+                        };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId65, args_);
             }
             finally
@@ -1128,7 +1265,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { f = start }, new jvalue { d = direction }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { f = start },
+                            new jvalue { d = direction }
+                        };
                 return AndroidJNI.CallStaticFloatMethod(_classObject, _cachedMethodId66, args_);
             }
             finally
@@ -1142,7 +1284,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = d }};
+                jvalue[] args_ = new jvalue[] { new jvalue { d = d } };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId67, args_);
             }
             finally
@@ -1156,7 +1298,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { f = f }};
+                jvalue[] args_ = new jvalue[] { new jvalue { f = f } };
                 return AndroidJNI.CallStaticFloatMethod(_classObject, _cachedMethodId68, args_);
             }
             finally
@@ -1170,7 +1312,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = d }};
+                jvalue[] args_ = new jvalue[] { new jvalue { d = d } };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId69, args_);
             }
             finally
@@ -1184,7 +1326,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { f = f }};
+                jvalue[] args_ = new jvalue[] { new jvalue { f = f } };
                 return AndroidJNI.CallStaticFloatMethod(_classObject, _cachedMethodId70, args_);
             }
             finally
@@ -1198,7 +1340,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { d = d }, new jvalue { i = scaleFactor }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { d = d },
+                            new jvalue { i = scaleFactor }
+                        };
                 return AndroidJNI.CallStaticDoubleMethod(_classObject, _cachedMethodId71, args_);
             }
             finally
@@ -1212,7 +1359,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { f = f }, new jvalue { i = scaleFactor }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { f = f },
+                            new jvalue { i = scaleFactor }
+                        };
                 return AndroidJNI.CallStaticFloatMethod(_classObject, _cachedMethodId72, args_);
             }
             finally

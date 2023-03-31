@@ -89,7 +89,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId0, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -104,7 +104,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { j = date }};
+                jvalue[] args_ = new jvalue[] { new jvalue { j = date } };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId1, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -119,7 +119,13 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = year }, new jvalue { i = month }, new jvalue { i = date }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = year },
+                            new jvalue { i = month },
+                            new jvalue { i = date }
+                        };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId2, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -134,7 +140,15 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = year }, new jvalue { i = month }, new jvalue { i = date }, new jvalue { i = hrs }, new jvalue { i = min }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = year },
+                            new jvalue { i = month },
+                            new jvalue { i = date },
+                            new jvalue { i = hrs },
+                            new jvalue { i = min }
+                        };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId3, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -149,7 +163,16 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = year }, new jvalue { i = month }, new jvalue { i = date }, new jvalue { i = hrs }, new jvalue { i = min }, new jvalue { i = sec }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = year },
+                            new jvalue { i = month },
+                            new jvalue { i = date },
+                            new jvalue { i = hrs },
+                            new jvalue { i = min },
+                            new jvalue { i = sec }
+                        };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId4, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -164,7 +187,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = AndroidJNI.NewString(s) }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = global::Google.LibraryWrapper.Java.Utils.NewString(s) } };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId5, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -201,7 +224,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return new global::Google.LibraryWrapper.Java.JavaObject(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId0, args_));
             }
             finally
@@ -215,7 +238,16 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = year }, new jvalue { i = month }, new jvalue { i = date }, new jvalue { i = hrs }, new jvalue { i = min }, new jvalue { i = sec }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { i = year },
+                            new jvalue { i = month },
+                            new jvalue { i = date },
+                            new jvalue { i = hrs },
+                            new jvalue { i = min },
+                            new jvalue { i = sec }
+                        };
                 return AndroidJNI.CallStaticLongMethod(_classObject, _cachedMethodId1, args_);
             }
             finally
@@ -229,7 +261,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = AndroidJNI.NewString(s) }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = global::Google.LibraryWrapper.Java.Utils.NewString(s) } };
                 return AndroidJNI.CallStaticLongMethod(_classObject, _cachedMethodId2, args_);
             }
             finally
@@ -243,7 +275,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId3, args_);
             }
             finally
@@ -257,7 +289,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = year }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = year } };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId4, args_);
             }
             finally
@@ -271,7 +303,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId5, args_);
             }
             finally
@@ -285,7 +317,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = month }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = month } };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId6, args_);
             }
             finally
@@ -299,7 +331,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId7, args_);
             }
             finally
@@ -313,7 +345,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = date }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = date } };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId8, args_);
             }
             finally
@@ -327,7 +359,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId9, args_);
             }
             finally
@@ -341,7 +373,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId10, args_);
             }
             finally
@@ -355,7 +387,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = hours }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = hours } };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId11, args_);
             }
             finally
@@ -369,7 +401,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId12, args_);
             }
             finally
@@ -383,7 +415,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = minutes }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = minutes } };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId13, args_);
             }
             finally
@@ -397,7 +429,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId14, args_);
             }
             finally
@@ -411,7 +443,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { i = seconds }};
+                jvalue[] args_ = new jvalue[] { new jvalue { i = seconds } };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId15, args_);
             }
             finally
@@ -425,7 +457,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallLongMethod(_rawObject, _cachedMethodId16, args_);
             }
             finally
@@ -439,7 +471,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { j = time }};
+                jvalue[] args_ = new jvalue[] { new jvalue { j = time } };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId17, args_);
             }
             finally
@@ -453,7 +485,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = when.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = when.GetRawObject() } };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId18, args_);
             }
             finally
@@ -467,7 +499,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = when.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = when.GetRawObject() } };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId19, args_);
             }
             finally
@@ -481,7 +513,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = obj.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = obj.GetRawObject() } };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId20, args_);
             }
             finally
@@ -495,7 +527,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = anotherDate.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = anotherDate.GetRawObject() } };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId21, args_);
             }
             finally
@@ -509,7 +541,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId22, args_);
             }
             finally
@@ -523,7 +555,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId23, args_);
             }
             finally
@@ -537,7 +569,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId24, args_);
             }
             finally
@@ -551,7 +583,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId25, args_);
             }
             finally
@@ -565,7 +597,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = instant.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = instant.GetRawObject() } };
                 return new global::Java.Util.Date(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId26, args_));
             }
             finally
@@ -579,7 +611,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return new global::Java.ExternalType.Java.Time.Instant(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId27, args_));
             }
             finally

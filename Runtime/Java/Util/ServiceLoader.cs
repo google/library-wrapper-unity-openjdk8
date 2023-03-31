@@ -53,7 +53,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId0, args_);
             }
             finally
@@ -67,8 +67,8 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
-                return new global::Java.Util.Iterator<S>.AnonymousImplementation(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId1, args_));
+                jvalue[] args_ = new jvalue[] {  };
+                return new global::Java.Util.IteratorAnonymousImplementation<S>(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId1, args_));
             }
             finally
             {
@@ -81,7 +81,12 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = service.GetRawObject() }, new jvalue { l = loader.GetRawObject() }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { l = service.GetRawObject() },
+                            new jvalue { l = loader.GetRawObject() }
+                        };
                 return new global::Java.Util.ServiceLoader<S2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId2, args_));
             }
             finally
@@ -95,7 +100,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = service.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = service.GetRawObject() } };
                 return new global::Java.Util.ServiceLoader<S2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId3, args_));
             }
             finally
@@ -109,7 +114,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = service.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = service.GetRawObject() } };
                 return new global::Java.Util.ServiceLoader<S2>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId4, args_));
             }
             finally

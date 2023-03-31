@@ -35,7 +35,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId0, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -72,7 +72,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId0, args_);
             }
             finally
@@ -86,7 +86,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallLongMethod(_rawObject, _cachedMethodId1, args_);
             }
             finally
@@ -100,7 +100,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallFloatMethod(_rawObject, _cachedMethodId2, args_);
             }
             finally
@@ -114,7 +114,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallDoubleMethod(_rawObject, _cachedMethodId3, args_);
             }
             finally
@@ -128,8 +128,8 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
-                return AndroidJNI.CallSByteMethod(_rawObject, _cachedMethodId4, args_);
+                jvalue[] args_ = new jvalue[] {  };
+                return global::Google.LibraryWrapper.Java.Utils.CallSByteMethod(_rawObject, _cachedMethodId4, args_);
             }
             finally
             {
@@ -142,7 +142,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallShortMethod(_rawObject, _cachedMethodId5, args_);
             }
             finally

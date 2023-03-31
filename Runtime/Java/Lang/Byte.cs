@@ -8,17 +8,32 @@ namespace Java.Lang
     {
         public static sbyte MIN_VALUE
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId0);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId0, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId0);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId0, value);
+            }
         }
         public static sbyte MAX_VALUE
         {
-            get => AndroidJNI.GetStaticSByteField(_classObject, _cachedFieldId1);
-            set => AndroidJNI.SetStaticSByteField(_classObject, _cachedFieldId1, value);
+            get
+            {
+                return global::Google.LibraryWrapper.Java.Utils.GetStaticSByteField(_classObject, _cachedFieldId1);
+            }
+            set
+            {
+                global::Google.LibraryWrapper.Java.Utils.SetStaticSByteField(_classObject, _cachedFieldId1, value);
+            }
         }
         public static global::Java.Lang.Class<global::Java.Lang.Byte> TYPE
         {
-            get => new global::Java.Lang.Class<global::Java.Lang.Byte>(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId2));
+            get
+            {
+                return new global::Java.Lang.Class<global::Java.Lang.Byte>(AndroidJNI.GetStaticObjectField(_classObject, _cachedFieldId2));
+            }
             set
             {
                 IntPtr valueRef = value.GetRawObject();
@@ -28,13 +43,25 @@ namespace Java.Lang
         }
         public static int SIZE
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId3);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId3, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId3);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId3, value);
+            }
         }
         public static int BYTES
         {
-            get => AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId4);
-            set => AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId4, value);
+            get
+            {
+                return AndroidJNI.GetStaticIntField(_classObject, _cachedFieldId4);
+            }
+            set
+            {
+                AndroidJNI.SetStaticIntField(_classObject, _cachedFieldId4, value);
+            }
         }
 
         private static readonly IntPtr _classObject;
@@ -94,7 +121,18 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { b = value }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue
+                            {
+                                #if UNITY_2019_1_OR_NEWER
+                                b = value
+                                #else
+                                b = (byte)value
+                                #endif
+                            }
+                        };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId0, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -109,7 +147,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = AndroidJNI.NewString(s) }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = global::Google.LibraryWrapper.Java.Utils.NewString(s) } };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId1, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -146,7 +184,18 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { b = b }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue
+                            {
+                                #if UNITY_2019_1_OR_NEWER
+                                b = b
+                                #else
+                                b = (byte)b
+                                #endif
+                            }
+                        };
                 return AndroidJNI.CallStaticStringMethod(_classObject, _cachedMethodId0, args_);
             }
             finally
@@ -160,7 +209,18 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { b = b }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue
+                            {
+                                #if UNITY_2019_1_OR_NEWER
+                                b = b
+                                #else
+                                b = (byte)b
+                                #endif
+                            }
+                        };
                 return new global::Java.Lang.Byte(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId1, args_));
             }
             finally
@@ -174,8 +234,13 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = AndroidJNI.NewString(s) }, new jvalue { i = radix }};
-                return AndroidJNI.CallStaticSByteMethod(_classObject, _cachedMethodId2, args_);
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { l = global::Google.LibraryWrapper.Java.Utils.NewString(s) },
+                            new jvalue { i = radix }
+                        };
+                return global::Google.LibraryWrapper.Java.Utils.CallStaticSByteMethod(_classObject, _cachedMethodId2, args_);
             }
             finally
             {
@@ -188,8 +253,8 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = AndroidJNI.NewString(s) }};
-                return AndroidJNI.CallStaticSByteMethod(_classObject, _cachedMethodId3, args_);
+                jvalue[] args_ = new jvalue[] { new jvalue { l = global::Google.LibraryWrapper.Java.Utils.NewString(s) } };
+                return global::Google.LibraryWrapper.Java.Utils.CallStaticSByteMethod(_classObject, _cachedMethodId3, args_);
             }
             finally
             {
@@ -202,7 +267,12 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = AndroidJNI.NewString(s) }, new jvalue { i = radix }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { l = global::Google.LibraryWrapper.Java.Utils.NewString(s) },
+                            new jvalue { i = radix }
+                        };
                 return new global::Java.Lang.Byte(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId4, args_));
             }
             finally
@@ -216,7 +286,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = AndroidJNI.NewString(s) }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = global::Google.LibraryWrapper.Java.Utils.NewString(s) } };
                 return new global::Java.Lang.Byte(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId5, args_));
             }
             finally
@@ -230,7 +300,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = AndroidJNI.NewString(nm) }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = global::Google.LibraryWrapper.Java.Utils.NewString(nm) } };
                 return new global::Java.Lang.Byte(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId6, args_));
             }
             finally
@@ -244,7 +314,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId7, args_);
             }
             finally
@@ -258,7 +328,18 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { b = value }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue
+                            {
+                                #if UNITY_2019_1_OR_NEWER
+                                b = value
+                                #else
+                                b = (byte)value
+                                #endif
+                            }
+                        };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId8, args_);
             }
             finally
@@ -272,7 +353,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = obj.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = obj.GetRawObject() } };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId9, args_);
             }
             finally
@@ -286,7 +367,7 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = anotherByte.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = anotherByte.GetRawObject() } };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId10, args_);
             }
             finally
@@ -300,7 +381,26 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { b = x }, new jvalue { b = y }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue
+                            {
+                                #if UNITY_2019_1_OR_NEWER
+                                b = x
+                                #else
+                                b = (byte)x
+                                #endif
+                            },
+                            new jvalue
+                            {
+                                #if UNITY_2019_1_OR_NEWER
+                                b = y
+                                #else
+                                b = (byte)y
+                                #endif
+                            }
+                        };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId11, args_);
             }
             finally
@@ -314,7 +414,18 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { b = x }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue
+                            {
+                                #if UNITY_2019_1_OR_NEWER
+                                b = x
+                                #else
+                                b = (byte)x
+                                #endif
+                            }
+                        };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId12, args_);
             }
             finally
@@ -328,7 +439,18 @@ namespace Java.Lang
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { b = x }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue
+                            {
+                                #if UNITY_2019_1_OR_NEWER
+                                b = x
+                                #else
+                                b = (byte)x
+                                #endif
+                            }
+                        };
                 return AndroidJNI.CallStaticLongMethod(_classObject, _cachedMethodId13, args_);
             }
             finally

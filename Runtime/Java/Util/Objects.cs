@@ -65,7 +65,12 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = a.GetRawObject() }, new jvalue { l = b.GetRawObject() }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { l = a.GetRawObject() },
+                            new jvalue { l = b.GetRawObject() }
+                        };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId0, args_);
             }
             finally
@@ -79,7 +84,12 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = a.GetRawObject() }, new jvalue { l = b.GetRawObject() }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { l = a.GetRawObject() },
+                            new jvalue { l = b.GetRawObject() }
+                        };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId1, args_);
             }
             finally
@@ -93,7 +103,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = o.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = o.GetRawObject() } };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId2, args_);
             }
             finally
@@ -107,7 +117,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = o.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = o.GetRawObject() } };
                 return AndroidJNI.CallStaticStringMethod(_classObject, _cachedMethodId3, args_);
             }
             finally
@@ -121,7 +131,12 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = o.GetRawObject() }, new jvalue { l = AndroidJNI.NewString(nullDefault) }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { l = o.GetRawObject() },
+                            new jvalue { l = global::Google.LibraryWrapper.Java.Utils.NewString(nullDefault) }
+                        };
                 return AndroidJNI.CallStaticStringMethod(_classObject, _cachedMethodId4, args_);
             }
             finally
@@ -135,7 +150,13 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {ToJvalue(a), ToJvalue(b), new jvalue { l = c.GetRawObject() }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            ToJvalue(a),
+                            ToJvalue(b),
+                            new jvalue { l = c.GetRawObject() }
+                        };
                 return AndroidJNI.CallStaticIntMethod(_classObject, _cachedMethodId5, args_);
             }
             finally
@@ -149,7 +170,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {ToJvalue(obj)};
+                jvalue[] args_ = new jvalue[] { ToJvalue(obj) };
                 if (typeof(T) == typeof(global::System.String))
                 {
                     return (T) (global::System.Object) AndroidJNI.CallStaticStringMethod(_classObject, _cachedMethodId6, args_);
@@ -171,7 +192,12 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {ToJvalue(obj), new jvalue { l = AndroidJNI.NewString(message) }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            ToJvalue(obj),
+                            new jvalue { l = global::Google.LibraryWrapper.Java.Utils.NewString(message) }
+                        };
                 if (typeof(T) == typeof(global::System.String))
                 {
                     return (T) (global::System.Object) AndroidJNI.CallStaticStringMethod(_classObject, _cachedMethodId7, args_);
@@ -193,7 +219,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = obj.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = obj.GetRawObject() } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId8, args_);
             }
             finally
@@ -207,7 +233,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = obj.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = obj.GetRawObject() } };
                 return AndroidJNI.CallStaticBooleanMethod(_classObject, _cachedMethodId9, args_);
             }
             finally
@@ -221,7 +247,12 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {ToJvalue(obj), new jvalue { l = messageSupplier.GetRawObject() }};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            ToJvalue(obj),
+                            new jvalue { l = messageSupplier.GetRawObject() }
+                        };
                 if (typeof(T) == typeof(global::System.String))
                 {
                     return (T) (global::System.Object) AndroidJNI.CallStaticStringMethod(_classObject, _cachedMethodId10, args_);

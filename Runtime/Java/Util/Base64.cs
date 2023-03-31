@@ -29,7 +29,7 @@ namespace Java.Util
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {};
+                    jvalue[] args_ = new jvalue[] {  };
                     IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId0, args_);
                     _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
                 }
@@ -66,7 +66,7 @@ namespace Java.Util
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {new jvalue { l = buffer.GetRawObject() }};
+                    jvalue[] args_ = new jvalue[] { new jvalue { l = buffer.GetRawObject() } };
                     return new global::Java.ExternalType.Java.Nio.ByteBuffer(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId0, args_));
                 }
                 finally
@@ -80,7 +80,7 @@ namespace Java.Util
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {new jvalue { l = @is.GetRawObject() }};
+                    jvalue[] args_ = new jvalue[] { new jvalue { l = @is.GetRawObject() } };
                     return new global::Java.ExternalType.Java.Io.InputStream(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId1, args_));
                 }
                 finally
@@ -130,7 +130,7 @@ namespace Java.Util
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {};
+                    jvalue[] args_ = new jvalue[] {  };
                     IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId0, args_);
                     _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
                 }
@@ -167,7 +167,7 @@ namespace Java.Util
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {new jvalue { l = buffer.GetRawObject() }};
+                    jvalue[] args_ = new jvalue[] { new jvalue { l = buffer.GetRawObject() } };
                     return new global::Java.ExternalType.Java.Nio.ByteBuffer(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId0, args_));
                 }
                 finally
@@ -181,7 +181,7 @@ namespace Java.Util
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {new jvalue { l = os.GetRawObject() }};
+                    jvalue[] args_ = new jvalue[] { new jvalue { l = os.GetRawObject() } };
                     return new global::Java.ExternalType.Java.Io.OutputStream(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId1, args_));
                 }
                 finally
@@ -195,7 +195,7 @@ namespace Java.Util
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {};
+                    jvalue[] args_ = new jvalue[] {  };
                     return new global::Java.Util.Base64.Encoder(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId2, args_));
                 }
                 finally
@@ -269,7 +269,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return new global::Java.Util.Base64.Encoder(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId0, args_));
             }
             finally
@@ -283,7 +283,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return new global::Java.Util.Base64.Encoder(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId1, args_));
             }
             finally
@@ -297,7 +297,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return new global::Java.Util.Base64.Encoder(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId2, args_));
             }
             finally
@@ -311,7 +311,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return new global::Java.Util.Base64.Decoder(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId3, args_));
             }
             finally
@@ -325,7 +325,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return new global::Java.Util.Base64.Decoder(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId4, args_));
             }
             finally
@@ -339,7 +339,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return new global::Java.Util.Base64.Decoder(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId5, args_));
             }
             finally

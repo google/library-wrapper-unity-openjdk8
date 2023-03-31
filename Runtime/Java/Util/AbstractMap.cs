@@ -6,7 +6,7 @@ namespace Java.Util
 {
     public static class AbstractMap
     {
-        public class SimpleEntry<K2, V2> : global::Google.LibraryWrapper.Java.JavaObject, global::Java.Util.Map.Entry<K2, V2>, global::Java.ExternalType.Java.Io.Serializable where K2 : class where V2 : class
+        public class SimpleEntry<K, V> : global::Google.LibraryWrapper.Java.JavaObject, global::Java.Util.Map.Entry<K, V>, global::Java.ExternalType.Java.Io.Serializable where K : class where V : class
         {
             private static readonly IntPtr _classObject;
             private static readonly IntPtr _cachedConstructorId0;
@@ -32,12 +32,17 @@ namespace Java.Util
                 _cachedMethodId4 = AndroidJNI.GetMethodID(_classObject, "hashCode", "()I");
             }
 
-            public SimpleEntry(K2 key, V2 value) : base(IntPtr.Zero)
+            public SimpleEntry(K key, V value) : base(IntPtr.Zero)
             {
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {ToJvalue(key), ToJvalue(value)};
+                    jvalue[] args_ =
+                            new jvalue[]
+                            {
+                                ToJvalue(key),
+                                ToJvalue(value)
+                            };
                     IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId0, args_);
                     _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
                 }
@@ -47,12 +52,12 @@ namespace Java.Util
                 }
             }
 
-            public SimpleEntry(global::Java.Util.Map.Entry<K2, V2> entry) : base(IntPtr.Zero)
+            public SimpleEntry(global::Java.Util.Map.Entry<K, V> entry) : base(IntPtr.Zero)
             {
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {new jvalue { l = entry.GetRawObject() }};
+                    jvalue[] args_ = new jvalue[] { new jvalue { l = entry.GetRawObject() } };
                     IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId1, args_);
                     _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
                 }
@@ -84,20 +89,20 @@ namespace Java.Util
                 }
             }
 
-            public K2 GetKey()
+            public K GetKey()
             {
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {};
-                    if (typeof(K2) == typeof(global::System.String))
+                    jvalue[] args_ = new jvalue[] {  };
+                    if (typeof(K) == typeof(global::System.String))
                     {
-                        return (K2) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId0, args_);
+                        return (K) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId0, args_);
                     }
                     else
                     {
                         IntPtr result_ = AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId0, args_);
-                        return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<K2>(result_);
+                        return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<K>(result_);
                     }
                 }
                 finally
@@ -106,20 +111,20 @@ namespace Java.Util
                 }
             }
 
-            public V2 GetValue()
+            public V GetValue()
             {
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {};
-                    if (typeof(V2) == typeof(global::System.String))
+                    jvalue[] args_ = new jvalue[] {  };
+                    if (typeof(V) == typeof(global::System.String))
                     {
-                        return (V2) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId1, args_);
+                        return (V) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId1, args_);
                     }
                     else
                     {
                         IntPtr result_ = AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId1, args_);
-                        return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V2>(result_);
+                        return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(result_);
                     }
                 }
                 finally
@@ -128,20 +133,20 @@ namespace Java.Util
                 }
             }
 
-            public V2 SetValue(V2 value)
+            public V SetValue(V value)
             {
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {ToJvalue(value)};
-                    if (typeof(V2) == typeof(global::System.String))
+                    jvalue[] args_ = new jvalue[] { ToJvalue(value) };
+                    if (typeof(V) == typeof(global::System.String))
                     {
-                        return (V2) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId2, args_);
+                        return (V) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId2, args_);
                     }
                     else
                     {
                         IntPtr result_ = AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId2, args_);
-                        return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V2>(result_);
+                        return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(result_);
                     }
                 }
                 finally
@@ -155,7 +160,7 @@ namespace Java.Util
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {new jvalue { l = o.GetRawObject() }};
+                    jvalue[] args_ = new jvalue[] { new jvalue { l = o.GetRawObject() } };
                     return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId3, args_);
                 }
                 finally
@@ -169,7 +174,7 @@ namespace Java.Util
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {};
+                    jvalue[] args_ = new jvalue[] {  };
                     return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId4, args_);
                 }
                 finally
@@ -178,14 +183,14 @@ namespace Java.Util
                 }
             }
 
-            public static explicit operator IntPtr(SimpleEntry<K2, V2> wrapper)
+            public static explicit operator IntPtr(SimpleEntry<K, V> wrapper)
             {
                 return wrapper.GetRawObject();
             }
 
-            public static explicit operator SimpleEntry<K2, V2>(IntPtr rawObject)
+            public static explicit operator SimpleEntry<K, V>(IntPtr rawObject)
             {
-                return new SimpleEntry<K2, V2>(rawObject);
+                return new SimpleEntry<K, V>(rawObject);
             }
 
             public new static IntPtr GetRawClass()
@@ -194,7 +199,7 @@ namespace Java.Util
             }
         } // end class SimpleEntry
 
-        public class SimpleImmutableEntry<K2, V2> : global::Google.LibraryWrapper.Java.JavaObject, global::Java.Util.Map.Entry<K2, V2>, global::Java.ExternalType.Java.Io.Serializable where K2 : class where V2 : class
+        public class SimpleImmutableEntry<K, V> : global::Google.LibraryWrapper.Java.JavaObject, global::Java.Util.Map.Entry<K, V>, global::Java.ExternalType.Java.Io.Serializable where K : class where V : class
         {
             private static readonly IntPtr _classObject;
             private static readonly IntPtr _cachedConstructorId0;
@@ -220,12 +225,17 @@ namespace Java.Util
                 _cachedMethodId4 = AndroidJNI.GetMethodID(_classObject, "hashCode", "()I");
             }
 
-            public SimpleImmutableEntry(K2 key, V2 value) : base(IntPtr.Zero)
+            public SimpleImmutableEntry(K key, V value) : base(IntPtr.Zero)
             {
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {ToJvalue(key), ToJvalue(value)};
+                    jvalue[] args_ =
+                            new jvalue[]
+                            {
+                                ToJvalue(key),
+                                ToJvalue(value)
+                            };
                     IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId0, args_);
                     _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
                 }
@@ -235,12 +245,12 @@ namespace Java.Util
                 }
             }
 
-            public SimpleImmutableEntry(global::Java.Util.Map.Entry<K2, V2> entry) : base(IntPtr.Zero)
+            public SimpleImmutableEntry(global::Java.Util.Map.Entry<K, V> entry) : base(IntPtr.Zero)
             {
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {new jvalue { l = entry.GetRawObject() }};
+                    jvalue[] args_ = new jvalue[] { new jvalue { l = entry.GetRawObject() } };
                     IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId1, args_);
                     _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
                 }
@@ -272,20 +282,20 @@ namespace Java.Util
                 }
             }
 
-            public K2 GetKey()
+            public K GetKey()
             {
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {};
-                    if (typeof(K2) == typeof(global::System.String))
+                    jvalue[] args_ = new jvalue[] {  };
+                    if (typeof(K) == typeof(global::System.String))
                     {
-                        return (K2) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId0, args_);
+                        return (K) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId0, args_);
                     }
                     else
                     {
                         IntPtr result_ = AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId0, args_);
-                        return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<K2>(result_);
+                        return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<K>(result_);
                     }
                 }
                 finally
@@ -294,20 +304,20 @@ namespace Java.Util
                 }
             }
 
-            public V2 GetValue()
+            public V GetValue()
             {
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {};
-                    if (typeof(V2) == typeof(global::System.String))
+                    jvalue[] args_ = new jvalue[] {  };
+                    if (typeof(V) == typeof(global::System.String))
                     {
-                        return (V2) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId1, args_);
+                        return (V) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId1, args_);
                     }
                     else
                     {
                         IntPtr result_ = AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId1, args_);
-                        return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V2>(result_);
+                        return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(result_);
                     }
                 }
                 finally
@@ -316,20 +326,20 @@ namespace Java.Util
                 }
             }
 
-            public V2 SetValue(V2 value)
+            public V SetValue(V value)
             {
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {ToJvalue(value)};
-                    if (typeof(V2) == typeof(global::System.String))
+                    jvalue[] args_ = new jvalue[] { ToJvalue(value) };
+                    if (typeof(V) == typeof(global::System.String))
                     {
-                        return (V2) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId2, args_);
+                        return (V) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId2, args_);
                     }
                     else
                     {
                         IntPtr result_ = AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId2, args_);
-                        return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V2>(result_);
+                        return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(result_);
                     }
                 }
                 finally
@@ -343,7 +353,7 @@ namespace Java.Util
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {new jvalue { l = o.GetRawObject() }};
+                    jvalue[] args_ = new jvalue[] { new jvalue { l = o.GetRawObject() } };
                     return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId3, args_);
                 }
                 finally
@@ -357,7 +367,7 @@ namespace Java.Util
                 try
                 {
                     AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {};
+                    jvalue[] args_ = new jvalue[] {  };
                     return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId4, args_);
                 }
                 finally
@@ -366,14 +376,14 @@ namespace Java.Util
                 }
             }
 
-            public static explicit operator IntPtr(SimpleImmutableEntry<K2, V2> wrapper)
+            public static explicit operator IntPtr(SimpleImmutableEntry<K, V> wrapper)
             {
                 return wrapper.GetRawObject();
             }
 
-            public static explicit operator SimpleImmutableEntry<K2, V2>(IntPtr rawObject)
+            public static explicit operator SimpleImmutableEntry<K, V>(IntPtr rawObject)
             {
-                return new SimpleImmutableEntry<K2, V2>(rawObject);
+                return new SimpleImmutableEntry<K, V>(rawObject);
             }
 
             public new static IntPtr GetRawClass()
@@ -430,7 +440,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 IntPtr rawObject_ = AndroidJNI.NewObject(_classObject, _cachedConstructorId0, args_);
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject_);
             }
@@ -467,7 +477,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId0, args_);
             }
             finally
@@ -481,7 +491,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId1, args_);
             }
             finally
@@ -495,7 +505,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = value.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = value.GetRawObject() } };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId2, args_);
             }
             finally
@@ -509,7 +519,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = key.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = key.GetRawObject() } };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId3, args_);
             }
             finally
@@ -523,7 +533,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = key.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = key.GetRawObject() } };
                 if (typeof(V) == typeof(global::System.String))
                 {
                     return (V) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId4, args_);
@@ -545,7 +555,12 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {ToJvalue(key), ToJvalue(value)};
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            ToJvalue(key),
+                            ToJvalue(value)
+                        };
                 if (typeof(V) == typeof(global::System.String))
                 {
                     return (V) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId5, args_);
@@ -567,7 +582,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = key.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = key.GetRawObject() } };
                 if (typeof(V) == typeof(global::System.String))
                 {
                     return (V) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId6, args_);
@@ -589,7 +604,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = m.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = m.GetRawObject() } };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId7, args_);
             }
             finally
@@ -603,7 +618,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId8, args_);
             }
             finally
@@ -617,8 +632,8 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
-                return new global::Java.Util.Set<K>.AnonymousImplementation(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId9, args_));
+                jvalue[] args_ = new jvalue[] {  };
+                return new global::Java.Util.SetAnonymousImplementation<K>(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId9, args_));
             }
             finally
             {
@@ -631,8 +646,8 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
-                return new global::Java.Util.Collection<V>.AnonymousImplementation(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId10, args_));
+                jvalue[] args_ = new jvalue[] {  };
+                return new global::Java.Util.CollectionAnonymousImplementation<V>(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId10, args_));
             }
             finally
             {
@@ -645,8 +660,8 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
-                return new global::Java.Util.Set<global::Java.Util.Map.Entry<K, V>>.AnonymousImplementation(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId11, args_));
+                jvalue[] args_ = new jvalue[] {  };
+                return new global::Java.Util.SetAnonymousImplementation<global::Java.Util.Map.Entry<K, V>>(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId11, args_));
             }
             finally
             {
@@ -659,7 +674,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {new jvalue { l = o.GetRawObject() }};
+                jvalue[] args_ = new jvalue[] { new jvalue { l = o.GetRawObject() } };
                 return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId12, args_);
             }
             finally
@@ -673,7 +688,7 @@ namespace Java.Util
             try
             {
                 AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {};
+                jvalue[] args_ = new jvalue[] {  };
                 return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId13, args_);
             }
             finally

@@ -4,7 +4,7 @@
   "displayName": "Library Wrappers OpenJDK 8",
   "description": "Library Wrapper is a code generator that parses Java API and produces wrapper APIs in Unity C#. This Unity package contains generated C# wrappers for a trimmed down version of OpenJDK 8, consisting of `java.lang` and `java.util` classes. These wrappers allow developers to access common Java data structures easily.",
   "dependencies": {
-    "com.google.librarywrapper.java": "0.2.0"
+    "com.google.librarywrapper.java": "0.2.1"
   },
   "unity": "2017.1",
   "author": {

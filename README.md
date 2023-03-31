@@ -32,3 +32,6 @@ to your project's `Packages/` folder
 
 All the wrappers can be accessed by importing `Java.Lang` or `Java.Util`. All
 methods and fields are renamed with CamelCase.
+
+The [`Utils.cs`](Runtime/Utils.cs) file contains some extension methods that
+converts data structures between Java and C#.

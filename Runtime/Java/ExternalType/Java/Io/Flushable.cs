@@ -64,7 +64,7 @@ namespace Java.ExternalType.Java.Io
 
         public override sealed AndroidJavaObject Invoke(global::System.String methodName, global::System.Object[] args)
         {
-        return base.Invoke(methodName, args);
+            return base.Invoke(methodName, args);
         }
     } // end class FlushableCallbackHelper
 } // end namespace Java.ExternalType.Java.Io

@@ -144,15 +144,15 @@ namespace Java.Util
 
         public override sealed AndroidJavaObject Invoke(global::System.String methodName, global::System.Object[] args)
         {
-        if (methodName == "hasNext" && args.Length == 0)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(HasNext());
-        }
-        else if (methodName == "next" && args.Length == 0)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Next());
-        }
-        return base.Invoke(methodName, args);
+            if (methodName == "hasNext" && args.Length == 0)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(HasNext());
+            }
+            else if (methodName == "next" && args.Length == 0)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Next());
+            }
+            return base.Invoke(methodName, args);
         }
     } // end class IteratorCallbackHelper
 } // end namespace Java.Util

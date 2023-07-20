@@ -64,7 +64,7 @@ namespace Java.ExternalType.Java.Util.Function
 
         public override sealed AndroidJavaObject Invoke(global::System.String methodName, global::System.Object[] args)
         {
-        return base.Invoke(methodName, args);
+            return base.Invoke(methodName, args);
         }
     } // end class IntConsumerCallbackHelper
 } // end namespace Java.ExternalType.Java.Util.Function

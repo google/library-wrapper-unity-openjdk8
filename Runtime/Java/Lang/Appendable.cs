@@ -130,19 +130,19 @@ namespace Java.Lang
 
         public override sealed AndroidJavaObject Invoke(global::System.String methodName, global::System.Object[] args)
         {
-        if (methodName == "append" && args.Length == 1)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Append(new global::Java.Lang.CharSequenceAnonymousImplementation(((AndroidJavaObject) args[0]).GetRawObject())));
-        }
-        else if (methodName == "append" && args.Length == 3)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Append(new global::Java.Lang.CharSequenceAnonymousImplementation(((AndroidJavaObject) args[0]).GetRawObject()), (int) args[1], (int) args[2]));
-        }
-        else if (methodName == "append" && args.Length == 1)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Append((char) args[0]));
-        }
-        return base.Invoke(methodName, args);
+            if (methodName == "append" && args.Length == 1)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Append(new global::Java.Lang.CharSequenceAnonymousImplementation(((AndroidJavaObject) args[0]).GetRawObject())));
+            }
+            else if (methodName == "append" && args.Length == 3)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Append(new global::Java.Lang.CharSequenceAnonymousImplementation(((AndroidJavaObject) args[0]).GetRawObject()), (int) args[1], (int) args[2]));
+            }
+            else if (methodName == "append" && args.Length == 1)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Append((char) args[0]));
+            }
+            return base.Invoke(methodName, args);
         }
     } // end class AppendableCallbackHelper
 } // end namespace Java.Lang

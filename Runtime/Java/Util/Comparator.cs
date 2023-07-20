@@ -375,15 +375,15 @@ namespace Java.Util
 
         public override sealed AndroidJavaObject Invoke(global::System.String methodName, global::System.Object[] args)
         {
-        if (methodName == "compare" && args.Length == 2)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Compare(args[0] is global::System.String ? (T) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<T>(((AndroidJavaObject) args[0]).GetRawObject()), args[1] is global::System.String ? (T) (global::System.Object) args[1] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<T>(((AndroidJavaObject) args[1]).GetRawObject())));
-        }
-        else if (methodName == "equals" && args.Length == 1)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Equals(new global::Google.LibraryWrapper.Java.JavaObject(((AndroidJavaObject) args[0]).GetRawObject())));
-        }
-        return base.Invoke(methodName, args);
+            if (methodName == "compare" && args.Length == 2)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Compare(args[0] is global::System.String ? (T) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<T>(((AndroidJavaObject) args[0]).GetRawObject()), args[1] is global::System.String ? (T) (global::System.Object) args[1] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<T>(((AndroidJavaObject) args[1]).GetRawObject())));
+            }
+            else if (methodName == "equals" && args.Length == 1)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Equals(new global::Google.LibraryWrapper.Java.JavaObject(((AndroidJavaObject) args[0]).GetRawObject())));
+            }
+            return base.Invoke(methodName, args);
         }
     } // end class ComparatorCallbackHelper
 } // end namespace Java.Util

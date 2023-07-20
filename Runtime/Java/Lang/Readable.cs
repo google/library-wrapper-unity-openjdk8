@@ -84,11 +84,11 @@ namespace Java.Lang
 
         public override sealed AndroidJavaObject Invoke(global::System.String methodName, global::System.Object[] args)
         {
-        if (methodName == "read" && args.Length == 1)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Read(new global::Java.ExternalType.Java.Nio.CharBuffer(((AndroidJavaObject) args[0]).GetRawObject())));
-        }
-        return base.Invoke(methodName, args);
+            if (methodName == "read" && args.Length == 1)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Read(new global::Java.ExternalType.Java.Nio.CharBuffer(((AndroidJavaObject) args[0]).GetRawObject())));
+            }
+            return base.Invoke(methodName, args);
         }
     } // end class ReadableCallbackHelper
 } // end namespace Java.Lang

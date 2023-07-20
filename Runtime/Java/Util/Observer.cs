@@ -89,12 +89,12 @@ namespace Java.Util
 
         public override sealed AndroidJavaObject Invoke(global::System.String methodName, global::System.Object[] args)
         {
-        if (methodName == "update" && args.Length == 2)
-        {
-        Update(new global::Java.Util.Observable(((AndroidJavaObject) args[0]).GetRawObject()), new global::Google.LibraryWrapper.Java.JavaObject(((AndroidJavaObject) args[1]).GetRawObject()));
-        return null;
-        }
-        return base.Invoke(methodName, args);
+            if (methodName == "update" && args.Length == 2)
+            {
+                Update(new global::Java.Util.Observable(((AndroidJavaObject) args[0]).GetRawObject()), new global::Google.LibraryWrapper.Java.JavaObject(((AndroidJavaObject) args[1]).GetRawObject()));
+                return null;
+            }
+            return base.Invoke(methodName, args);
         }
     } // end class ObserverCallbackHelper
 } // end namespace Java.Util

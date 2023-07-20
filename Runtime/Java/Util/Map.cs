@@ -254,27 +254,27 @@ namespace Java.Util
 
             public override sealed AndroidJavaObject Invoke(global::System.String methodName, global::System.Object[] args)
             {
-            if (methodName == "getKey" && args.Length == 0)
-            {
-            return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(GetKey());
-            }
-            else if (methodName == "getValue" && args.Length == 0)
-            {
-            return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(GetValue());
-            }
-            else if (methodName == "setValue" && args.Length == 1)
-            {
-            return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(SetValue(args[0] is global::System.String ? (V) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(((AndroidJavaObject) args[0]).GetRawObject())));
-            }
-            else if (methodName == "equals" && args.Length == 1)
-            {
-            return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Equals(new global::Google.LibraryWrapper.Java.JavaObject(((AndroidJavaObject) args[0]).GetRawObject())));
-            }
-            else if (methodName == "hashCode" && args.Length == 0)
-            {
-            return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(HashCode());
-            }
-            return base.Invoke(methodName, args);
+                if (methodName == "getKey" && args.Length == 0)
+                {
+                    return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(GetKey());
+                }
+                else if (methodName == "getValue" && args.Length == 0)
+                {
+                    return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(GetValue());
+                }
+                else if (methodName == "setValue" && args.Length == 1)
+                {
+                    return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(SetValue(args[0] is global::System.String ? (V) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(((AndroidJavaObject) args[0]).GetRawObject())));
+                }
+                else if (methodName == "equals" && args.Length == 1)
+                {
+                    return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Equals(new global::Google.LibraryWrapper.Java.JavaObject(((AndroidJavaObject) args[0]).GetRawObject())));
+                }
+                else if (methodName == "hashCode" && args.Length == 0)
+                {
+                    return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(HashCode());
+                }
+                return base.Invoke(methodName, args);
             }
         } // end class EntryCallbackHelper
 
@@ -927,65 +927,65 @@ namespace Java.Util
 
         public override sealed AndroidJavaObject Invoke(global::System.String methodName, global::System.Object[] args)
         {
-        if (methodName == "size" && args.Length == 0)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Size());
-        }
-        else if (methodName == "isEmpty" && args.Length == 0)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(IsEmpty());
-        }
-        else if (methodName == "containsKey" && args.Length == 1)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(ContainsKey(new global::Google.LibraryWrapper.Java.JavaObject(((AndroidJavaObject) args[0]).GetRawObject())));
-        }
-        else if (methodName == "containsValue" && args.Length == 1)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(ContainsValue(new global::Google.LibraryWrapper.Java.JavaObject(((AndroidJavaObject) args[0]).GetRawObject())));
-        }
-        else if (methodName == "get" && args.Length == 1)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Get(new global::Google.LibraryWrapper.Java.JavaObject(((AndroidJavaObject) args[0]).GetRawObject())));
-        }
-        else if (methodName == "put" && args.Length == 2)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Put(args[0] is global::System.String ? (K) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<K>(((AndroidJavaObject) args[0]).GetRawObject()), args[1] is global::System.String ? (V) (global::System.Object) args[1] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(((AndroidJavaObject) args[1]).GetRawObject())));
-        }
-        else if (methodName == "remove" && args.Length == 1)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Remove(new global::Google.LibraryWrapper.Java.JavaObject(((AndroidJavaObject) args[0]).GetRawObject())));
-        }
-        else if (methodName == "putAll" && args.Length == 1)
-        {
-        PutAll(new global::Java.Util.MapAnonymousImplementation<K, V>(((AndroidJavaObject) args[0]).GetRawObject()));
-        return null;
-        }
-        else if (methodName == "clear" && args.Length == 0)
-        {
-        Clear();
-        return null;
-        }
-        else if (methodName == "keySet" && args.Length == 0)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(KeySet());
-        }
-        else if (methodName == "values" && args.Length == 0)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Values());
-        }
-        else if (methodName == "entrySet" && args.Length == 0)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(EntrySet());
-        }
-        else if (methodName == "equals" && args.Length == 1)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Equals(new global::Google.LibraryWrapper.Java.JavaObject(((AndroidJavaObject) args[0]).GetRawObject())));
-        }
-        else if (methodName == "hashCode" && args.Length == 0)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(HashCode());
-        }
-        return base.Invoke(methodName, args);
+            if (methodName == "size" && args.Length == 0)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Size());
+            }
+            else if (methodName == "isEmpty" && args.Length == 0)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(IsEmpty());
+            }
+            else if (methodName == "containsKey" && args.Length == 1)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(ContainsKey(new global::Google.LibraryWrapper.Java.JavaObject(((AndroidJavaObject) args[0]).GetRawObject())));
+            }
+            else if (methodName == "containsValue" && args.Length == 1)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(ContainsValue(new global::Google.LibraryWrapper.Java.JavaObject(((AndroidJavaObject) args[0]).GetRawObject())));
+            }
+            else if (methodName == "get" && args.Length == 1)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Get(new global::Google.LibraryWrapper.Java.JavaObject(((AndroidJavaObject) args[0]).GetRawObject())));
+            }
+            else if (methodName == "put" && args.Length == 2)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Put(args[0] is global::System.String ? (K) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<K>(((AndroidJavaObject) args[0]).GetRawObject()), args[1] is global::System.String ? (V) (global::System.Object) args[1] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(((AndroidJavaObject) args[1]).GetRawObject())));
+            }
+            else if (methodName == "remove" && args.Length == 1)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Remove(new global::Google.LibraryWrapper.Java.JavaObject(((AndroidJavaObject) args[0]).GetRawObject())));
+            }
+            else if (methodName == "putAll" && args.Length == 1)
+            {
+                PutAll(new global::Java.Util.MapAnonymousImplementation<K, V>(((AndroidJavaObject) args[0]).GetRawObject()));
+                return null;
+            }
+            else if (methodName == "clear" && args.Length == 0)
+            {
+                Clear();
+                return null;
+            }
+            else if (methodName == "keySet" && args.Length == 0)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(KeySet());
+            }
+            else if (methodName == "values" && args.Length == 0)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Values());
+            }
+            else if (methodName == "entrySet" && args.Length == 0)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(EntrySet());
+            }
+            else if (methodName == "equals" && args.Length == 1)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Equals(new global::Google.LibraryWrapper.Java.JavaObject(((AndroidJavaObject) args[0]).GetRawObject())));
+            }
+            else if (methodName == "hashCode" && args.Length == 0)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(HashCode());
+            }
+            return base.Invoke(methodName, args);
         }
     } // end class MapCallbackHelper
 } // end namespace Java.Util

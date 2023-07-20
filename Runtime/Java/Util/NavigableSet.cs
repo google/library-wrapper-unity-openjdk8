@@ -712,128 +712,128 @@ namespace Java.Util
 
         public override sealed AndroidJavaObject Invoke(global::System.String methodName, global::System.Object[] args)
         {
-        if (methodName == "lower" && args.Length == 1)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Lower(args[0] is global::System.String ? (E) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<E>(((AndroidJavaObject) args[0]).GetRawObject())));
-        }
-        else if (methodName == "floor" && args.Length == 1)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Floor(args[0] is global::System.String ? (E) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<E>(((AndroidJavaObject) args[0]).GetRawObject())));
-        }
-        else if (methodName == "ceiling" && args.Length == 1)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Ceiling(args[0] is global::System.String ? (E) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<E>(((AndroidJavaObject) args[0]).GetRawObject())));
-        }
-        else if (methodName == "higher" && args.Length == 1)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Higher(args[0] is global::System.String ? (E) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<E>(((AndroidJavaObject) args[0]).GetRawObject())));
-        }
-        else if (methodName == "pollFirst" && args.Length == 0)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(PollFirst());
-        }
-        else if (methodName == "pollLast" && args.Length == 0)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(PollLast());
-        }
-        else if (methodName == "iterator" && args.Length == 0)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Iterator());
-        }
-        else if (methodName == "descendingSet" && args.Length == 0)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(DescendingSet());
-        }
-        else if (methodName == "descendingIterator" && args.Length == 0)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(DescendingIterator());
-        }
-        else if (methodName == "subSet" && args.Length == 4)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(SubSet(args[0] is global::System.String ? (E) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<E>(((AndroidJavaObject) args[0]).GetRawObject()), (bool) args[1], args[2] is global::System.String ? (E) (global::System.Object) args[2] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<E>(((AndroidJavaObject) args[2]).GetRawObject()), (bool) args[3]));
-        }
-        else if (methodName == "headSet" && args.Length == 2)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(HeadSet(args[0] is global::System.String ? (E) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<E>(((AndroidJavaObject) args[0]).GetRawObject()), (bool) args[1]));
-        }
-        else if (methodName == "tailSet" && args.Length == 2)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(TailSet(args[0] is global::System.String ? (E) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<E>(((AndroidJavaObject) args[0]).GetRawObject()), (bool) args[1]));
-        }
-        else if (methodName == "subSet" && args.Length == 2)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(SubSet(args[0] is global::System.String ? (E) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<E>(((AndroidJavaObject) args[0]).GetRawObject()), args[1] is global::System.String ? (E) (global::System.Object) args[1] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<E>(((AndroidJavaObject) args[1]).GetRawObject())));
-        }
-        else if (methodName == "headSet" && args.Length == 1)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(HeadSet(args[0] is global::System.String ? (E) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<E>(((AndroidJavaObject) args[0]).GetRawObject())));
-        }
-        else if (methodName == "tailSet" && args.Length == 1)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(TailSet(args[0] is global::System.String ? (E) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<E>(((AndroidJavaObject) args[0]).GetRawObject())));
-        }
-        else if (methodName == "comparator" && args.Length == 0)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Comparator());
-        }
-        else if (methodName == "first" && args.Length == 0)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(First());
-        }
-        else if (methodName == "last" && args.Length == 0)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Last());
-        }
-        else if (methodName == "size" && args.Length == 0)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Size());
-        }
-        else if (methodName == "isEmpty" && args.Length == 0)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(IsEmpty());
-        }
-        else if (methodName == "contains" && args.Length == 1)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Contains(new global::Google.LibraryWrapper.Java.JavaObject(((AndroidJavaObject) args[0]).GetRawObject())));
-        }
-        else if (methodName == "add" && args.Length == 1)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Add(args[0] is global::System.String ? (E) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<E>(((AndroidJavaObject) args[0]).GetRawObject())));
-        }
-        else if (methodName == "remove" && args.Length == 1)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Remove(new global::Google.LibraryWrapper.Java.JavaObject(((AndroidJavaObject) args[0]).GetRawObject())));
-        }
-        else if (methodName == "containsAll" && args.Length == 1)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(ContainsAll(new global::Java.Util.CollectionAnonymousImplementation<global::Google.LibraryWrapper.Java.JavaObject>(((AndroidJavaObject) args[0]).GetRawObject())));
-        }
-        else if (methodName == "addAll" && args.Length == 1)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(AddAll(new global::Java.Util.CollectionAnonymousImplementation<E>(((AndroidJavaObject) args[0]).GetRawObject())));
-        }
-        else if (methodName == "retainAll" && args.Length == 1)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(RetainAll(new global::Java.Util.CollectionAnonymousImplementation<global::Google.LibraryWrapper.Java.JavaObject>(((AndroidJavaObject) args[0]).GetRawObject())));
-        }
-        else if (methodName == "removeAll" && args.Length == 1)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(RemoveAll(new global::Java.Util.CollectionAnonymousImplementation<global::Google.LibraryWrapper.Java.JavaObject>(((AndroidJavaObject) args[0]).GetRawObject())));
-        }
-        else if (methodName == "clear" && args.Length == 0)
-        {
-        Clear();
-        return null;
-        }
-        else if (methodName == "equals" && args.Length == 1)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Equals(new global::Google.LibraryWrapper.Java.JavaObject(((AndroidJavaObject) args[0]).GetRawObject())));
-        }
-        else if (methodName == "hashCode" && args.Length == 0)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(HashCode());
-        }
-        return base.Invoke(methodName, args);
+            if (methodName == "lower" && args.Length == 1)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Lower(args[0] is global::System.String ? (E) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<E>(((AndroidJavaObject) args[0]).GetRawObject())));
+            }
+            else if (methodName == "floor" && args.Length == 1)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Floor(args[0] is global::System.String ? (E) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<E>(((AndroidJavaObject) args[0]).GetRawObject())));
+            }
+            else if (methodName == "ceiling" && args.Length == 1)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Ceiling(args[0] is global::System.String ? (E) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<E>(((AndroidJavaObject) args[0]).GetRawObject())));
+            }
+            else if (methodName == "higher" && args.Length == 1)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Higher(args[0] is global::System.String ? (E) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<E>(((AndroidJavaObject) args[0]).GetRawObject())));
+            }
+            else if (methodName == "pollFirst" && args.Length == 0)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(PollFirst());
+            }
+            else if (methodName == "pollLast" && args.Length == 0)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(PollLast());
+            }
+            else if (methodName == "iterator" && args.Length == 0)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Iterator());
+            }
+            else if (methodName == "descendingSet" && args.Length == 0)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(DescendingSet());
+            }
+            else if (methodName == "descendingIterator" && args.Length == 0)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(DescendingIterator());
+            }
+            else if (methodName == "subSet" && args.Length == 4)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(SubSet(args[0] is global::System.String ? (E) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<E>(((AndroidJavaObject) args[0]).GetRawObject()), (bool) args[1], args[2] is global::System.String ? (E) (global::System.Object) args[2] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<E>(((AndroidJavaObject) args[2]).GetRawObject()), (bool) args[3]));
+            }
+            else if (methodName == "headSet" && args.Length == 2)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(HeadSet(args[0] is global::System.String ? (E) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<E>(((AndroidJavaObject) args[0]).GetRawObject()), (bool) args[1]));
+            }
+            else if (methodName == "tailSet" && args.Length == 2)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(TailSet(args[0] is global::System.String ? (E) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<E>(((AndroidJavaObject) args[0]).GetRawObject()), (bool) args[1]));
+            }
+            else if (methodName == "subSet" && args.Length == 2)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(SubSet(args[0] is global::System.String ? (E) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<E>(((AndroidJavaObject) args[0]).GetRawObject()), args[1] is global::System.String ? (E) (global::System.Object) args[1] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<E>(((AndroidJavaObject) args[1]).GetRawObject())));
+            }
+            else if (methodName == "headSet" && args.Length == 1)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(HeadSet(args[0] is global::System.String ? (E) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<E>(((AndroidJavaObject) args[0]).GetRawObject())));
+            }
+            else if (methodName == "tailSet" && args.Length == 1)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(TailSet(args[0] is global::System.String ? (E) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<E>(((AndroidJavaObject) args[0]).GetRawObject())));
+            }
+            else if (methodName == "comparator" && args.Length == 0)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Comparator());
+            }
+            else if (methodName == "first" && args.Length == 0)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(First());
+            }
+            else if (methodName == "last" && args.Length == 0)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Last());
+            }
+            else if (methodName == "size" && args.Length == 0)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Size());
+            }
+            else if (methodName == "isEmpty" && args.Length == 0)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(IsEmpty());
+            }
+            else if (methodName == "contains" && args.Length == 1)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Contains(new global::Google.LibraryWrapper.Java.JavaObject(((AndroidJavaObject) args[0]).GetRawObject())));
+            }
+            else if (methodName == "add" && args.Length == 1)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Add(args[0] is global::System.String ? (E) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<E>(((AndroidJavaObject) args[0]).GetRawObject())));
+            }
+            else if (methodName == "remove" && args.Length == 1)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Remove(new global::Google.LibraryWrapper.Java.JavaObject(((AndroidJavaObject) args[0]).GetRawObject())));
+            }
+            else if (methodName == "containsAll" && args.Length == 1)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(ContainsAll(new global::Java.Util.CollectionAnonymousImplementation<global::Google.LibraryWrapper.Java.JavaObject>(((AndroidJavaObject) args[0]).GetRawObject())));
+            }
+            else if (methodName == "addAll" && args.Length == 1)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(AddAll(new global::Java.Util.CollectionAnonymousImplementation<E>(((AndroidJavaObject) args[0]).GetRawObject())));
+            }
+            else if (methodName == "retainAll" && args.Length == 1)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(RetainAll(new global::Java.Util.CollectionAnonymousImplementation<global::Google.LibraryWrapper.Java.JavaObject>(((AndroidJavaObject) args[0]).GetRawObject())));
+            }
+            else if (methodName == "removeAll" && args.Length == 1)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(RemoveAll(new global::Java.Util.CollectionAnonymousImplementation<global::Google.LibraryWrapper.Java.JavaObject>(((AndroidJavaObject) args[0]).GetRawObject())));
+            }
+            else if (methodName == "clear" && args.Length == 0)
+            {
+                Clear();
+                return null;
+            }
+            else if (methodName == "equals" && args.Length == 1)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Equals(new global::Google.LibraryWrapper.Java.JavaObject(((AndroidJavaObject) args[0]).GetRawObject())));
+            }
+            else if (methodName == "hashCode" && args.Length == 0)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(HashCode());
+            }
+            return base.Invoke(methodName, args);
         }
     } // end class NavigableSetCallbackHelper
 } // end namespace Java.Util

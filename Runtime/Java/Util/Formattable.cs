@@ -91,12 +91,12 @@ namespace Java.Util
 
         public override sealed AndroidJavaObject Invoke(global::System.String methodName, global::System.Object[] args)
         {
-        if (methodName == "formatTo" && args.Length == 4)
-        {
-        FormatTo(new global::Java.Util.Formatter(((AndroidJavaObject) args[0]).GetRawObject()), (int) args[1], (int) args[2], (int) args[3]);
-        return null;
-        }
-        return base.Invoke(methodName, args);
+            if (methodName == "formatTo" && args.Length == 4)
+            {
+                FormatTo(new global::Java.Util.Formatter(((AndroidJavaObject) args[0]).GetRawObject()), (int) args[1], (int) args[2], (int) args[3]);
+                return null;
+            }
+            return base.Invoke(methodName, args);
         }
     } // end class FormattableCallbackHelper
 } // end namespace Java.Util

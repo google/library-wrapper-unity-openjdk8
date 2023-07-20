@@ -66,7 +66,7 @@ namespace Java.ExternalType.Java.Util
 
             public override sealed AndroidJavaObject Invoke(global::System.String methodName, global::System.Object[] args)
             {
-            return base.Invoke(methodName, args);
+                return base.Invoke(methodName, args);
             }
         } // end class OfDoubleCallbackHelper
 
@@ -130,7 +130,7 @@ namespace Java.ExternalType.Java.Util
 
             public override sealed AndroidJavaObject Invoke(global::System.String methodName, global::System.Object[] args)
             {
-            return base.Invoke(methodName, args);
+                return base.Invoke(methodName, args);
             }
         } // end class OfIntCallbackHelper
 
@@ -194,7 +194,7 @@ namespace Java.ExternalType.Java.Util
 
             public override sealed AndroidJavaObject Invoke(global::System.String methodName, global::System.Object[] args)
             {
-            return base.Invoke(methodName, args);
+                return base.Invoke(methodName, args);
             }
         } // end class OfLongCallbackHelper
 
@@ -259,7 +259,7 @@ namespace Java.ExternalType.Java.Util
 
         public override sealed AndroidJavaObject Invoke(global::System.String methodName, global::System.Object[] args)
         {
-        return base.Invoke(methodName, args);
+            return base.Invoke(methodName, args);
         }
     } // end class SpliteratorCallbackHelper
 } // end namespace Java.ExternalType.Java.Util

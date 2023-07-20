@@ -248,12 +248,12 @@ namespace Java.Lang
 
             public override sealed AndroidJavaObject Invoke(global::System.String methodName, global::System.Object[] args)
             {
-            if (methodName == "uncaughtException" && args.Length == 2)
-            {
-            UncaughtException(new global::Java.Lang.Thread(((AndroidJavaObject) args[0]).GetRawObject()), new global::Java.Lang.Throwable(((AndroidJavaObject) args[1]).GetRawObject()));
-            return null;
-            }
-            return base.Invoke(methodName, args);
+                if (methodName == "uncaughtException" && args.Length == 2)
+                {
+                    UncaughtException(new global::Java.Lang.Thread(((AndroidJavaObject) args[0]).GetRawObject()), new global::Java.Lang.Throwable(((AndroidJavaObject) args[1]).GetRawObject()));
+                    return null;
+                }
+                return base.Invoke(methodName, args);
             }
         } // end class UncaughtExceptionHandlerCallbackHelper
 

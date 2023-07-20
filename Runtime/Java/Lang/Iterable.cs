@@ -116,11 +116,11 @@ namespace Java.Lang
 
         public override sealed AndroidJavaObject Invoke(global::System.String methodName, global::System.Object[] args)
         {
-        if (methodName == "iterator" && args.Length == 0)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Iterator());
-        }
-        return base.Invoke(methodName, args);
+            if (methodName == "iterator" && args.Length == 0)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Iterator());
+            }
+            return base.Invoke(methodName, args);
         }
     } // end class IterableCallbackHelper
 } // end namespace Java.Lang

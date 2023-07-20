@@ -112,15 +112,15 @@ namespace Java.Util
 
         public override sealed AndroidJavaObject Invoke(global::System.String methodName, global::System.Object[] args)
         {
-        if (methodName == "hasMoreElements" && args.Length == 0)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(HasMoreElements());
-        }
-        else if (methodName == "nextElement" && args.Length == 0)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(NextElement());
-        }
-        return base.Invoke(methodName, args);
+            if (methodName == "hasMoreElements" && args.Length == 0)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(HasMoreElements());
+            }
+            else if (methodName == "nextElement" && args.Length == 0)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(NextElement());
+            }
+            return base.Invoke(methodName, args);
         }
     } // end class EnumerationCallbackHelper
 } // end namespace Java.Util

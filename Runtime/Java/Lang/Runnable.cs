@@ -84,12 +84,12 @@ namespace Java.Lang
 
         public override sealed AndroidJavaObject Invoke(global::System.String methodName, global::System.Object[] args)
         {
-        if (methodName == "run" && args.Length == 0)
-        {
-        Run();
-        return null;
-        }
-        return base.Invoke(methodName, args);
+            if (methodName == "run" && args.Length == 0)
+            {
+                Run();
+                return null;
+            }
+            return base.Invoke(methodName, args);
         }
     } // end class RunnableCallbackHelper
 } // end namespace Java.Lang

@@ -84,12 +84,12 @@ namespace Java.Lang
 
         public override sealed AndroidJavaObject Invoke(global::System.String methodName, global::System.Object[] args)
         {
-        if (methodName == "close" && args.Length == 0)
-        {
-        Close();
-        return null;
-        }
-        return base.Invoke(methodName, args);
+            if (methodName == "close" && args.Length == 0)
+            {
+                Close();
+                return null;
+            }
+            return base.Invoke(methodName, args);
         }
     } // end class AutoCloseableCallbackHelper
 } // end namespace Java.Lang

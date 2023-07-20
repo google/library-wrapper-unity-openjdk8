@@ -163,19 +163,19 @@ namespace Java.Lang
 
         public override sealed AndroidJavaObject Invoke(global::System.String methodName, global::System.Object[] args)
         {
-        if (methodName == "length" && args.Length == 0)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Length());
-        }
-        else if (methodName == "charAt" && args.Length == 1)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(CharAt((int) args[0]));
-        }
-        else if (methodName == "subSequence" && args.Length == 2)
-        {
-        return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(SubSequence((int) args[0], (int) args[1]));
-        }
-        return base.Invoke(methodName, args);
+            if (methodName == "length" && args.Length == 0)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Length());
+            }
+            else if (methodName == "charAt" && args.Length == 1)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(CharAt((int) args[0]));
+            }
+            else if (methodName == "subSequence" && args.Length == 2)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(SubSequence((int) args[0], (int) args[1]));
+            }
+            return base.Invoke(methodName, args);
         }
     } // end class CharSequenceCallbackHelper
 } // end namespace Java.Lang

@@ -6,6 +6,15 @@ namespace Java.ExternalType.Java.Util.Function
 {
     public interface DoubleConsumer : global::Google.LibraryWrapper.Java.JavaInterface
     {
+        private static readonly IntPtr _classObject;
+
+        static DoubleConsumer()
+        {
+            AndroidJNI.AttachCurrentThread();
+            IntPtr classObject = AndroidJNI.FindClass("java/util/function/DoubleConsumer");
+            _classObject = AndroidJNI.NewGlobalRef(classObject);
+            AndroidJNI.DeleteLocalRef(classObject);
+        }
     } // end class DoubleConsumer
 
     public class DoubleConsumerAnonymousImplementation : global::Google.LibraryWrapper.Java.JavaObject, global::Java.ExternalType.Java.Util.Function.DoubleConsumer

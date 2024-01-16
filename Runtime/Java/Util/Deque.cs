@@ -6,6 +6,15 @@ namespace Java.Util
 {
     public interface Deque<E> : global::Google.LibraryWrapper.Java.JavaInterface, global::Java.Util.Queue<E> where E : class
     {
+        private static readonly IntPtr _classObject;
+
+        static Deque()
+        {
+            AndroidJNI.AttachCurrentThread();
+            IntPtr classObject = AndroidJNI.FindClass("java/util/Deque");
+            _classObject = AndroidJNI.NewGlobalRef(classObject);
+            AndroidJNI.DeleteLocalRef(classObject);
+        }
 
         void AddFirst(E e);
 

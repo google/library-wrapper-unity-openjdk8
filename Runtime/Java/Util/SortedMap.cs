@@ -6,6 +6,15 @@ namespace Java.Util
 {
     public interface SortedMap<K, V> : global::Google.LibraryWrapper.Java.JavaInterface, global::Java.Util.Map<K, V> where K : class where V : class
     {
+        private static readonly IntPtr _classObject;
+
+        static SortedMap()
+        {
+            AndroidJNI.AttachCurrentThread();
+            IntPtr classObject = AndroidJNI.FindClass("java/util/SortedMap");
+            _classObject = AndroidJNI.NewGlobalRef(classObject);
+            AndroidJNI.DeleteLocalRef(classObject);
+        }
 
         global::Java.Util.Comparator<K> Comparator();
 

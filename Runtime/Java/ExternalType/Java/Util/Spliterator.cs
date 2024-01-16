@@ -8,6 +8,15 @@ namespace Java.ExternalType.Java.Util
     {
         public interface OfDouble : global::Google.LibraryWrapper.Java.JavaInterface
         {
+            private static readonly IntPtr _classObject;
+
+            static OfDouble()
+            {
+                AndroidJNI.AttachCurrentThread();
+                IntPtr classObject = AndroidJNI.FindClass("java/util/Spliterator$OfDouble");
+                _classObject = AndroidJNI.NewGlobalRef(classObject);
+                AndroidJNI.DeleteLocalRef(classObject);
+            }
         } // end class OfDouble
 
         public class OfDoubleAnonymousImplementation : global::Google.LibraryWrapper.Java.JavaObject, global::Java.ExternalType.Java.Util.Spliterator.OfDouble
@@ -72,6 +81,15 @@ namespace Java.ExternalType.Java.Util
 
         public interface OfInt : global::Google.LibraryWrapper.Java.JavaInterface
         {
+            private static readonly IntPtr _classObject;
+
+            static OfInt()
+            {
+                AndroidJNI.AttachCurrentThread();
+                IntPtr classObject = AndroidJNI.FindClass("java/util/Spliterator$OfInt");
+                _classObject = AndroidJNI.NewGlobalRef(classObject);
+                AndroidJNI.DeleteLocalRef(classObject);
+            }
         } // end class OfInt
 
         public class OfIntAnonymousImplementation : global::Google.LibraryWrapper.Java.JavaObject, global::Java.ExternalType.Java.Util.Spliterator.OfInt
@@ -136,6 +154,15 @@ namespace Java.ExternalType.Java.Util
 
         public interface OfLong : global::Google.LibraryWrapper.Java.JavaInterface
         {
+            private static readonly IntPtr _classObject;
+
+            static OfLong()
+            {
+                AndroidJNI.AttachCurrentThread();
+                IntPtr classObject = AndroidJNI.FindClass("java/util/Spliterator$OfLong");
+                _classObject = AndroidJNI.NewGlobalRef(classObject);
+                AndroidJNI.DeleteLocalRef(classObject);
+            }
         } // end class OfLong
 
         public class OfLongAnonymousImplementation : global::Google.LibraryWrapper.Java.JavaObject, global::Java.ExternalType.Java.Util.Spliterator.OfLong
@@ -201,6 +228,15 @@ namespace Java.ExternalType.Java.Util
     } // end class Spliterator
     public interface Spliterator<T0> : global::Google.LibraryWrapper.Java.JavaInterface where T0 : class
     {
+        private static readonly IntPtr _classObject;
+
+        static Spliterator()
+        {
+            AndroidJNI.AttachCurrentThread();
+            IntPtr classObject = AndroidJNI.FindClass("java/util/Spliterator");
+            _classObject = AndroidJNI.NewGlobalRef(classObject);
+            AndroidJNI.DeleteLocalRef(classObject);
+        }
     } // end class Spliterator
 
     public class SpliteratorAnonymousImplementation<T0> : global::Google.LibraryWrapper.Java.JavaObject, global::Java.ExternalType.Java.Util.Spliterator<T0> where T0 : class

@@ -6,6 +6,15 @@ namespace Java.Util
 {
     public interface NavigableMap<K, V> : global::Google.LibraryWrapper.Java.JavaInterface, global::Java.Util.SortedMap<K, V> where K : class where V : class
     {
+        private static readonly IntPtr _classObject;
+
+        static NavigableMap()
+        {
+            AndroidJNI.AttachCurrentThread();
+            IntPtr classObject = AndroidJNI.FindClass("java/util/NavigableMap");
+            _classObject = AndroidJNI.NewGlobalRef(classObject);
+            AndroidJNI.DeleteLocalRef(classObject);
+        }
 
         global::Java.Util.Map.Entry<K, V> LowerEntry(K key);
 

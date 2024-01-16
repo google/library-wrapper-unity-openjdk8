@@ -6,6 +6,15 @@ namespace Java.ExternalType.Java.Util.Function
 {
     public interface IntConsumer : global::Google.LibraryWrapper.Java.JavaInterface
     {
+        private static readonly IntPtr _classObject;
+
+        static IntConsumer()
+        {
+            AndroidJNI.AttachCurrentThread();
+            IntPtr classObject = AndroidJNI.FindClass("java/util/function/IntConsumer");
+            _classObject = AndroidJNI.NewGlobalRef(classObject);
+            AndroidJNI.DeleteLocalRef(classObject);
+        }
     } // end class IntConsumer
 
     public class IntConsumerAnonymousImplementation : global::Google.LibraryWrapper.Java.JavaObject, global::Java.ExternalType.Java.Util.Function.IntConsumer

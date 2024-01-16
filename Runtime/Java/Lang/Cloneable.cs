@@ -6,6 +6,15 @@ namespace Java.Lang
 {
     public interface Cloneable : global::Google.LibraryWrapper.Java.JavaInterface
     {
+        private static readonly IntPtr _classObject;
+
+        static Cloneable()
+        {
+            AndroidJNI.AttachCurrentThread();
+            IntPtr classObject = AndroidJNI.FindClass("java/lang/Cloneable");
+            _classObject = AndroidJNI.NewGlobalRef(classObject);
+            AndroidJNI.DeleteLocalRef(classObject);
+        }
     } // end class Cloneable
 
     public class CloneableAnonymousImplementation : global::Google.LibraryWrapper.Java.JavaObject, global::Java.Lang.Cloneable

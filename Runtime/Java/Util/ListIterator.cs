@@ -6,6 +6,15 @@ namespace Java.Util
 {
     public interface ListIterator<E> : global::Google.LibraryWrapper.Java.JavaInterface, global::Java.Util.Iterator<E> where E : class
     {
+        private static readonly IntPtr _classObject;
+
+        static ListIterator()
+        {
+            AndroidJNI.AttachCurrentThread();
+            IntPtr classObject = AndroidJNI.FindClass("java/util/ListIterator");
+            _classObject = AndroidJNI.NewGlobalRef(classObject);
+            AndroidJNI.DeleteLocalRef(classObject);
+        }
 
         bool HasPrevious();
 

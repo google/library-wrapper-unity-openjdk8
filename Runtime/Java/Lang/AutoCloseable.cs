@@ -6,6 +6,15 @@ namespace Java.Lang
 {
     public interface AutoCloseable : global::Google.LibraryWrapper.Java.JavaInterface
     {
+        private static readonly IntPtr _classObject;
+
+        static AutoCloseable()
+        {
+            AndroidJNI.AttachCurrentThread();
+            IntPtr classObject = AndroidJNI.FindClass("java/lang/AutoCloseable");
+            _classObject = AndroidJNI.NewGlobalRef(classObject);
+            AndroidJNI.DeleteLocalRef(classObject);
+        }
 
         void Close();
     } // end class AutoCloseable

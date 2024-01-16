@@ -165,6 +165,15 @@ namespace Java.Lang
 
         public interface UncaughtExceptionHandler : global::Google.LibraryWrapper.Java.JavaInterface
         {
+            private static readonly IntPtr _classObject;
+
+            static UncaughtExceptionHandler()
+            {
+                AndroidJNI.AttachCurrentThread();
+                IntPtr classObject = AndroidJNI.FindClass("java/lang/Thread$UncaughtExceptionHandler");
+                _classObject = AndroidJNI.NewGlobalRef(classObject);
+                AndroidJNI.DeleteLocalRef(classObject);
+            }
 
             void UncaughtException(global::Java.Lang.Thread t, global::Java.Lang.Throwable e);
         } // end class UncaughtExceptionHandler

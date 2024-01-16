@@ -6,6 +6,15 @@ namespace Java.ExternalType.Java.Io
 {
     public interface Serializable : global::Google.LibraryWrapper.Java.JavaInterface
     {
+        private static readonly IntPtr _classObject;
+
+        static Serializable()
+        {
+            AndroidJNI.AttachCurrentThread();
+            IntPtr classObject = AndroidJNI.FindClass("java/io/Serializable");
+            _classObject = AndroidJNI.NewGlobalRef(classObject);
+            AndroidJNI.DeleteLocalRef(classObject);
+        }
     } // end class Serializable
 
     public class SerializableAnonymousImplementation : global::Google.LibraryWrapper.Java.JavaObject, global::Java.ExternalType.Java.Io.Serializable

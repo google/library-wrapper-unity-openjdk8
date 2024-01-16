@@ -6,6 +6,15 @@ namespace Java.Util
 {
     public interface Enumeration<E> : global::Google.LibraryWrapper.Java.JavaInterface where E : class
     {
+        private static readonly IntPtr _classObject;
+
+        static Enumeration()
+        {
+            AndroidJNI.AttachCurrentThread();
+            IntPtr classObject = AndroidJNI.FindClass("java/util/Enumeration");
+            _classObject = AndroidJNI.NewGlobalRef(classObject);
+            AndroidJNI.DeleteLocalRef(classObject);
+        }
 
         bool HasMoreElements();
 

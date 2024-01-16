@@ -6,6 +6,15 @@ namespace Java.ExternalType.Java.Lang
 {
     public interface Comparable<T0> : global::Google.LibraryWrapper.Java.JavaInterface where T0 : class
     {
+        private static readonly IntPtr _classObject;
+
+        static Comparable()
+        {
+            AndroidJNI.AttachCurrentThread();
+            IntPtr classObject = AndroidJNI.FindClass("java/lang/Comparable");
+            _classObject = AndroidJNI.NewGlobalRef(classObject);
+            AndroidJNI.DeleteLocalRef(classObject);
+        }
     } // end class Comparable
 
     public class ComparableAnonymousImplementation<T0> : global::Google.LibraryWrapper.Java.JavaObject, global::Java.ExternalType.Java.Lang.Comparable<T0> where T0 : class

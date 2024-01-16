@@ -6,6 +6,15 @@ namespace Java.ExternalType.Java.Lang.Reflect
 {
     public interface AnnotatedElement : global::Google.LibraryWrapper.Java.JavaInterface
     {
+        private static readonly IntPtr _classObject;
+
+        static AnnotatedElement()
+        {
+            AndroidJNI.AttachCurrentThread();
+            IntPtr classObject = AndroidJNI.FindClass("java/lang/reflect/AnnotatedElement");
+            _classObject = AndroidJNI.NewGlobalRef(classObject);
+            AndroidJNI.DeleteLocalRef(classObject);
+        }
     } // end class AnnotatedElement
 
     public class AnnotatedElementAnonymousImplementation : global::Google.LibraryWrapper.Java.JavaObject, global::Java.ExternalType.Java.Lang.Reflect.AnnotatedElement

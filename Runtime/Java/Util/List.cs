@@ -6,6 +6,21 @@ namespace Java.Util
 {
     public interface List<E> : global::Google.LibraryWrapper.Java.JavaInterface, global::Java.Util.Collection<E> where E : class
     {
+        private static readonly IntPtr _classObject;
+        private static readonly IntPtr _cachedMethodId0;
+        private static readonly IntPtr _cachedMethodId1;
+        private static readonly IntPtr _cachedMethodId2;
+
+        static List()
+        {
+            AndroidJNI.AttachCurrentThread();
+            IntPtr classObject = AndroidJNI.FindClass("java/util/List");
+            _classObject = AndroidJNI.NewGlobalRef(classObject);
+            AndroidJNI.DeleteLocalRef(classObject);
+            _cachedMethodId0 = AndroidJNI.GetMethodID(_classObject, "replaceAll", "(Ljava/util/function/UnaryOperator;)V");
+            _cachedMethodId1 = AndroidJNI.GetMethodID(_classObject, "sort", "(Ljava/util/Comparator;)V");
+            _cachedMethodId2 = AndroidJNI.GetMethodID(_classObject, "spliterator", "()Ljava/util/Spliterator;");
+        }
 
         bool AddAll(int index, global::Java.Util.Collection<E> c);
 
@@ -26,6 +41,48 @@ namespace Java.Util
         global::Java.Util.ListIterator<E> ListIterator(int index);
 
         global::Java.Util.List<E> SubList(int fromIndex, int toIndex);
+
+        void ReplaceAll(global::Java.ExternalType.Java.Util.Function.UnaryOperator<E> @operator)
+        {
+            try
+            {
+                AndroidJNI.PushLocalFrame(0);
+                jvalue[] args_ = new jvalue[] { new jvalue { l = @operator.GetRawObject() } };
+                AndroidJNI.CallVoidMethod(GetRawObject(), _cachedMethodId0, args_);
+            }
+            finally
+            {
+                AndroidJNI.PopLocalFrame(IntPtr.Zero);
+            }
+        }
+
+        void Sort(global::Java.Util.Comparator<E> c)
+        {
+            try
+            {
+                AndroidJNI.PushLocalFrame(0);
+                jvalue[] args_ = new jvalue[] { new jvalue { l = c.GetRawObject() } };
+                AndroidJNI.CallVoidMethod(GetRawObject(), _cachedMethodId1, args_);
+            }
+            finally
+            {
+                AndroidJNI.PopLocalFrame(IntPtr.Zero);
+            }
+        }
+
+        global::Java.ExternalType.Java.Util.Spliterator<E> Spliterator()
+        {
+            try
+            {
+                AndroidJNI.PushLocalFrame(0);
+                jvalue[] args_ = new jvalue[] {  };
+                return new global::Java.ExternalType.Java.Util.SpliteratorAnonymousImplementation<E>(AndroidJNI.CallObjectMethod(GetRawObject(), _cachedMethodId2, args_));
+            }
+            finally
+            {
+                AndroidJNI.PopLocalFrame(IntPtr.Zero);
+            }
+        }
     } // end class List
 
     public class ListAnonymousImplementation<E> : global::Google.LibraryWrapper.Java.JavaObject, global::Java.Util.List<E> where E : class
@@ -54,9 +111,6 @@ namespace Java.Util
         private static readonly IntPtr _cachedMethodId20;
         private static readonly IntPtr _cachedMethodId21;
         private static readonly IntPtr _cachedMethodId22;
-        private static readonly IntPtr _cachedMethodId23;
-        private static readonly IntPtr _cachedMethodId24;
-        private static readonly IntPtr _cachedMethodId25;
 
         static ListAnonymousImplementation()
         {
@@ -75,21 +129,18 @@ namespace Java.Util
             _cachedMethodId8 = AndroidJNI.GetMethodID(_classObject, "addAll", "(ILjava/util/Collection;)Z");
             _cachedMethodId9 = AndroidJNI.GetMethodID(_classObject, "removeAll", "(Ljava/util/Collection;)Z");
             _cachedMethodId10 = AndroidJNI.GetMethodID(_classObject, "retainAll", "(Ljava/util/Collection;)Z");
-            _cachedMethodId11 = AndroidJNI.GetMethodID(_classObject, "replaceAll", "(Ljava/util/function/UnaryOperator;)V");
-            _cachedMethodId12 = AndroidJNI.GetMethodID(_classObject, "sort", "(Ljava/util/Comparator;)V");
-            _cachedMethodId13 = AndroidJNI.GetMethodID(_classObject, "clear", "()V");
-            _cachedMethodId14 = AndroidJNI.GetMethodID(_classObject, "equals", "(Ljava/lang/Object;)Z");
-            _cachedMethodId15 = AndroidJNI.GetMethodID(_classObject, "hashCode", "()I");
-            _cachedMethodId16 = AndroidJNI.GetMethodID(_classObject, "get", "(I)Ljava/lang/Object;");
-            _cachedMethodId17 = AndroidJNI.GetMethodID(_classObject, "set", "(ILjava/lang/Object;)Ljava/lang/Object;");
-            _cachedMethodId18 = AndroidJNI.GetMethodID(_classObject, "add", "(ILjava/lang/Object;)V");
-            _cachedMethodId19 = AndroidJNI.GetMethodID(_classObject, "remove", "(I)Ljava/lang/Object;");
-            _cachedMethodId20 = AndroidJNI.GetMethodID(_classObject, "indexOf", "(Ljava/lang/Object;)I");
-            _cachedMethodId21 = AndroidJNI.GetMethodID(_classObject, "lastIndexOf", "(Ljava/lang/Object;)I");
-            _cachedMethodId22 = AndroidJNI.GetMethodID(_classObject, "listIterator", "()Ljava/util/ListIterator;");
-            _cachedMethodId23 = AndroidJNI.GetMethodID(_classObject, "listIterator", "(I)Ljava/util/ListIterator;");
-            _cachedMethodId24 = AndroidJNI.GetMethodID(_classObject, "subList", "(II)Ljava/util/List;");
-            _cachedMethodId25 = AndroidJNI.GetMethodID(_classObject, "spliterator", "()Ljava/util/Spliterator;");
+            _cachedMethodId11 = AndroidJNI.GetMethodID(_classObject, "clear", "()V");
+            _cachedMethodId12 = AndroidJNI.GetMethodID(_classObject, "equals", "(Ljava/lang/Object;)Z");
+            _cachedMethodId13 = AndroidJNI.GetMethodID(_classObject, "hashCode", "()I");
+            _cachedMethodId14 = AndroidJNI.GetMethodID(_classObject, "get", "(I)Ljava/lang/Object;");
+            _cachedMethodId15 = AndroidJNI.GetMethodID(_classObject, "set", "(ILjava/lang/Object;)Ljava/lang/Object;");
+            _cachedMethodId16 = AndroidJNI.GetMethodID(_classObject, "add", "(ILjava/lang/Object;)V");
+            _cachedMethodId17 = AndroidJNI.GetMethodID(_classObject, "remove", "(I)Ljava/lang/Object;");
+            _cachedMethodId18 = AndroidJNI.GetMethodID(_classObject, "indexOf", "(Ljava/lang/Object;)I");
+            _cachedMethodId19 = AndroidJNI.GetMethodID(_classObject, "lastIndexOf", "(Ljava/lang/Object;)I");
+            _cachedMethodId20 = AndroidJNI.GetMethodID(_classObject, "listIterator", "()Ljava/util/ListIterator;");
+            _cachedMethodId21 = AndroidJNI.GetMethodID(_classObject, "listIterator", "(I)Ljava/util/ListIterator;");
+            _cachedMethodId22 = AndroidJNI.GetMethodID(_classObject, "subList", "(II)Ljava/util/List;");
         }
 
         public ListAnonymousImplementation(IntPtr rawObject) : base(IntPtr.Zero)
@@ -273,41 +324,13 @@ namespace Java.Util
             }
         }
 
-        public void ReplaceAll(global::Java.ExternalType.Java.Util.Function.UnaryOperator<E> @operator)
-        {
-            try
-            {
-                AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] { new jvalue { l = @operator.GetRawObject() } };
-                AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId11, args_);
-            }
-            finally
-            {
-                AndroidJNI.PopLocalFrame(IntPtr.Zero);
-            }
-        }
-
-        public void Sort(global::Java.Util.Comparator<E> c)
-        {
-            try
-            {
-                AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] { new jvalue { l = c.GetRawObject() } };
-                AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId12, args_);
-            }
-            finally
-            {
-                AndroidJNI.PopLocalFrame(IntPtr.Zero);
-            }
-        }
-
         public void Clear()
         {
             try
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] {  };
-                AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId13, args_);
+                AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId11, args_);
             }
             finally
             {
@@ -321,7 +344,7 @@ namespace Java.Util
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] { new jvalue { l = o.GetRawObject() } };
-                return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId14, args_);
+                return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId12, args_);
             }
             finally
             {
@@ -335,7 +358,7 @@ namespace Java.Util
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] {  };
-                return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId15, args_);
+                return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId13, args_);
             }
             finally
             {
@@ -351,11 +374,11 @@ namespace Java.Util
                 jvalue[] args_ = new jvalue[] { new jvalue { i = index } };
                 if (typeof(E) == typeof(global::System.String))
                 {
-                    return (E) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId16, args_);
+                    return (E) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId14, args_);
                 }
                 else
                 {
-                    IntPtr result_ = AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId16, args_);
+                    IntPtr result_ = AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId14, args_);
                     return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<E>(result_);
                 }
             }
@@ -378,11 +401,11 @@ namespace Java.Util
                         };
                 if (typeof(E) == typeof(global::System.String))
                 {
-                    return (E) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId17, args_);
+                    return (E) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId15, args_);
                 }
                 else
                 {
-                    IntPtr result_ = AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId17, args_);
+                    IntPtr result_ = AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId15, args_);
                     return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<E>(result_);
                 }
             }
@@ -403,7 +426,7 @@ namespace Java.Util
                             new jvalue { i = index },
                             ToJvalue(element)
                         };
-                AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId18, args_);
+                AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId16, args_);
             }
             finally
             {
@@ -419,11 +442,11 @@ namespace Java.Util
                 jvalue[] args_ = new jvalue[] { new jvalue { i = index } };
                 if (typeof(E) == typeof(global::System.String))
                 {
-                    return (E) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId19, args_);
+                    return (E) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId17, args_);
                 }
                 else
                 {
-                    IntPtr result_ = AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId19, args_);
+                    IntPtr result_ = AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId17, args_);
                     return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<E>(result_);
                 }
             }
@@ -439,7 +462,7 @@ namespace Java.Util
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] { new jvalue { l = o.GetRawObject() } };
-                return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId20, args_);
+                return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId18, args_);
             }
             finally
             {
@@ -453,7 +476,7 @@ namespace Java.Util
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] { new jvalue { l = o.GetRawObject() } };
-                return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId21, args_);
+                return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId19, args_);
             }
             finally
             {
@@ -467,7 +490,7 @@ namespace Java.Util
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] {  };
-                return new global::Java.Util.ListIteratorAnonymousImplementation<E>(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId22, args_));
+                return new global::Java.Util.ListIteratorAnonymousImplementation<E>(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId20, args_));
             }
             finally
             {
@@ -481,7 +504,7 @@ namespace Java.Util
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] { new jvalue { i = index } };
-                return new global::Java.Util.ListIteratorAnonymousImplementation<E>(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId23, args_));
+                return new global::Java.Util.ListIteratorAnonymousImplementation<E>(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId21, args_));
             }
             finally
             {
@@ -500,21 +523,7 @@ namespace Java.Util
                             new jvalue { i = fromIndex },
                             new jvalue { i = toIndex }
                         };
-                return new global::Java.Util.ListAnonymousImplementation<E>(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId24, args_));
-            }
-            finally
-            {
-                AndroidJNI.PopLocalFrame(IntPtr.Zero);
-            }
-        }
-
-        public global::Java.ExternalType.Java.Util.Spliterator<E> Spliterator()
-        {
-            try
-            {
-                AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {  };
-                return new global::Java.ExternalType.Java.Util.SpliteratorAnonymousImplementation<E>(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId25, args_));
+                return new global::Java.Util.ListAnonymousImplementation<E>(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId22, args_));
             }
             finally
             {
@@ -564,6 +573,10 @@ namespace Java.Util
 
         public abstract bool RetainAll(global::Java.Util.Collection<global::Google.LibraryWrapper.Java.JavaObject> c);
 
+        public abstract void ReplaceAll(global::Java.ExternalType.Java.Util.Function.UnaryOperator<E> @operator);
+
+        public abstract void Sort(global::Java.Util.Comparator<E> c);
+
         public abstract void Clear();
 
         public abstract bool Equals(global::Google.LibraryWrapper.Java.JavaObject o);
@@ -587,6 +600,8 @@ namespace Java.Util
         public abstract global::Java.Util.ListIterator<E> ListIterator(int index);
 
         public abstract global::Java.Util.List<E> SubList(int fromIndex, int toIndex);
+
+        public abstract global::Java.ExternalType.Java.Util.Spliterator<E> Spliterator();
 
         public override sealed AndroidJavaObject Invoke(global::System.String methodName, global::System.Object[] args)
         {
@@ -633,6 +648,16 @@ namespace Java.Util
             else if (methodName == "retainAll" && args.Length == 1)
             {
                 return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(RetainAll(new global::Java.Util.CollectionAnonymousImplementation<global::Google.LibraryWrapper.Java.JavaObject>(((AndroidJavaObject) args[0]).GetRawObject())));
+            }
+            else if (methodName == "replaceAll" && args.Length == 1)
+            {
+                ReplaceAll(new global::Java.ExternalType.Java.Util.Function.UnaryOperator<E>(((AndroidJavaObject) args[0]).GetRawObject()));
+                return null;
+            }
+            else if (methodName == "sort" && args.Length == 1)
+            {
+                Sort(new global::Java.Util.ComparatorAnonymousImplementation<E>(((AndroidJavaObject) args[0]).GetRawObject()));
+                return null;
             }
             else if (methodName == "clear" && args.Length == 0)
             {
@@ -683,6 +708,10 @@ namespace Java.Util
             else if (methodName == "subList" && args.Length == 2)
             {
                 return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(SubList((int) args[0], (int) args[1]));
+            }
+            else if (methodName == "spliterator" && args.Length == 0)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Spliterator());
             }
             return base.Invoke(methodName, args);
         }

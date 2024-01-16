@@ -6,16 +6,55 @@ namespace Java.Lang
 {
     public interface Iterable<T> : global::Google.LibraryWrapper.Java.JavaInterface where T : class
     {
+        private static readonly IntPtr _classObject;
+        private static readonly IntPtr _cachedMethodId0;
+        private static readonly IntPtr _cachedMethodId1;
+
+        static Iterable()
+        {
+            AndroidJNI.AttachCurrentThread();
+            IntPtr classObject = AndroidJNI.FindClass("java/lang/Iterable");
+            _classObject = AndroidJNI.NewGlobalRef(classObject);
+            AndroidJNI.DeleteLocalRef(classObject);
+            _cachedMethodId0 = AndroidJNI.GetMethodID(_classObject, "forEach", "(Ljava/util/function/Consumer;)V");
+            _cachedMethodId1 = AndroidJNI.GetMethodID(_classObject, "spliterator", "()Ljava/util/Spliterator;");
+        }
 
         global::Java.Util.Iterator<T> Iterator();
+
+        void ForEach(global::Java.ExternalType.Java.Util.Function.Consumer<T> action)
+        {
+            try
+            {
+                AndroidJNI.PushLocalFrame(0);
+                jvalue[] args_ = new jvalue[] { new jvalue { l = action.GetRawObject() } };
+                AndroidJNI.CallVoidMethod(GetRawObject(), _cachedMethodId0, args_);
+            }
+            finally
+            {
+                AndroidJNI.PopLocalFrame(IntPtr.Zero);
+            }
+        }
+
+        global::Java.ExternalType.Java.Util.Spliterator<T> Spliterator()
+        {
+            try
+            {
+                AndroidJNI.PushLocalFrame(0);
+                jvalue[] args_ = new jvalue[] {  };
+                return new global::Java.ExternalType.Java.Util.SpliteratorAnonymousImplementation<T>(AndroidJNI.CallObjectMethod(GetRawObject(), _cachedMethodId1, args_));
+            }
+            finally
+            {
+                AndroidJNI.PopLocalFrame(IntPtr.Zero);
+            }
+        }
     } // end class Iterable
 
     public class IterableAnonymousImplementation<T> : global::Google.LibraryWrapper.Java.JavaObject, global::Java.Lang.Iterable<T> where T : class
     {
         private static readonly IntPtr _classObject;
         private static readonly IntPtr _cachedMethodId0;
-        private static readonly IntPtr _cachedMethodId1;
-        private static readonly IntPtr _cachedMethodId2;
 
         static IterableAnonymousImplementation()
         {
@@ -24,8 +63,6 @@ namespace Java.Lang
             _classObject = AndroidJNI.NewGlobalRef(classObject);
             AndroidJNI.DeleteLocalRef(classObject);
             _cachedMethodId0 = AndroidJNI.GetMethodID(_classObject, "iterator", "()Ljava/util/Iterator;");
-            _cachedMethodId1 = AndroidJNI.GetMethodID(_classObject, "forEach", "(Ljava/util/function/Consumer;)V");
-            _cachedMethodId2 = AndroidJNI.GetMethodID(_classObject, "spliterator", "()Ljava/util/Spliterator;");
         }
 
         public IterableAnonymousImplementation(IntPtr rawObject) : base(IntPtr.Zero)
@@ -64,34 +101,6 @@ namespace Java.Lang
             }
         }
 
-        public void ForEach(global::Java.ExternalType.Java.Util.Function.Consumer<T> action)
-        {
-            try
-            {
-                AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] { new jvalue { l = action.GetRawObject() } };
-                AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId1, args_);
-            }
-            finally
-            {
-                AndroidJNI.PopLocalFrame(IntPtr.Zero);
-            }
-        }
-
-        public global::Java.ExternalType.Java.Util.Spliterator<T> Spliterator()
-        {
-            try
-            {
-                AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {  };
-                return new global::Java.ExternalType.Java.Util.SpliteratorAnonymousImplementation<T>(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId2, args_));
-            }
-            finally
-            {
-                AndroidJNI.PopLocalFrame(IntPtr.Zero);
-            }
-        }
-
         public static explicit operator IntPtr(IterableAnonymousImplementation<T> wrapper)
         {
             return wrapper.GetRawObject();
@@ -114,11 +123,24 @@ namespace Java.Lang
 
         public abstract global::Java.Util.Iterator<T> Iterator();
 
+        public abstract void ForEach(global::Java.ExternalType.Java.Util.Function.Consumer<T> action);
+
+        public abstract global::Java.ExternalType.Java.Util.Spliterator<T> Spliterator();
+
         public override sealed AndroidJavaObject Invoke(global::System.String methodName, global::System.Object[] args)
         {
             if (methodName == "iterator" && args.Length == 0)
             {
                 return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Iterator());
+            }
+            else if (methodName == "forEach" && args.Length == 1)
+            {
+                ForEach(new global::Java.ExternalType.Java.Util.Function.Consumer<T>(((AndroidJavaObject) args[0]).GetRawObject()));
+                return null;
+            }
+            else if (methodName == "spliterator" && args.Length == 0)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Spliterator());
             }
             return base.Invoke(methodName, args);
         }

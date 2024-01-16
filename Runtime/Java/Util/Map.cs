@@ -8,6 +8,23 @@ namespace Java.Util
     {
         public interface Entry<K, V> : global::Google.LibraryWrapper.Java.JavaInterface where K : class where V : class
         {
+            private static readonly IntPtr _classObject;
+            private static readonly IntPtr _cachedMethodId0;
+            private static readonly IntPtr _cachedMethodId1;
+            private static readonly IntPtr _cachedMethodId2;
+            private static readonly IntPtr _cachedMethodId3;
+
+            static Entry()
+            {
+                AndroidJNI.AttachCurrentThread();
+                IntPtr classObject = AndroidJNI.FindClass("java/util/Map$Entry");
+                _classObject = AndroidJNI.NewGlobalRef(classObject);
+                AndroidJNI.DeleteLocalRef(classObject);
+                _cachedMethodId0 = AndroidJNI.GetStaticMethodID(_classObject, "comparingByKey", "()Ljava/util/Comparator;");
+                _cachedMethodId1 = AndroidJNI.GetStaticMethodID(_classObject, "comparingByValue", "()Ljava/util/Comparator;");
+                _cachedMethodId2 = AndroidJNI.GetStaticMethodID(_classObject, "comparingByKey", "(Ljava/util/Comparator;)Ljava/util/Comparator;");
+                _cachedMethodId3 = AndroidJNI.GetStaticMethodID(_classObject, "comparingByValue", "(Ljava/util/Comparator;)Ljava/util/Comparator;");
+            }
 
             K GetKey();
 
@@ -18,6 +35,62 @@ namespace Java.Util
             bool Equals(global::Google.LibraryWrapper.Java.JavaObject o);
 
             int HashCode();
+
+            static global::Java.Util.Comparator<global::Java.Util.Map.Entry<K2, V2>> ComparingByKey<K2, V2>() where K2 : class, global::Java.ExternalType.Java.Lang.Comparable<K2> where V2 : class
+            {
+                try
+                {
+                    AndroidJNI.PushLocalFrame(0);
+                    jvalue[] args_ = new jvalue[] {  };
+                    return new global::Java.Util.ComparatorAnonymousImplementation<global::Java.Util.Map.Entry<K2, V2>>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId0, args_));
+                }
+                finally
+                {
+                    AndroidJNI.PopLocalFrame(IntPtr.Zero);
+                }
+            }
+
+            static global::Java.Util.Comparator<global::Java.Util.Map.Entry<K2, V2>> ComparingByValue<K2, V2>() where K2 : class where V2 : class, global::Java.ExternalType.Java.Lang.Comparable<V2>
+            {
+                try
+                {
+                    AndroidJNI.PushLocalFrame(0);
+                    jvalue[] args_ = new jvalue[] {  };
+                    return new global::Java.Util.ComparatorAnonymousImplementation<global::Java.Util.Map.Entry<K2, V2>>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId1, args_));
+                }
+                finally
+                {
+                    AndroidJNI.PopLocalFrame(IntPtr.Zero);
+                }
+            }
+
+            static global::Java.Util.Comparator<global::Java.Util.Map.Entry<K2, V2>> ComparingByKey<K2, V2>(global::Java.Util.Comparator<K2> cmp) where K2 : class where V2 : class
+            {
+                try
+                {
+                    AndroidJNI.PushLocalFrame(0);
+                    jvalue[] args_ = new jvalue[] { new jvalue { l = cmp.GetRawObject() } };
+                    return new global::Java.Util.ComparatorAnonymousImplementation<global::Java.Util.Map.Entry<K2, V2>>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId2, args_));
+                }
+                finally
+                {
+                    AndroidJNI.PopLocalFrame(IntPtr.Zero);
+                }
+            }
+
+            static global::Java.Util.Comparator<global::Java.Util.Map.Entry<K2, V2>> ComparingByValue<K2, V2>(global::Java.Util.Comparator<V2> cmp) where K2 : class where V2 : class
+            {
+                try
+                {
+                    AndroidJNI.PushLocalFrame(0);
+                    jvalue[] args_ = new jvalue[] { new jvalue { l = cmp.GetRawObject() } };
+                    return new global::Java.Util.ComparatorAnonymousImplementation<global::Java.Util.Map.Entry<K2, V2>>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId3, args_));
+                }
+                finally
+                {
+                    AndroidJNI.PopLocalFrame(IntPtr.Zero);
+                }
+            }
         } // end class Entry
 
         public class EntryAnonymousImplementation<K, V> : global::Google.LibraryWrapper.Java.JavaObject, global::Java.Util.Map.Entry<K, V> where K : class where V : class
@@ -28,10 +101,6 @@ namespace Java.Util
             private static readonly IntPtr _cachedMethodId2;
             private static readonly IntPtr _cachedMethodId3;
             private static readonly IntPtr _cachedMethodId4;
-            private static readonly IntPtr _cachedMethodId5;
-            private static readonly IntPtr _cachedMethodId6;
-            private static readonly IntPtr _cachedMethodId7;
-            private static readonly IntPtr _cachedMethodId8;
 
             static EntryAnonymousImplementation()
             {
@@ -44,10 +113,6 @@ namespace Java.Util
                 _cachedMethodId2 = AndroidJNI.GetMethodID(_classObject, "setValue", "(Ljava/lang/Object;)Ljava/lang/Object;");
                 _cachedMethodId3 = AndroidJNI.GetMethodID(_classObject, "equals", "(Ljava/lang/Object;)Z");
                 _cachedMethodId4 = AndroidJNI.GetMethodID(_classObject, "hashCode", "()I");
-                _cachedMethodId5 = AndroidJNI.GetStaticMethodID(_classObject, "comparingByKey", "()Ljava/util/Comparator;");
-                _cachedMethodId6 = AndroidJNI.GetStaticMethodID(_classObject, "comparingByValue", "()Ljava/util/Comparator;");
-                _cachedMethodId7 = AndroidJNI.GetStaticMethodID(_classObject, "comparingByKey", "(Ljava/util/Comparator;)Ljava/util/Comparator;");
-                _cachedMethodId8 = AndroidJNI.GetStaticMethodID(_classObject, "comparingByValue", "(Ljava/util/Comparator;)Ljava/util/Comparator;");
             }
 
             public EntryAnonymousImplementation(IntPtr rawObject) : base(IntPtr.Zero)
@@ -166,62 +231,6 @@ namespace Java.Util
                 }
             }
 
-            public static global::Java.Util.Comparator<global::Java.Util.Map.Entry<K2, V2>> ComparingByKey<K2, V2>() where K2 : class, global::Java.ExternalType.Java.Lang.Comparable<K2> where V2 : class
-            {
-                try
-                {
-                    AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {  };
-                    return new global::Java.Util.ComparatorAnonymousImplementation<global::Java.Util.Map.Entry<K2, V2>>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId5, args_));
-                }
-                finally
-                {
-                    AndroidJNI.PopLocalFrame(IntPtr.Zero);
-                }
-            }
-
-            public static global::Java.Util.Comparator<global::Java.Util.Map.Entry<K2, V2>> ComparingByValue<K2, V2>() where K2 : class where V2 : class, global::Java.ExternalType.Java.Lang.Comparable<V2>
-            {
-                try
-                {
-                    AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] {  };
-                    return new global::Java.Util.ComparatorAnonymousImplementation<global::Java.Util.Map.Entry<K2, V2>>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId6, args_));
-                }
-                finally
-                {
-                    AndroidJNI.PopLocalFrame(IntPtr.Zero);
-                }
-            }
-
-            public static global::Java.Util.Comparator<global::Java.Util.Map.Entry<K2, V2>> ComparingByKey<K2, V2>(global::Java.Util.Comparator<K2> cmp) where K2 : class where V2 : class
-            {
-                try
-                {
-                    AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] { new jvalue { l = cmp.GetRawObject() } };
-                    return new global::Java.Util.ComparatorAnonymousImplementation<global::Java.Util.Map.Entry<K2, V2>>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId7, args_));
-                }
-                finally
-                {
-                    AndroidJNI.PopLocalFrame(IntPtr.Zero);
-                }
-            }
-
-            public static global::Java.Util.Comparator<global::Java.Util.Map.Entry<K2, V2>> ComparingByValue<K2, V2>(global::Java.Util.Comparator<V2> cmp) where K2 : class where V2 : class
-            {
-                try
-                {
-                    AndroidJNI.PushLocalFrame(0);
-                    jvalue[] args_ = new jvalue[] { new jvalue { l = cmp.GetRawObject() } };
-                    return new global::Java.Util.ComparatorAnonymousImplementation<global::Java.Util.Map.Entry<K2, V2>>(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId8, args_));
-                }
-                finally
-                {
-                    AndroidJNI.PopLocalFrame(IntPtr.Zero);
-                }
-            }
-
             public static explicit operator IntPtr(EntryAnonymousImplementation<K, V> wrapper)
             {
                 return wrapper.GetRawObject();
@@ -281,6 +290,37 @@ namespace Java.Util
     } // end class Map
     public interface Map<K, V> : global::Google.LibraryWrapper.Java.JavaInterface where K : class where V : class
     {
+        private static readonly IntPtr _classObject;
+        private static readonly IntPtr _cachedMethodId0;
+        private static readonly IntPtr _cachedMethodId1;
+        private static readonly IntPtr _cachedMethodId2;
+        private static readonly IntPtr _cachedMethodId3;
+        private static readonly IntPtr _cachedMethodId4;
+        private static readonly IntPtr _cachedMethodId5;
+        private static readonly IntPtr _cachedMethodId6;
+        private static readonly IntPtr _cachedMethodId7;
+        private static readonly IntPtr _cachedMethodId8;
+        private static readonly IntPtr _cachedMethodId9;
+        private static readonly IntPtr _cachedMethodId10;
+
+        static Map()
+        {
+            AndroidJNI.AttachCurrentThread();
+            IntPtr classObject = AndroidJNI.FindClass("java/util/Map");
+            _classObject = AndroidJNI.NewGlobalRef(classObject);
+            AndroidJNI.DeleteLocalRef(classObject);
+            _cachedMethodId0 = AndroidJNI.GetMethodID(_classObject, "getOrDefault", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;");
+            _cachedMethodId1 = AndroidJNI.GetMethodID(_classObject, "forEach", "(Ljava/util/function/BiConsumer;)V");
+            _cachedMethodId2 = AndroidJNI.GetMethodID(_classObject, "replaceAll", "(Ljava/util/function/BiFunction;)V");
+            _cachedMethodId3 = AndroidJNI.GetMethodID(_classObject, "putIfAbsent", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;");
+            _cachedMethodId4 = AndroidJNI.GetMethodID(_classObject, "remove", "(Ljava/lang/Object;Ljava/lang/Object;)Z");
+            _cachedMethodId5 = AndroidJNI.GetMethodID(_classObject, "replace", "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z");
+            _cachedMethodId6 = AndroidJNI.GetMethodID(_classObject, "replace", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;");
+            _cachedMethodId7 = AndroidJNI.GetMethodID(_classObject, "computeIfAbsent", "(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;");
+            _cachedMethodId8 = AndroidJNI.GetMethodID(_classObject, "computeIfPresent", "(Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;");
+            _cachedMethodId9 = AndroidJNI.GetMethodID(_classObject, "compute", "(Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;");
+            _cachedMethodId10 = AndroidJNI.GetMethodID(_classObject, "merge", "(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;");
+        }
 
         int Size();
 
@@ -309,6 +349,263 @@ namespace Java.Util
         bool Equals(global::Google.LibraryWrapper.Java.JavaObject o);
 
         int HashCode();
+
+        V GetOrDefault(global::Google.LibraryWrapper.Java.JavaObject key, V defaultValue)
+        {
+            try
+            {
+                AndroidJNI.PushLocalFrame(0);
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { l = key.GetRawObject() },
+                            ToJvalue(defaultValue)
+                        };
+                if (typeof(V) == typeof(global::System.String))
+                {
+                    return (V) (global::System.Object) AndroidJNI.CallStringMethod(GetRawObject(), _cachedMethodId0, args_);
+                }
+                else
+                {
+                    IntPtr result_ = AndroidJNI.CallObjectMethod(GetRawObject(), _cachedMethodId0, args_);
+                    return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(result_);
+                }
+            }
+            finally
+            {
+                AndroidJNI.PopLocalFrame(IntPtr.Zero);
+            }
+        }
+
+        void ForEach(global::Java.ExternalType.Java.Util.Function.BiConsumer<K, V> action)
+        {
+            try
+            {
+                AndroidJNI.PushLocalFrame(0);
+                jvalue[] args_ = new jvalue[] { new jvalue { l = action.GetRawObject() } };
+                AndroidJNI.CallVoidMethod(GetRawObject(), _cachedMethodId1, args_);
+            }
+            finally
+            {
+                AndroidJNI.PopLocalFrame(IntPtr.Zero);
+            }
+        }
+
+        void ReplaceAll(global::Java.ExternalType.Java.Util.Function.BiFunction<K, V, V> function)
+        {
+            try
+            {
+                AndroidJNI.PushLocalFrame(0);
+                jvalue[] args_ = new jvalue[] { new jvalue { l = function.GetRawObject() } };
+                AndroidJNI.CallVoidMethod(GetRawObject(), _cachedMethodId2, args_);
+            }
+            finally
+            {
+                AndroidJNI.PopLocalFrame(IntPtr.Zero);
+            }
+        }
+
+        V PutIfAbsent(K key, V value)
+        {
+            try
+            {
+                AndroidJNI.PushLocalFrame(0);
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            ToJvalue(key),
+                            ToJvalue(value)
+                        };
+                if (typeof(V) == typeof(global::System.String))
+                {
+                    return (V) (global::System.Object) AndroidJNI.CallStringMethod(GetRawObject(), _cachedMethodId3, args_);
+                }
+                else
+                {
+                    IntPtr result_ = AndroidJNI.CallObjectMethod(GetRawObject(), _cachedMethodId3, args_);
+                    return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(result_);
+                }
+            }
+            finally
+            {
+                AndroidJNI.PopLocalFrame(IntPtr.Zero);
+            }
+        }
+
+        bool Remove(global::Google.LibraryWrapper.Java.JavaObject key, global::Google.LibraryWrapper.Java.JavaObject value)
+        {
+            try
+            {
+                AndroidJNI.PushLocalFrame(0);
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            new jvalue { l = key.GetRawObject() },
+                            new jvalue { l = value.GetRawObject() }
+                        };
+                return AndroidJNI.CallBooleanMethod(GetRawObject(), _cachedMethodId4, args_);
+            }
+            finally
+            {
+                AndroidJNI.PopLocalFrame(IntPtr.Zero);
+            }
+        }
+
+        bool Replace(K key, V oldValue, V newValue)
+        {
+            try
+            {
+                AndroidJNI.PushLocalFrame(0);
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            ToJvalue(key),
+                            ToJvalue(oldValue),
+                            ToJvalue(newValue)
+                        };
+                return AndroidJNI.CallBooleanMethod(GetRawObject(), _cachedMethodId5, args_);
+            }
+            finally
+            {
+                AndroidJNI.PopLocalFrame(IntPtr.Zero);
+            }
+        }
+
+        V Replace(K key, V value)
+        {
+            try
+            {
+                AndroidJNI.PushLocalFrame(0);
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            ToJvalue(key),
+                            ToJvalue(value)
+                        };
+                if (typeof(V) == typeof(global::System.String))
+                {
+                    return (V) (global::System.Object) AndroidJNI.CallStringMethod(GetRawObject(), _cachedMethodId6, args_);
+                }
+                else
+                {
+                    IntPtr result_ = AndroidJNI.CallObjectMethod(GetRawObject(), _cachedMethodId6, args_);
+                    return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(result_);
+                }
+            }
+            finally
+            {
+                AndroidJNI.PopLocalFrame(IntPtr.Zero);
+            }
+        }
+
+        V ComputeIfAbsent(K key, global::Java.ExternalType.Java.Util.Function.Function<K, V> mappingFunction)
+        {
+            try
+            {
+                AndroidJNI.PushLocalFrame(0);
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            ToJvalue(key),
+                            new jvalue { l = mappingFunction.GetRawObject() }
+                        };
+                if (typeof(V) == typeof(global::System.String))
+                {
+                    return (V) (global::System.Object) AndroidJNI.CallStringMethod(GetRawObject(), _cachedMethodId7, args_);
+                }
+                else
+                {
+                    IntPtr result_ = AndroidJNI.CallObjectMethod(GetRawObject(), _cachedMethodId7, args_);
+                    return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(result_);
+                }
+            }
+            finally
+            {
+                AndroidJNI.PopLocalFrame(IntPtr.Zero);
+            }
+        }
+
+        V ComputeIfPresent(K key, global::Java.ExternalType.Java.Util.Function.BiFunction<K, V, V> remappingFunction)
+        {
+            try
+            {
+                AndroidJNI.PushLocalFrame(0);
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            ToJvalue(key),
+                            new jvalue { l = remappingFunction.GetRawObject() }
+                        };
+                if (typeof(V) == typeof(global::System.String))
+                {
+                    return (V) (global::System.Object) AndroidJNI.CallStringMethod(GetRawObject(), _cachedMethodId8, args_);
+                }
+                else
+                {
+                    IntPtr result_ = AndroidJNI.CallObjectMethod(GetRawObject(), _cachedMethodId8, args_);
+                    return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(result_);
+                }
+            }
+            finally
+            {
+                AndroidJNI.PopLocalFrame(IntPtr.Zero);
+            }
+        }
+
+        V Compute(K key, global::Java.ExternalType.Java.Util.Function.BiFunction<K, V, V> remappingFunction)
+        {
+            try
+            {
+                AndroidJNI.PushLocalFrame(0);
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            ToJvalue(key),
+                            new jvalue { l = remappingFunction.GetRawObject() }
+                        };
+                if (typeof(V) == typeof(global::System.String))
+                {
+                    return (V) (global::System.Object) AndroidJNI.CallStringMethod(GetRawObject(), _cachedMethodId9, args_);
+                }
+                else
+                {
+                    IntPtr result_ = AndroidJNI.CallObjectMethod(GetRawObject(), _cachedMethodId9, args_);
+                    return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(result_);
+                }
+            }
+            finally
+            {
+                AndroidJNI.PopLocalFrame(IntPtr.Zero);
+            }
+        }
+
+        V Merge(K key, V value, global::Java.ExternalType.Java.Util.Function.BiFunction<V, V, V> remappingFunction)
+        {
+            try
+            {
+                AndroidJNI.PushLocalFrame(0);
+                jvalue[] args_ =
+                        new jvalue[]
+                        {
+                            ToJvalue(key),
+                            ToJvalue(value),
+                            new jvalue { l = remappingFunction.GetRawObject() }
+                        };
+                if (typeof(V) == typeof(global::System.String))
+                {
+                    return (V) (global::System.Object) AndroidJNI.CallStringMethod(GetRawObject(), _cachedMethodId10, args_);
+                }
+                else
+                {
+                    IntPtr result_ = AndroidJNI.CallObjectMethod(GetRawObject(), _cachedMethodId10, args_);
+                    return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(result_);
+                }
+            }
+            finally
+            {
+                AndroidJNI.PopLocalFrame(IntPtr.Zero);
+            }
+        }
     } // end class Map
 
     public class MapAnonymousImplementation<K, V> : global::Google.LibraryWrapper.Java.JavaObject, global::Java.Util.Map<K, V> where K : class where V : class
@@ -328,17 +625,6 @@ namespace Java.Util
         private static readonly IntPtr _cachedMethodId11;
         private static readonly IntPtr _cachedMethodId12;
         private static readonly IntPtr _cachedMethodId13;
-        private static readonly IntPtr _cachedMethodId14;
-        private static readonly IntPtr _cachedMethodId15;
-        private static readonly IntPtr _cachedMethodId16;
-        private static readonly IntPtr _cachedMethodId17;
-        private static readonly IntPtr _cachedMethodId18;
-        private static readonly IntPtr _cachedMethodId19;
-        private static readonly IntPtr _cachedMethodId20;
-        private static readonly IntPtr _cachedMethodId21;
-        private static readonly IntPtr _cachedMethodId22;
-        private static readonly IntPtr _cachedMethodId23;
-        private static readonly IntPtr _cachedMethodId24;
 
         static MapAnonymousImplementation()
         {
@@ -360,17 +646,6 @@ namespace Java.Util
             _cachedMethodId11 = AndroidJNI.GetMethodID(_classObject, "entrySet", "()Ljava/util/Set;");
             _cachedMethodId12 = AndroidJNI.GetMethodID(_classObject, "equals", "(Ljava/lang/Object;)Z");
             _cachedMethodId13 = AndroidJNI.GetMethodID(_classObject, "hashCode", "()I");
-            _cachedMethodId14 = AndroidJNI.GetMethodID(_classObject, "getOrDefault", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;");
-            _cachedMethodId15 = AndroidJNI.GetMethodID(_classObject, "forEach", "(Ljava/util/function/BiConsumer;)V");
-            _cachedMethodId16 = AndroidJNI.GetMethodID(_classObject, "replaceAll", "(Ljava/util/function/BiFunction;)V");
-            _cachedMethodId17 = AndroidJNI.GetMethodID(_classObject, "putIfAbsent", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;");
-            _cachedMethodId18 = AndroidJNI.GetMethodID(_classObject, "remove", "(Ljava/lang/Object;Ljava/lang/Object;)Z");
-            _cachedMethodId19 = AndroidJNI.GetMethodID(_classObject, "replace", "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z");
-            _cachedMethodId20 = AndroidJNI.GetMethodID(_classObject, "replace", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;");
-            _cachedMethodId21 = AndroidJNI.GetMethodID(_classObject, "computeIfAbsent", "(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;");
-            _cachedMethodId22 = AndroidJNI.GetMethodID(_classObject, "computeIfPresent", "(Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;");
-            _cachedMethodId23 = AndroidJNI.GetMethodID(_classObject, "compute", "(Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;");
-            _cachedMethodId24 = AndroidJNI.GetMethodID(_classObject, "merge", "(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;");
         }
 
         public MapAnonymousImplementation(IntPtr rawObject) : base(IntPtr.Zero)
@@ -620,263 +895,6 @@ namespace Java.Util
             }
         }
 
-        public V GetOrDefault(global::Google.LibraryWrapper.Java.JavaObject key, V defaultValue)
-        {
-            try
-            {
-                AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ =
-                        new jvalue[]
-                        {
-                            new jvalue { l = key.GetRawObject() },
-                            ToJvalue(defaultValue)
-                        };
-                if (typeof(V) == typeof(global::System.String))
-                {
-                    return (V) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId14, args_);
-                }
-                else
-                {
-                    IntPtr result_ = AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId14, args_);
-                    return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(result_);
-                }
-            }
-            finally
-            {
-                AndroidJNI.PopLocalFrame(IntPtr.Zero);
-            }
-        }
-
-        public void ForEach(global::Java.ExternalType.Java.Util.Function.BiConsumer<K, V> action)
-        {
-            try
-            {
-                AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] { new jvalue { l = action.GetRawObject() } };
-                AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId15, args_);
-            }
-            finally
-            {
-                AndroidJNI.PopLocalFrame(IntPtr.Zero);
-            }
-        }
-
-        public void ReplaceAll(global::Java.ExternalType.Java.Util.Function.BiFunction<K, V, V> function)
-        {
-            try
-            {
-                AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] { new jvalue { l = function.GetRawObject() } };
-                AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId16, args_);
-            }
-            finally
-            {
-                AndroidJNI.PopLocalFrame(IntPtr.Zero);
-            }
-        }
-
-        public V PutIfAbsent(K key, V value)
-        {
-            try
-            {
-                AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ =
-                        new jvalue[]
-                        {
-                            ToJvalue(key),
-                            ToJvalue(value)
-                        };
-                if (typeof(V) == typeof(global::System.String))
-                {
-                    return (V) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId17, args_);
-                }
-                else
-                {
-                    IntPtr result_ = AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId17, args_);
-                    return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(result_);
-                }
-            }
-            finally
-            {
-                AndroidJNI.PopLocalFrame(IntPtr.Zero);
-            }
-        }
-
-        public bool Remove(global::Google.LibraryWrapper.Java.JavaObject key, global::Google.LibraryWrapper.Java.JavaObject value)
-        {
-            try
-            {
-                AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ =
-                        new jvalue[]
-                        {
-                            new jvalue { l = key.GetRawObject() },
-                            new jvalue { l = value.GetRawObject() }
-                        };
-                return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId18, args_);
-            }
-            finally
-            {
-                AndroidJNI.PopLocalFrame(IntPtr.Zero);
-            }
-        }
-
-        public bool Replace(K key, V oldValue, V newValue)
-        {
-            try
-            {
-                AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ =
-                        new jvalue[]
-                        {
-                            ToJvalue(key),
-                            ToJvalue(oldValue),
-                            ToJvalue(newValue)
-                        };
-                return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId19, args_);
-            }
-            finally
-            {
-                AndroidJNI.PopLocalFrame(IntPtr.Zero);
-            }
-        }
-
-        public V Replace(K key, V value)
-        {
-            try
-            {
-                AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ =
-                        new jvalue[]
-                        {
-                            ToJvalue(key),
-                            ToJvalue(value)
-                        };
-                if (typeof(V) == typeof(global::System.String))
-                {
-                    return (V) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId20, args_);
-                }
-                else
-                {
-                    IntPtr result_ = AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId20, args_);
-                    return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(result_);
-                }
-            }
-            finally
-            {
-                AndroidJNI.PopLocalFrame(IntPtr.Zero);
-            }
-        }
-
-        public V ComputeIfAbsent(K key, global::Java.ExternalType.Java.Util.Function.Function<K, V> mappingFunction)
-        {
-            try
-            {
-                AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ =
-                        new jvalue[]
-                        {
-                            ToJvalue(key),
-                            new jvalue { l = mappingFunction.GetRawObject() }
-                        };
-                if (typeof(V) == typeof(global::System.String))
-                {
-                    return (V) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId21, args_);
-                }
-                else
-                {
-                    IntPtr result_ = AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId21, args_);
-                    return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(result_);
-                }
-            }
-            finally
-            {
-                AndroidJNI.PopLocalFrame(IntPtr.Zero);
-            }
-        }
-
-        public V ComputeIfPresent(K key, global::Java.ExternalType.Java.Util.Function.BiFunction<K, V, V> remappingFunction)
-        {
-            try
-            {
-                AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ =
-                        new jvalue[]
-                        {
-                            ToJvalue(key),
-                            new jvalue { l = remappingFunction.GetRawObject() }
-                        };
-                if (typeof(V) == typeof(global::System.String))
-                {
-                    return (V) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId22, args_);
-                }
-                else
-                {
-                    IntPtr result_ = AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId22, args_);
-                    return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(result_);
-                }
-            }
-            finally
-            {
-                AndroidJNI.PopLocalFrame(IntPtr.Zero);
-            }
-        }
-
-        public V Compute(K key, global::Java.ExternalType.Java.Util.Function.BiFunction<K, V, V> remappingFunction)
-        {
-            try
-            {
-                AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ =
-                        new jvalue[]
-                        {
-                            ToJvalue(key),
-                            new jvalue { l = remappingFunction.GetRawObject() }
-                        };
-                if (typeof(V) == typeof(global::System.String))
-                {
-                    return (V) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId23, args_);
-                }
-                else
-                {
-                    IntPtr result_ = AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId23, args_);
-                    return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(result_);
-                }
-            }
-            finally
-            {
-                AndroidJNI.PopLocalFrame(IntPtr.Zero);
-            }
-        }
-
-        public V Merge(K key, V value, global::Java.ExternalType.Java.Util.Function.BiFunction<V, V, V> remappingFunction)
-        {
-            try
-            {
-                AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ =
-                        new jvalue[]
-                        {
-                            ToJvalue(key),
-                            ToJvalue(value),
-                            new jvalue { l = remappingFunction.GetRawObject() }
-                        };
-                if (typeof(V) == typeof(global::System.String))
-                {
-                    return (V) (global::System.Object) AndroidJNI.CallStringMethod(_rawObject, _cachedMethodId24, args_);
-                }
-                else
-                {
-                    IntPtr result_ = AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId24, args_);
-                    return Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(result_);
-                }
-            }
-            finally
-            {
-                AndroidJNI.PopLocalFrame(IntPtr.Zero);
-            }
-        }
-
         public static explicit operator IntPtr(MapAnonymousImplementation<K, V> wrapper)
         {
             return wrapper.GetRawObject();
@@ -924,6 +942,28 @@ namespace Java.Util
         public abstract bool Equals(global::Google.LibraryWrapper.Java.JavaObject o);
 
         public abstract int HashCode();
+
+        public abstract V GetOrDefault(global::Google.LibraryWrapper.Java.JavaObject key, V defaultValue);
+
+        public abstract void ForEach(global::Java.ExternalType.Java.Util.Function.BiConsumer<K, V> action);
+
+        public abstract void ReplaceAll(global::Java.ExternalType.Java.Util.Function.BiFunction<K, V, V> function);
+
+        public abstract V PutIfAbsent(K key, V value);
+
+        public abstract bool Remove(global::Google.LibraryWrapper.Java.JavaObject key, global::Google.LibraryWrapper.Java.JavaObject value);
+
+        public abstract bool Replace(K key, V oldValue, V newValue);
+
+        public abstract V Replace(K key, V value);
+
+        public abstract V ComputeIfAbsent(K key, global::Java.ExternalType.Java.Util.Function.Function<K, V> mappingFunction);
+
+        public abstract V ComputeIfPresent(K key, global::Java.ExternalType.Java.Util.Function.BiFunction<K, V, V> remappingFunction);
+
+        public abstract V Compute(K key, global::Java.ExternalType.Java.Util.Function.BiFunction<K, V, V> remappingFunction);
+
+        public abstract V Merge(K key, V value, global::Java.ExternalType.Java.Util.Function.BiFunction<V, V, V> remappingFunction);
 
         public override sealed AndroidJavaObject Invoke(global::System.String methodName, global::System.Object[] args)
         {
@@ -984,6 +1024,52 @@ namespace Java.Util
             else if (methodName == "hashCode" && args.Length == 0)
             {
                 return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(HashCode());
+            }
+            else if (methodName == "getOrDefault" && args.Length == 2)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(GetOrDefault(new global::Google.LibraryWrapper.Java.JavaObject(((AndroidJavaObject) args[0]).GetRawObject()), args[1] is global::System.String ? (V) (global::System.Object) args[1] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(((AndroidJavaObject) args[1]).GetRawObject())));
+            }
+            else if (methodName == "forEach" && args.Length == 1)
+            {
+                ForEach(new global::Java.ExternalType.Java.Util.Function.BiConsumer<K, V>(((AndroidJavaObject) args[0]).GetRawObject()));
+                return null;
+            }
+            else if (methodName == "replaceAll" && args.Length == 1)
+            {
+                ReplaceAll(new global::Java.ExternalType.Java.Util.Function.BiFunction<K, V, V>(((AndroidJavaObject) args[0]).GetRawObject()));
+                return null;
+            }
+            else if (methodName == "putIfAbsent" && args.Length == 2)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(PutIfAbsent(args[0] is global::System.String ? (K) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<K>(((AndroidJavaObject) args[0]).GetRawObject()), args[1] is global::System.String ? (V) (global::System.Object) args[1] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(((AndroidJavaObject) args[1]).GetRawObject())));
+            }
+            else if (methodName == "remove" && args.Length == 2)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Remove(new global::Google.LibraryWrapper.Java.JavaObject(((AndroidJavaObject) args[0]).GetRawObject()), new global::Google.LibraryWrapper.Java.JavaObject(((AndroidJavaObject) args[1]).GetRawObject())));
+            }
+            else if (methodName == "replace" && args.Length == 3)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Replace(args[0] is global::System.String ? (K) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<K>(((AndroidJavaObject) args[0]).GetRawObject()), args[1] is global::System.String ? (V) (global::System.Object) args[1] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(((AndroidJavaObject) args[1]).GetRawObject()), args[2] is global::System.String ? (V) (global::System.Object) args[2] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(((AndroidJavaObject) args[2]).GetRawObject())));
+            }
+            else if (methodName == "replace" && args.Length == 2)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Replace(args[0] is global::System.String ? (K) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<K>(((AndroidJavaObject) args[0]).GetRawObject()), args[1] is global::System.String ? (V) (global::System.Object) args[1] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(((AndroidJavaObject) args[1]).GetRawObject())));
+            }
+            else if (methodName == "computeIfAbsent" && args.Length == 2)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(ComputeIfAbsent(args[0] is global::System.String ? (K) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<K>(((AndroidJavaObject) args[0]).GetRawObject()), new global::Java.ExternalType.Java.Util.Function.Function<K, V>(((AndroidJavaObject) args[1]).GetRawObject())));
+            }
+            else if (methodName == "computeIfPresent" && args.Length == 2)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(ComputeIfPresent(args[0] is global::System.String ? (K) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<K>(((AndroidJavaObject) args[0]).GetRawObject()), new global::Java.ExternalType.Java.Util.Function.BiFunction<K, V, V>(((AndroidJavaObject) args[1]).GetRawObject())));
+            }
+            else if (methodName == "compute" && args.Length == 2)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Compute(args[0] is global::System.String ? (K) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<K>(((AndroidJavaObject) args[0]).GetRawObject()), new global::Java.ExternalType.Java.Util.Function.BiFunction<K, V, V>(((AndroidJavaObject) args[1]).GetRawObject())));
+            }
+            else if (methodName == "merge" && args.Length == 3)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Merge(args[0] is global::System.String ? (K) (global::System.Object) args[0] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<K>(((AndroidJavaObject) args[0]).GetRawObject()), args[1] is global::System.String ? (V) (global::System.Object) args[1] : Google.LibraryWrapper.Java.Utils.CreateGenericInstance<V>(((AndroidJavaObject) args[1]).GetRawObject()), new global::Java.ExternalType.Java.Util.Function.BiFunction<V, V, V>(((AndroidJavaObject) args[2]).GetRawObject())));
             }
             return base.Invoke(methodName, args);
         }

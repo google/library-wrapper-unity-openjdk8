@@ -6,6 +6,15 @@ namespace Java.Util
 {
     public interface EventListener : global::Google.LibraryWrapper.Java.JavaInterface
     {
+        private static readonly IntPtr _classObject;
+
+        static EventListener()
+        {
+            AndroidJNI.AttachCurrentThread();
+            IntPtr classObject = AndroidJNI.FindClass("java/util/EventListener");
+            _classObject = AndroidJNI.NewGlobalRef(classObject);
+            AndroidJNI.DeleteLocalRef(classObject);
+        }
     } // end class EventListener
 
     public class EventListenerAnonymousImplementation : global::Google.LibraryWrapper.Java.JavaObject, global::Java.Util.EventListener

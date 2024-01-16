@@ -6,6 +6,17 @@ namespace Java.Util
 {
     public interface SortedSet<E> : global::Google.LibraryWrapper.Java.JavaInterface, global::Java.Util.Set<E> where E : class
     {
+        private static readonly IntPtr _classObject;
+        private static readonly IntPtr _cachedMethodId0;
+
+        static SortedSet()
+        {
+            AndroidJNI.AttachCurrentThread();
+            IntPtr classObject = AndroidJNI.FindClass("java/util/SortedSet");
+            _classObject = AndroidJNI.NewGlobalRef(classObject);
+            AndroidJNI.DeleteLocalRef(classObject);
+            _cachedMethodId0 = AndroidJNI.GetMethodID(_classObject, "spliterator", "()Ljava/util/Spliterator;");
+        }
 
         global::Java.Util.Comparator<E> Comparator();
 
@@ -18,6 +29,20 @@ namespace Java.Util
         E First();
 
         E Last();
+
+        global::Java.ExternalType.Java.Util.Spliterator<E> Spliterator()
+        {
+            try
+            {
+                AndroidJNI.PushLocalFrame(0);
+                jvalue[] args_ = new jvalue[] {  };
+                return new global::Java.ExternalType.Java.Util.SpliteratorAnonymousImplementation<E>(AndroidJNI.CallObjectMethod(GetRawObject(), _cachedMethodId0, args_));
+            }
+            finally
+            {
+                AndroidJNI.PopLocalFrame(IntPtr.Zero);
+            }
+        }
     } // end class SortedSet
 
     public class SortedSetAnonymousImplementation<E> : global::Google.LibraryWrapper.Java.JavaObject, global::Java.Util.SortedSet<E> where E : class
@@ -42,7 +67,6 @@ namespace Java.Util
         private static readonly IntPtr _cachedMethodId16;
         private static readonly IntPtr _cachedMethodId17;
         private static readonly IntPtr _cachedMethodId18;
-        private static readonly IntPtr _cachedMethodId19;
 
         static SortedSetAnonymousImplementation()
         {
@@ -56,20 +80,19 @@ namespace Java.Util
             _cachedMethodId3 = AndroidJNI.GetMethodID(_classObject, "tailSet", "(Ljava/lang/Object;)Ljava/util/SortedSet;");
             _cachedMethodId4 = AndroidJNI.GetMethodID(_classObject, "first", "()Ljava/lang/Object;");
             _cachedMethodId5 = AndroidJNI.GetMethodID(_classObject, "last", "()Ljava/lang/Object;");
-            _cachedMethodId6 = AndroidJNI.GetMethodID(_classObject, "spliterator", "()Ljava/util/Spliterator;");
-            _cachedMethodId7 = AndroidJNI.GetMethodID(_classObject, "size", "()I");
-            _cachedMethodId8 = AndroidJNI.GetMethodID(_classObject, "isEmpty", "()Z");
-            _cachedMethodId9 = AndroidJNI.GetMethodID(_classObject, "contains", "(Ljava/lang/Object;)Z");
-            _cachedMethodId10 = AndroidJNI.GetMethodID(_classObject, "iterator", "()Ljava/util/Iterator;");
-            _cachedMethodId11 = AndroidJNI.GetMethodID(_classObject, "add", "(Ljava/lang/Object;)Z");
-            _cachedMethodId12 = AndroidJNI.GetMethodID(_classObject, "remove", "(Ljava/lang/Object;)Z");
-            _cachedMethodId13 = AndroidJNI.GetMethodID(_classObject, "containsAll", "(Ljava/util/Collection;)Z");
-            _cachedMethodId14 = AndroidJNI.GetMethodID(_classObject, "addAll", "(Ljava/util/Collection;)Z");
-            _cachedMethodId15 = AndroidJNI.GetMethodID(_classObject, "retainAll", "(Ljava/util/Collection;)Z");
-            _cachedMethodId16 = AndroidJNI.GetMethodID(_classObject, "removeAll", "(Ljava/util/Collection;)Z");
-            _cachedMethodId17 = AndroidJNI.GetMethodID(_classObject, "clear", "()V");
-            _cachedMethodId18 = AndroidJNI.GetMethodID(_classObject, "equals", "(Ljava/lang/Object;)Z");
-            _cachedMethodId19 = AndroidJNI.GetMethodID(_classObject, "hashCode", "()I");
+            _cachedMethodId6 = AndroidJNI.GetMethodID(_classObject, "size", "()I");
+            _cachedMethodId7 = AndroidJNI.GetMethodID(_classObject, "isEmpty", "()Z");
+            _cachedMethodId8 = AndroidJNI.GetMethodID(_classObject, "contains", "(Ljava/lang/Object;)Z");
+            _cachedMethodId9 = AndroidJNI.GetMethodID(_classObject, "iterator", "()Ljava/util/Iterator;");
+            _cachedMethodId10 = AndroidJNI.GetMethodID(_classObject, "add", "(Ljava/lang/Object;)Z");
+            _cachedMethodId11 = AndroidJNI.GetMethodID(_classObject, "remove", "(Ljava/lang/Object;)Z");
+            _cachedMethodId12 = AndroidJNI.GetMethodID(_classObject, "containsAll", "(Ljava/util/Collection;)Z");
+            _cachedMethodId13 = AndroidJNI.GetMethodID(_classObject, "addAll", "(Ljava/util/Collection;)Z");
+            _cachedMethodId14 = AndroidJNI.GetMethodID(_classObject, "retainAll", "(Ljava/util/Collection;)Z");
+            _cachedMethodId15 = AndroidJNI.GetMethodID(_classObject, "removeAll", "(Ljava/util/Collection;)Z");
+            _cachedMethodId16 = AndroidJNI.GetMethodID(_classObject, "clear", "()V");
+            _cachedMethodId17 = AndroidJNI.GetMethodID(_classObject, "equals", "(Ljava/lang/Object;)Z");
+            _cachedMethodId18 = AndroidJNI.GetMethodID(_classObject, "hashCode", "()I");
         }
 
         public SortedSetAnonymousImplementation(IntPtr rawObject) : base(IntPtr.Zero)
@@ -199,27 +222,13 @@ namespace Java.Util
             }
         }
 
-        public global::Java.ExternalType.Java.Util.Spliterator<E> Spliterator()
-        {
-            try
-            {
-                AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {  };
-                return new global::Java.ExternalType.Java.Util.SpliteratorAnonymousImplementation<E>(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId6, args_));
-            }
-            finally
-            {
-                AndroidJNI.PopLocalFrame(IntPtr.Zero);
-            }
-        }
-
         public int Size()
         {
             try
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] {  };
-                return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId7, args_);
+                return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId6, args_);
             }
             finally
             {
@@ -233,7 +242,7 @@ namespace Java.Util
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] {  };
-                return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId8, args_);
+                return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId7, args_);
             }
             finally
             {
@@ -247,7 +256,7 @@ namespace Java.Util
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] { new jvalue { l = o.GetRawObject() } };
-                return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId9, args_);
+                return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId8, args_);
             }
             finally
             {
@@ -261,7 +270,7 @@ namespace Java.Util
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] {  };
-                return new global::Java.Util.IteratorAnonymousImplementation<E>(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId10, args_));
+                return new global::Java.Util.IteratorAnonymousImplementation<E>(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId9, args_));
             }
             finally
             {
@@ -275,7 +284,7 @@ namespace Java.Util
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] { ToJvalue(e) };
-                return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId11, args_);
+                return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId10, args_);
             }
             finally
             {
@@ -289,7 +298,7 @@ namespace Java.Util
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] { new jvalue { l = o.GetRawObject() } };
-                return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId12, args_);
+                return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId11, args_);
             }
             finally
             {
@@ -303,7 +312,7 @@ namespace Java.Util
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] { new jvalue { l = c.GetRawObject() } };
-                return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId13, args_);
+                return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId12, args_);
             }
             finally
             {
@@ -317,7 +326,7 @@ namespace Java.Util
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] { new jvalue { l = c.GetRawObject() } };
-                return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId14, args_);
+                return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId13, args_);
             }
             finally
             {
@@ -331,7 +340,7 @@ namespace Java.Util
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] { new jvalue { l = c.GetRawObject() } };
-                return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId15, args_);
+                return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId14, args_);
             }
             finally
             {
@@ -345,7 +354,7 @@ namespace Java.Util
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] { new jvalue { l = c.GetRawObject() } };
-                return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId16, args_);
+                return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId15, args_);
             }
             finally
             {
@@ -359,7 +368,7 @@ namespace Java.Util
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] {  };
-                AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId17, args_);
+                AndroidJNI.CallVoidMethod(_rawObject, _cachedMethodId16, args_);
             }
             finally
             {
@@ -373,7 +382,7 @@ namespace Java.Util
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] { new jvalue { l = o.GetRawObject() } };
-                return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId18, args_);
+                return AndroidJNI.CallBooleanMethod(_rawObject, _cachedMethodId17, args_);
             }
             finally
             {
@@ -387,7 +396,7 @@ namespace Java.Util
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] {  };
-                return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId19, args_);
+                return AndroidJNI.CallIntMethod(_rawObject, _cachedMethodId18, args_);
             }
             finally
             {
@@ -426,6 +435,8 @@ namespace Java.Util
         public abstract E First();
 
         public abstract E Last();
+
+        public abstract global::Java.ExternalType.Java.Util.Spliterator<E> Spliterator();
 
         public abstract int Size();
 
@@ -478,6 +489,10 @@ namespace Java.Util
             else if (methodName == "last" && args.Length == 0)
             {
                 return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Last());
+            }
+            else if (methodName == "spliterator" && args.Length == 0)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Spliterator());
             }
             else if (methodName == "size" && args.Length == 0)
             {

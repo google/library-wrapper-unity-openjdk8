@@ -6,6 +6,15 @@ namespace Java.Util
 {
     public interface RandomAccess : global::Google.LibraryWrapper.Java.JavaInterface
     {
+        private static readonly IntPtr _classObject;
+
+        static RandomAccess()
+        {
+            AndroidJNI.AttachCurrentThread();
+            IntPtr classObject = AndroidJNI.FindClass("java/util/RandomAccess");
+            _classObject = AndroidJNI.NewGlobalRef(classObject);
+            AndroidJNI.DeleteLocalRef(classObject);
+        }
     } // end class RandomAccess
 
     public class RandomAccessAnonymousImplementation : global::Google.LibraryWrapper.Java.JavaObject, global::Java.Util.RandomAccess

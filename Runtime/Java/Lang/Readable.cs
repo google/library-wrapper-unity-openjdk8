@@ -6,6 +6,15 @@ namespace Java.Lang
 {
     public interface Readable : global::Google.LibraryWrapper.Java.JavaInterface
     {
+        private static readonly IntPtr _classObject;
+
+        static Readable()
+        {
+            AndroidJNI.AttachCurrentThread();
+            IntPtr classObject = AndroidJNI.FindClass("java/lang/Readable");
+            _classObject = AndroidJNI.NewGlobalRef(classObject);
+            AndroidJNI.DeleteLocalRef(classObject);
+        }
 
         int Read(global::Java.ExternalType.Java.Nio.CharBuffer cb);
     } // end class Readable

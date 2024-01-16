@@ -6,6 +6,15 @@ namespace Java.ExternalType.Java.Lang.Reflect
 {
     public interface GenericDeclaration : global::Google.LibraryWrapper.Java.JavaInterface
     {
+        private static readonly IntPtr _classObject;
+
+        static GenericDeclaration()
+        {
+            AndroidJNI.AttachCurrentThread();
+            IntPtr classObject = AndroidJNI.FindClass("java/lang/reflect/GenericDeclaration");
+            _classObject = AndroidJNI.NewGlobalRef(classObject);
+            AndroidJNI.DeleteLocalRef(classObject);
+        }
     } // end class GenericDeclaration
 
     public class GenericDeclarationAnonymousImplementation : global::Google.LibraryWrapper.Java.JavaObject, global::Java.ExternalType.Java.Lang.Reflect.GenericDeclaration

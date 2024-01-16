@@ -6,6 +6,31 @@ namespace Java.Util
 {
     public interface Set<E> : global::Google.LibraryWrapper.Java.JavaInterface, global::Java.Util.Collection<E> where E : class
     {
+        private static readonly IntPtr _classObject;
+        private static readonly IntPtr _cachedMethodId0;
+
+        static Set()
+        {
+            AndroidJNI.AttachCurrentThread();
+            IntPtr classObject = AndroidJNI.FindClass("java/util/Set");
+            _classObject = AndroidJNI.NewGlobalRef(classObject);
+            AndroidJNI.DeleteLocalRef(classObject);
+            _cachedMethodId0 = AndroidJNI.GetMethodID(_classObject, "spliterator", "()Ljava/util/Spliterator;");
+        }
+
+        global::Java.ExternalType.Java.Util.Spliterator<E> Spliterator()
+        {
+            try
+            {
+                AndroidJNI.PushLocalFrame(0);
+                jvalue[] args_ = new jvalue[] {  };
+                return new global::Java.ExternalType.Java.Util.SpliteratorAnonymousImplementation<E>(AndroidJNI.CallObjectMethod(GetRawObject(), _cachedMethodId0, args_));
+            }
+            finally
+            {
+                AndroidJNI.PopLocalFrame(IntPtr.Zero);
+            }
+        }
     } // end class Set
 
     public class SetAnonymousImplementation<E> : global::Google.LibraryWrapper.Java.JavaObject, global::Java.Util.Set<E> where E : class
@@ -24,7 +49,6 @@ namespace Java.Util
         private static readonly IntPtr _cachedMethodId10;
         private static readonly IntPtr _cachedMethodId11;
         private static readonly IntPtr _cachedMethodId12;
-        private static readonly IntPtr _cachedMethodId13;
 
         static SetAnonymousImplementation()
         {
@@ -45,7 +69,6 @@ namespace Java.Util
             _cachedMethodId10 = AndroidJNI.GetMethodID(_classObject, "clear", "()V");
             _cachedMethodId11 = AndroidJNI.GetMethodID(_classObject, "equals", "(Ljava/lang/Object;)Z");
             _cachedMethodId12 = AndroidJNI.GetMethodID(_classObject, "hashCode", "()I");
-            _cachedMethodId13 = AndroidJNI.GetMethodID(_classObject, "spliterator", "()Ljava/util/Spliterator;");
         }
 
         public SetAnonymousImplementation(IntPtr rawObject) : base(IntPtr.Zero)
@@ -252,20 +275,6 @@ namespace Java.Util
             }
         }
 
-        public global::Java.ExternalType.Java.Util.Spliterator<E> Spliterator()
-        {
-            try
-            {
-                AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {  };
-                return new global::Java.ExternalType.Java.Util.SpliteratorAnonymousImplementation<E>(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId13, args_));
-            }
-            finally
-            {
-                AndroidJNI.PopLocalFrame(IntPtr.Zero);
-            }
-        }
-
         public static explicit operator IntPtr(SetAnonymousImplementation<E> wrapper)
         {
             return wrapper.GetRawObject();
@@ -311,6 +320,8 @@ namespace Java.Util
         public abstract bool Equals(global::Google.LibraryWrapper.Java.JavaObject o);
 
         public abstract int HashCode();
+
+        public abstract global::Java.ExternalType.Java.Util.Spliterator<E> Spliterator();
 
         public override sealed AndroidJavaObject Invoke(global::System.String methodName, global::System.Object[] args)
         {
@@ -366,6 +377,10 @@ namespace Java.Util
             else if (methodName == "hashCode" && args.Length == 0)
             {
                 return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(HashCode());
+            }
+            else if (methodName == "spliterator" && args.Length == 0)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Spliterator());
             }
             return base.Invoke(methodName, args);
         }

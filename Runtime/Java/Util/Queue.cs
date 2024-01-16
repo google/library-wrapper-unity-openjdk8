@@ -6,6 +6,15 @@ namespace Java.Util
 {
     public interface Queue<E> : global::Google.LibraryWrapper.Java.JavaInterface, global::Java.Util.Collection<E> where E : class
     {
+        private static readonly IntPtr _classObject;
+
+        static Queue()
+        {
+            AndroidJNI.AttachCurrentThread();
+            IntPtr classObject = AndroidJNI.FindClass("java/util/Queue");
+            _classObject = AndroidJNI.NewGlobalRef(classObject);
+            AndroidJNI.DeleteLocalRef(classObject);
+        }
 
         bool Offer(E e);
 

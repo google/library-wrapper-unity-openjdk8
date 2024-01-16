@@ -6,6 +6,19 @@ namespace Java.Lang
 {
     public interface CharSequence : global::Google.LibraryWrapper.Java.JavaInterface
     {
+        private static readonly IntPtr _classObject;
+        private static readonly IntPtr _cachedMethodId0;
+        private static readonly IntPtr _cachedMethodId1;
+
+        static CharSequence()
+        {
+            AndroidJNI.AttachCurrentThread();
+            IntPtr classObject = AndroidJNI.FindClass("java/lang/CharSequence");
+            _classObject = AndroidJNI.NewGlobalRef(classObject);
+            AndroidJNI.DeleteLocalRef(classObject);
+            _cachedMethodId0 = AndroidJNI.GetMethodID(_classObject, "chars", "()Ljava/util/stream/IntStream;");
+            _cachedMethodId1 = AndroidJNI.GetMethodID(_classObject, "codePoints", "()Ljava/util/stream/IntStream;");
+        }
 
         int Length();
 
@@ -14,6 +27,34 @@ namespace Java.Lang
         global::Java.Lang.CharSequence SubSequence(int start, int end);
 
         global::System.String ToString();
+
+        global::Java.ExternalType.Java.Util.Stream.IntStream Chars()
+        {
+            try
+            {
+                AndroidJNI.PushLocalFrame(0);
+                jvalue[] args_ = new jvalue[] {  };
+                return new global::Java.ExternalType.Java.Util.Stream.IntStream(AndroidJNI.CallObjectMethod(GetRawObject(), _cachedMethodId0, args_));
+            }
+            finally
+            {
+                AndroidJNI.PopLocalFrame(IntPtr.Zero);
+            }
+        }
+
+        global::Java.ExternalType.Java.Util.Stream.IntStream CodePoints()
+        {
+            try
+            {
+                AndroidJNI.PushLocalFrame(0);
+                jvalue[] args_ = new jvalue[] {  };
+                return new global::Java.ExternalType.Java.Util.Stream.IntStream(AndroidJNI.CallObjectMethod(GetRawObject(), _cachedMethodId1, args_));
+            }
+            finally
+            {
+                AndroidJNI.PopLocalFrame(IntPtr.Zero);
+            }
+        }
     } // end class CharSequence
 
     public class CharSequenceAnonymousImplementation : global::Google.LibraryWrapper.Java.JavaObject, global::Java.Lang.CharSequence
@@ -22,8 +63,6 @@ namespace Java.Lang
         private static readonly IntPtr _cachedMethodId0;
         private static readonly IntPtr _cachedMethodId1;
         private static readonly IntPtr _cachedMethodId2;
-        private static readonly IntPtr _cachedMethodId3;
-        private static readonly IntPtr _cachedMethodId4;
 
         static CharSequenceAnonymousImplementation()
         {
@@ -34,8 +73,6 @@ namespace Java.Lang
             _cachedMethodId0 = AndroidJNI.GetMethodID(_classObject, "length", "()I");
             _cachedMethodId1 = AndroidJNI.GetMethodID(_classObject, "charAt", "(I)C");
             _cachedMethodId2 = AndroidJNI.GetMethodID(_classObject, "subSequence", "(II)Ljava/lang/CharSequence;");
-            _cachedMethodId3 = AndroidJNI.GetMethodID(_classObject, "chars", "()Ljava/util/stream/IntStream;");
-            _cachedMethodId4 = AndroidJNI.GetMethodID(_classObject, "codePoints", "()Ljava/util/stream/IntStream;");
         }
 
         public CharSequenceAnonymousImplementation(IntPtr rawObject) : base(IntPtr.Zero)
@@ -107,34 +144,6 @@ namespace Java.Lang
             }
         }
 
-        public global::Java.ExternalType.Java.Util.Stream.IntStream Chars()
-        {
-            try
-            {
-                AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {  };
-                return new global::Java.ExternalType.Java.Util.Stream.IntStream(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId3, args_));
-            }
-            finally
-            {
-                AndroidJNI.PopLocalFrame(IntPtr.Zero);
-            }
-        }
-
-        public global::Java.ExternalType.Java.Util.Stream.IntStream CodePoints()
-        {
-            try
-            {
-                AndroidJNI.PushLocalFrame(0);
-                jvalue[] args_ = new jvalue[] {  };
-                return new global::Java.ExternalType.Java.Util.Stream.IntStream(AndroidJNI.CallObjectMethod(_rawObject, _cachedMethodId4, args_));
-            }
-            finally
-            {
-                AndroidJNI.PopLocalFrame(IntPtr.Zero);
-            }
-        }
-
         public static explicit operator IntPtr(CharSequenceAnonymousImplementation wrapper)
         {
             return wrapper.GetRawObject();
@@ -161,6 +170,10 @@ namespace Java.Lang
 
         public abstract global::Java.Lang.CharSequence SubSequence(int start, int end);
 
+        public abstract global::Java.ExternalType.Java.Util.Stream.IntStream Chars();
+
+        public abstract global::Java.ExternalType.Java.Util.Stream.IntStream CodePoints();
+
         public override sealed AndroidJavaObject Invoke(global::System.String methodName, global::System.Object[] args)
         {
             if (methodName == "length" && args.Length == 0)
@@ -174,6 +187,14 @@ namespace Java.Lang
             else if (methodName == "subSequence" && args.Length == 2)
             {
                 return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(SubSequence((int) args[0], (int) args[1]));
+            }
+            else if (methodName == "chars" && args.Length == 0)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(Chars());
+            }
+            else if (methodName == "codePoints" && args.Length == 0)
+            {
+                return Google.LibraryWrapper.Java.Utils.ToAndroidJavaObject(CodePoints());
             }
             return base.Invoke(methodName, args);
         }

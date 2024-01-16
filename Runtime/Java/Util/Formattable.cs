@@ -6,6 +6,15 @@ namespace Java.Util
 {
     public interface Formattable : global::Google.LibraryWrapper.Java.JavaInterface
     {
+        private static readonly IntPtr _classObject;
+
+        static Formattable()
+        {
+            AndroidJNI.AttachCurrentThread();
+            IntPtr classObject = AndroidJNI.FindClass("java/util/Formattable");
+            _classObject = AndroidJNI.NewGlobalRef(classObject);
+            AndroidJNI.DeleteLocalRef(classObject);
+        }
 
         void FormatTo(global::Java.Util.Formatter formatter, int flags, int width, int precision);
     } // end class Formattable

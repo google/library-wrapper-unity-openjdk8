@@ -6,6 +6,15 @@ namespace Java.Util
 {
     public interface NavigableSet<E> : global::Google.LibraryWrapper.Java.JavaInterface, global::Java.Util.SortedSet<E> where E : class
     {
+        private static readonly IntPtr _classObject;
+
+        static NavigableSet()
+        {
+            AndroidJNI.AttachCurrentThread();
+            IntPtr classObject = AndroidJNI.FindClass("java/util/NavigableSet");
+            _classObject = AndroidJNI.NewGlobalRef(classObject);
+            AndroidJNI.DeleteLocalRef(classObject);
+        }
 
         E Lower(E e);
 

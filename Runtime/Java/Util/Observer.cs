@@ -6,6 +6,15 @@ namespace Java.Util
 {
     public interface Observer : global::Google.LibraryWrapper.Java.JavaInterface
     {
+        private static readonly IntPtr _classObject;
+
+        static Observer()
+        {
+            AndroidJNI.AttachCurrentThread();
+            IntPtr classObject = AndroidJNI.FindClass("java/util/Observer");
+            _classObject = AndroidJNI.NewGlobalRef(classObject);
+            AndroidJNI.DeleteLocalRef(classObject);
+        }
 
         void Update(global::Java.Util.Observable o, global::Google.LibraryWrapper.Java.JavaObject arg);
     } // end class Observer

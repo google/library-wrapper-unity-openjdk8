@@ -6,6 +6,15 @@ namespace Java.Lang
 {
     public interface Appendable : global::Google.LibraryWrapper.Java.JavaInterface
     {
+        private static readonly IntPtr _classObject;
+
+        static Appendable()
+        {
+            AndroidJNI.AttachCurrentThread();
+            IntPtr classObject = AndroidJNI.FindClass("java/lang/Appendable");
+            _classObject = AndroidJNI.NewGlobalRef(classObject);
+            AndroidJNI.DeleteLocalRef(classObject);
+        }
 
         global::Java.Lang.Appendable Append(global::Java.Lang.CharSequence csq);
 

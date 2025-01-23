@@ -225,7 +225,7 @@ namespace Java.Lang
             }
         }
 
-        public static void SetSecurityManager(global::Java.Lang.SecurityManager s)
+        public static void SetSecurityManager(global::Java.ExternalType.Java.Lang.SecurityManager s)
         {
             try
             {
@@ -239,13 +239,13 @@ namespace Java.Lang
             }
         }
 
-        public static global::Java.Lang.SecurityManager GetSecurityManager()
+        public static global::Java.ExternalType.Java.Lang.SecurityManager GetSecurityManager()
         {
             try
             {
                 AndroidJNI.PushLocalFrame(0);
                 jvalue[] args_ = new jvalue[] {  };
-                return new global::Java.Lang.SecurityManager(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId6, args_));
+                return new global::Java.ExternalType.Java.Lang.SecurityManager(AndroidJNI.CallStaticObjectMethod(_classObject, _cachedMethodId6, args_));
             }
             finally
             {

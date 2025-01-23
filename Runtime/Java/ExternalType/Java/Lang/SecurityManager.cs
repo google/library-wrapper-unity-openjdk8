@@ -2,21 +2,21 @@ using System;
 
 using UnityEngine;
 
-namespace Java.ExternalType.Java.Io
+namespace Java.ExternalType.Java.Lang
 {
-    public class FileDescriptor : global::Google.LibraryWrapper.Java.JavaObject
+    public class SecurityManager : global::Google.LibraryWrapper.Java.JavaObject
     {
         private static readonly IntPtr _classObject;
 
-        static FileDescriptor()
+        static SecurityManager()
         {
             AndroidJNI.AttachCurrentThread();
-            IntPtr classObject = AndroidJNI.FindClass("java/io/FileDescriptor");
+            IntPtr classObject = AndroidJNI.FindClass("java/lang/SecurityManager");
             _classObject = AndroidJNI.NewGlobalRef(classObject);
             AndroidJNI.DeleteLocalRef(classObject);
         }
 
-        public FileDescriptor(IntPtr rawObject) : base(IntPtr.Zero)
+        public SecurityManager(IntPtr rawObject) : base(IntPtr.Zero)
         {
             if (rawObject == IntPtr.Zero)
             {
@@ -28,7 +28,7 @@ namespace Java.ExternalType.Java.Io
                 IntPtr instanceClassObject_ = AndroidJNI.GetObjectClass(rawObject);
                 if (!AndroidJNI.IsAssignableFrom(instanceClassObject_, _classObject))
                 {
-                    throw new ArgumentException("The provided reference is not an instance of FileDescriptor.");
+                    throw new ArgumentException("The provided reference is not an instance of SecurityManager.");
                 }
                 _rawObject = AndroidJNI.NewGlobalRef(rawObject);
             }
@@ -38,19 +38,19 @@ namespace Java.ExternalType.Java.Io
             }
         }
 
-        public static explicit operator IntPtr(FileDescriptor wrapper)
+        public static explicit operator IntPtr(SecurityManager wrapper)
         {
             return wrapper.GetRawObject();
         }
 
-        public static explicit operator FileDescriptor(IntPtr rawObject)
+        public static explicit operator SecurityManager(IntPtr rawObject)
         {
-            return new FileDescriptor(rawObject);
+            return new SecurityManager(rawObject);
         }
 
         public new static IntPtr GetRawClass()
         {
             return AndroidJNI.NewLocalRef(_classObject);
         }
-    } // end class FileDescriptor
-} // end namespace Java.ExternalType.Java.Io
+    } // end class SecurityManager
+} // end namespace Java.ExternalType.Java.Lang
